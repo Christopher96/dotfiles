@@ -1,0 +1,27 @@
+! --- URxvt General ---
+URxvt*scrollBar: false
+URxvt*urgentOnBell: true
+URxvt*visualBell: false
+URxvt*cursorUnderline: true
+URxvt*cursorBlink: true
+
+URxvt.matcher.button: 1
+URxvt.perl-ext-common: default,matcher,keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.url-select.launcher:/usr/bin/xdg-open
+URxvt.url-select.underline: true
+URxvt.font:xft:Hack-Bold:size=11
+URxvt.matcher.rend.0: Uline Bold fg5
+
+! --- URxvt Colors ---
+URxvt.depth: 32
+URxvt.background: #383c4a
+URxvt.foreground: #ffffff
+
+! --- Color Schemes ---
+!#include ".config/xcolors/apple-dark"
+!#include ".config/xcolors/baskerville"
+!#include ".config/xcolors/gjm"
+!#include ".config/xcolors/phrak1"
+!#include ".config/xcolors/darkocean"
+#include ".config/xcolors/monokai"
