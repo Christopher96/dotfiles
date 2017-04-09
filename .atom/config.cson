@@ -1,0 +1,39 @@
+"*":
+  "autoclose-html": {}
+  "browser-plus":
+    homepage: "localhost/~syphez"
+    live: 300
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "hyperclick"
+      "php-hyperclick"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "seti-ui"
+      "monokai-seti"
+    ]
+  editor:
+    autoIndentOnPaste: false
+    confirmCheckoutHeadRevision: false
+    fontFamily: "Meslo LG L"
+    scrollSensitivity: 60
+    softWrap: true
+  "exception-reporting":
+    userId: "84097cc0-db5f-7b16-377b-75eeca071bce"
+  "js-hyperclick": {}
+  linter:
+    errorPanelHeight: 95
+  "linter-eslint":
+    fixOnSave: true
+  "linter-scss-lint": {}
+  "seti-ui":
+    font: "Default Atom Font"
+    themeColor: "Red"
+  welcome:
+    showOnStartup: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
