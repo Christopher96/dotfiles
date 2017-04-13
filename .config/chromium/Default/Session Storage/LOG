@@ -1,0 +1,9 @@
+2017/04/13-10:47:39.037 1443 Reusing MANIFEST /home/syphez/.config/chromium/Default/Session Storage/MANIFEST-000001
+2017/04/13-10:47:39.037 1443 Recovering log #18
+2017/04/13-10:47:39.039 1443 Reusing old log /home/syphez/.config/chromium/Default/Session Storage/000018.log 
+2017/04/13-10:48:39.045 3009 Level-0 table #23: started
+2017/04/13-10:48:39.051 3009 Level-0 table #23: 14885 bytes OK
+2017/04/13-10:48:39.055 3009 Delete type=0 #18
+2017/04/13-10:57:48.081 3009 Level-0 table #25: started
+2017/04/13-10:57:48.300 3009 Level-0 table #25: 92355 bytes OK
+2017/04/13-10:57:48.305 3009 Delete type=0 #22

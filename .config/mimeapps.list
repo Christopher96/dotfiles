@@ -1,0 +1,6 @@
+[Added Associations]
+application/zip=xarchiver.desktop;
+image/jpeg=feh.desktop;
+text/plain=atom.desktop;
+application/x-7z-compressed=xarchiver.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;xarchiver.desktop;

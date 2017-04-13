@@ -1,0 +1,1442 @@
+{
+   "account_creation_privacy_statement": {
+      "message": "Jeg godtar Ghosterys datapraksis i selskapets $LINK_PS_START$Personvernerklæring$LINK_PS_END$ og vilkårene i $LINK_UA_START$Lisensavtalen$LINK_UA_END$.",
+      "placeholders": {
+         "link_ps_end": {
+            "content": "\u003C/a>"
+         },
+         "link_ps_start": {
+            "content": "\u003Ca target=\"_blank\" href=\"https://www.ghostery.com/about-us/privacy-statements/ghostery-browser-extension/ghostery-browser-extension-privacy-statement/\">"
+         },
+         "link_ua_end": {
+            "content": "\u003C/a>"
+         },
+         "link_ua_start": {
+            "content": "\u003Ca target=\"_blank\" href=\"https://www.ghostery.com/about-us/privacy-statements/ghostery-browser-extension/ghostery-browser-extension-end-user-license-agreem/\">"
+         }
+      }
+   },
+   "account_signin_privacy_statement": {
+      "message": "Kontoen din gir deg tilgang til avanserte funksjoner og er ikke assosiert med noen sporingsdata du kan ha valgt å dele med oss. For spesifikk informasjon om hvordan vi bruker kontodataene, ser du våre $LINK_FAQ_START$Vanlige spørsmål$LINK_FAQ_END$.",
+      "placeholders": {
+         "link_faq_end": {
+            "content": "\u003C/a>"
+         },
+         "link_faq_start": {
+            "content": "\u003Ca target=\"_blank\" href=\"https://www.ghostery.com/support/faq/ghostery-add-on/\">"
+         }
+      }
+   },
+   "all": {
+      "description": "Standardinnstilling i &quot;filtrer etter type&quot;-rullegardinmenyen for tagleseren. Filtrerer ikke ut noenting. Skal leses som &quot;Vis alle&quot;.",
+      "message": "alle"
+   },
+   "banner_check_your_email_title": {
+      "message": "Sjekk e-posten om kort tid for en kobling for å tilbakestille passordet."
+   },
+   "banner_no_such_account_message": {
+      "message": "Det virker ikke som om vi kan finne denne e-post- og passordkombinasjonen. Prøv en gang til."
+   },
+   "blacklist_error_duplicate_url": {
+      "message": "Dette nettstedet er allerede begrenset."
+   },
+   "blacklist_error_whitelist_url": {
+      "message": "Dette nettstedet har allerede blitt fjernet fra Klarerte nettsteder-listen og blitt lagt til Begrensede nettsteder-listen din."
+   },
+   "blocked": {
+      "description": "Velg dette for å kun vise blokkerte (merkede) tagger i tagleseren. Skal leses som &quot;Vis blokkert&quot;.",
+      "message": "blokkert"
+   },
+   "blocked_redirect_action_always_title": {
+      "description": "Tittel for &quot;Tillat alltid og last inn på nytt&quot;-knappen på den blokkerte omdirigert-siden.",
+      "message": "Tillat alltid og last inn på nytt."
+   },
+   "blocked_redirect_action_through_once_title": {
+      "description": "Tittel for&quot;Tillat én gang&quot;-knappen på den blokkerte omdiriger-siden.",
+      "message": "Tillat merker en gang helt til sluttplasseringen er nådd."
+   },
+   "blocked_redirect_page_title": {
+      "description": "Sidetittel for blocked_redirect.html, som vises når en omdirigering blir blokkert.",
+      "message": "Ghostery hindret en omdirigering."
+   },
+   "blocked_redirect_prevent": {
+      "description": "Tekst som vises på block_redirect.html når en omdirigering blir blokkert. Skal vises inni &quot;redirect-prevent&quot; div.",
+      "message": "Ghostery hindret en omdirigering fra $BREAK$ $SP_O_START$$ORIGIN$$SP_END$ til $SP_D_START$$DESTINATION$$SP_END$, $BREAK$som er en del av $A_START$$APP$$A_END$. $BREAK$",
+      "placeholders": {
+         "a_end": {
+            "content": "\u003C/a>"
+         },
+         "a_start": {
+            "content": "\u003Ca id=\"name\" href=\"$4\" target=\"_blank\">"
+         },
+         "app": {
+            "content": "$3",
+            "example": "Dobbeltklikk"
+         },
+         "break": {
+            "content": "\u003Cbr>"
+         },
+         "destination": {
+            "content": "$2"
+         },
+         "origin": {
+            "content": "$1"
+         },
+         "sp_d_start": {
+            "content": "\u003Cspan id=\"destination\">"
+         },
+         "sp_end": {
+            "content": "\u003C/span>"
+         },
+         "sp_o_start": {
+            "content": "\u003Cspan id=\"origin\">"
+         }
+      }
+   },
+   "blocked_redirect_url_content": {
+      "description": "Tekst som vises på block_redirect.html når en omdirigering blir blokkert og en endelig &quot;destinasjon&quot;-URL-adresse ikke blir funnet.",
+      "message": "Det virker som om dette merket omdirigerer til $BREAK$ $A_START$$REDIRECT_URL$$A_END$ Hvis denne koblingen ikke ser riktig ut og du ønsker å fortsette, klikker du på ikonet under for å tillate $APP$ og laste inn på nytt.",
+      "placeholders": {
+         "a_end": {
+            "content": "\u003C/a>"
+         },
+         "a_start": {
+            "content": "\u003Ca href=\"$1\" class=\"ellipsis\" title=\"$1\">"
+         },
+         "app": {
+            "content": "$2",
+            "example": "Dobbeltklikk"
+         },
+         "break": {
+            "content": "\u003Cbr>"
+         },
+         "redirect_url": {
+            "content": "$1"
+         }
+      }
+   },
+   "blocking_block_all": {
+      "message": "Blokker alle"
+   },
+   "blocking_block_shown": {
+      "message": "Blokkering vist"
+   },
+   "blocking_category_blocked": {
+      "description": "som i &quot;5 (sporingsverktøy) BLOKKERT&quot;",
+      "message": "Blokkert"
+   },
+   "blocking_category_tracker": {
+      "message": "Sporingsverktøy"
+   },
+   "blocking_category_trackers": {
+      "message": "Sporingsverktøy"
+   },
+   "blocking_options_blocked": {
+      "message": "Blokkert"
+   },
+   "blocking_options_blocked_all": {
+      "message": "Alle sporingsverktøy i kategorien er blokkert"
+   },
+   "blocking_options_trackers": {
+      "message": "Sporingsverktøy"
+   },
+   "blocking_trackers": {
+      "message": "Sporingsverktøy"
+   },
+   "box_dismiss_0s": {
+      "message": "Forkast $SPAN_START$aldri$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_dismiss_15s": {
+      "message": "Forkast $SPAN_START$etter 15 sekunder$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_dismiss_30s": {
+      "message": "Forkast $SPAN_START$etter 30 sekunder$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_dismiss_5s": {
+      "message": "Forkast $SPAN_START$etter 5 sekunder$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_bl": {
+      "message": "Vis $SPAN_START$nede til venstre$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_br": {
+      "message": "Vis $SPAN_START$nede til høyre$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_tl": {
+      "message": "Vis $SPAN_START$oppe til venstre$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_tr": {
+      "message": "Vis $SPAN_START$oppe til høyre$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_hide": {
+      "message": "Skjul felt"
+   },
+   "box_hide_expanded": {
+      "message": "Skjul lilla felt"
+   },
+   "box_looking": {
+      "message": "Søker"
+   },
+   "box_options_expanded": {
+      "message": "Alternativer"
+   },
+   "box_settings": {
+      "message": "Innstillinger"
+   },
+   "box_settings_expanded": {
+      "message": "Mine Ghostery-innstillinger"
+   },
+   "box_tracker": {
+      "message": "Sporingsverktøy"
+   },
+   "box_trackers": {
+      "message": "Sporingsverktøy"
+   },
+   "box_warning_compatibility": {
+      "message": "Avbrutt side-sporingsverktøy"
+   },
+   "box_warning_nonsecure": {
+      "message": "Ikke-sikre sporingsverktøy"
+   },
+   "box_warning_slow": {
+      "message": "Langsomme sporingsverktøy"
+   },
+   "browse_button_label": {
+      "message": "Bla gjennom..."
+   },
+   "browser_button_tooltip": {
+      "description": "Ghosterys nettleserknapp-verktøytips.",
+      "message": "Vis Ghosterys funn"
+   },
+   "button_cancel": {
+      "description": "Del av en bekreftelsesdialog. Når du klikker på dette, avbrytes handlingen.",
+      "message": "Avbryt"
+   },
+   "category_advertising": {
+      "description": "Ghostery organiserer tagger etter kategori. Dette er en av flere tag-kategorier.",
+      "message": "Annonsering"
+   },
+   "category_advertising_desc": {
+      "description": "Brukervendt beskrivelse for Reklametag-kategorien.",
+      "message": "Tilbyr annonsering eller annonseringsrelaterte tjenester, som f.eks. datainnsamling, atferdsanalyse eller retargeting."
+   },
+   "category_audio_video_player": {
+      "description": "Ghostery organiserer tagger etter kategori. Dette er en av flere tag-kategorier.",
+      "message": "Lyd/video-spiller"
+   },
+   "category_audio_video_player_desc": {
+      "description": "Brukervendt beskrivelse for tag-kategorien Lyd/Video-spiller.",
+      "message": "Gjør det mulig for nettsteder å publisere, distribuere og optimalisere video- og lydinnhold."
+   },
+   "category_comments": {
+      "description": "Ghostery organiserer tagger etter kategori. Dette er en av flere tag-kategorier.",
+      "message": "Kommentarer"
+   },
+   "category_comments_desc": {
+      "description": "Brukervendt beskrivelse for tag-kategorien Kommentarer.",
+      "message": "Aktiverer kommentarseksjoner for artikler og produktomtaler."
+   },
+   "category_customer_interaction": {
+      "description": "Ghostery organiserer tagger etter kategori. Dette er en av flere tag-kategorier.",
+      "message": "Kundeinteraksjon"
+   },
+   "category_customer_interaction_desc": {
+      "description": "Brukervendt beskrivelse for tag-kategorien Kundeinteraksjon.",
+      "message": "Omfatter chat, e-postmeldinger, kundestøtte og andre verktøy for samhandling."
+   },
+   "category_essential": {
+      "description": "Ghostery organiserer tagger etter kategori. Dette er en av flere tag-kategorier.",
+      "message": "Essensielt"
+   },
+   "category_essential_desc": {
+      "description": "Brukervendt beskrivelse for tag-kategorien Viktig.",
+      "message": "Omfatter tag-administrasjon, personvernerklæringer og teknologier som er viktige for funksjonaliteten til et nettsted."
+   },
+   "category_pornvertising": {
+      "description": "Ghostery organiserer tagger etter kategori. Dette er en av flere tag-kategorier.",
+      "message": "Reklame uegnet for barn"
+   },
+   "category_pornvertising_desc": {
+      "description": "Brukervendt beskrivelse for tag-kategorien Voksent innhold.",
+      "message": "Tilbyr annonseringsteknologi utviklet spesielt for nettsteder med innhold som er uegnet for barn."
+   },
+   "category_site_analytics": {
+      "description": "Ghostery organiserer tagger etter kategori. Dette er en av flere tag-kategorier.",
+      "message": "Nettstedsanalyse"
+   },
+   "category_site_analytics_desc": {
+      "description": "Brukervendt beskrivelse for tag-kategorien Nettsedsanalyse.",
+      "message": "Samler inn og analyserer data relatert til nettstedsbruk- og ytelse."
+   },
+   "category_social_media": {
+      "description": "Ghostery organiserer tagger etter kategori. Dette er en av flere tag-kategorier.",
+      "message": "Sosiale medier"
+   },
+   "category_social_media_desc": {
+      "description": "Brukervendt beskrivelse for tag-kategorien Sosiale medier.",
+      "message": "Integrerer funksjoner relatert til sosiale medier."
+   },
+   "category_uncategorized": {
+      "message": "Ukategorisert"
+   },
+   "category_uncategorized_desc": {
+      "message": "Disse sporingsverktøyene har ikke blitt kategorisert ennå."
+   },
+   "click2play_allow_always_tooltip": {
+      "description": "Verktøytips som vises over &quot;alltid tillat&quot; click2play-knappen.",
+      "message": "Tillat og last inn på nytt."
+   },
+   "click2play_allow_once_button_tooltip": {
+      "description": "Verktøytips som vises over click2play-erstatningen for &quot;sosiale&quot;-knapper.",
+      "message": "Ghostery blokkerte $APP_NAME$. Klikk her for å tillate at det lastes inn bare denne ene gangen.",
+      "placeholders": {
+         "app_name": {
+            "content": "$1",
+            "example": "Twitter-knapp"
+         }
+      }
+   },
+   "click2play_allow_once_tooltip": {
+      "description": "Verktøytips som vises over &quot;tillat en gang&quot; click2play-knappen.",
+      "message": "Tillatt en gang og last inn på nytt."
+   },
+   "click2play_blocked": {
+      "message": "Ghostery blokkerte $APP_NAME$.",
+      "placeholders": {
+         "app_name": {
+            "content": "$1",
+            "example": "SoundCloud"
+         }
+      }
+   },
+   "click2play_comment_form": {
+      "message": "Ghostery blokkerte kommentarer drevet av $NAME$.",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "click2play_review_form": {
+      "message": "Ghostery blokkerte anmeldelser drevet av $NAME$.",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "click2play_survey_form": {
+      "message": "Ghostery blokkerte spørreundersøkelse drevet av $NAME$.",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "click2play_video_form": {
+      "message": "Ghostery blokkerte $NAME$ sin videospiller.",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "consent_privacy": {
+      "message": "Samtykke påkrevd."
+   },
+   "copyright": {
+      "description": "Melding om opphavsrett, vises i bunntekst på side.",
+      "message": "$C$ $YEAR$ $GHOSTERY$, en del av $COMPANY_ADDRESS$",
+      "placeholders": {
+         "c": {
+            "content": "©"
+         },
+         "company_address": {
+            "content": "$1",
+            "example": "GHOSTERY, Inc., Such-and-such Street, Such-and-such Floor, New York, NY, Zip Code"
+         },
+         "ghostery": {
+            "content": "\u003Ca href='https://www.ghostery.com' target='_blank'>Ghostery\u003C/a>"
+         },
+         "year": {
+            "content": "2015"
+         }
+      }
+   },
+   "create_password_field_label": {
+      "message": "Passord:"
+   },
+   "dismiss": {
+      "description": "Tekst for en knapp eller kobling for å lukke en varsling.",
+      "message": "Forkast"
+   },
+   "email_address_in_use": {
+      "message": "Den e-postadressen er allerede i bruk. Velg en annen."
+   },
+   "email_confirm_field_label": {
+      "message": "Bekreft e-postadresse:"
+   },
+   "email_field_label": {
+      "message": "E-postadresse:"
+   },
+   "error_email_forgot": {
+      "message": "Hmm, jeg kan ikke finne den e-postadressen. Kanskje du kan prøve en annen?"
+   },
+   "file_was_not_selected": {
+      "message": "Fil ble ikke valgt"
+   },
+   "first_name_field_label": {
+      "message": "Fornavn (valgfritt):"
+   },
+   "forgot_password_message": {
+      "message": "Har du glemt passordet? Det kan skje den beste. Vi sender instruksjoner om hvordan du tilbakestiller passordet."
+   },
+   "invalid_email_confirmation": {
+      "message": "E-postadressene dine stemmer ikke overens."
+   },
+   "invalid_email_create": {
+      "message": "Angi en gyldig e-postadresse."
+   },
+   "invalid_email_forgot": {
+      "message": "Beklager, du må oppgi en ekte e-postadresse."
+   },
+   "invalid_email_login": {
+      "message": "Beklager, du må oppgi en ekte e-postadresse."
+   },
+   "last_name_field_label": {
+      "message": "Etternavn (valgfritt):"
+   },
+   "library_never_updated": {
+      "description": "Tekst som vises hvis det ikke har forekommet noen oppdateringer av tag-bibliotek ennå.",
+      "message": "Automatiske oppdateringer anbefales sterkt."
+   },
+   "library_update_already_updated": {
+      "description": "Tekst som vises hvis tag-biblioteket ikke trengte å oppdateres fra eksterne servere siden det allerede er den nyeste utgaven.",
+      "message": "Biblioteket er allerede oppdatert."
+   },
+   "library_update_failed": {
+      "description": "Oppdatering av tag-bibliotek mislyktes.",
+      "message": "Beklager, oppdateringen mislyktes. Prøv på nytt senere."
+   },
+   "library_update_in_progress": {
+      "description": "Viser at en oppdatering pågår (kan ha en grafikk som spinner ved siden av seg).",
+      "message": "Oppdaterer ..."
+   },
+   "library_update_now_link": {
+      "message": "Oppdater nå."
+   },
+   "library_update_successful": {
+      "description": "Oppdatering av tag-bibliotk fullført.",
+      "message": "Vellykket!"
+   },
+   "library_updated_on": {
+      "description": "Tekst som vises når en oppdatering av tag-bibliotek har skjedd minst én gang.",
+      "message": "Sporingsverktøy-biblioteket ble sist synkronisert $DATE$",
+      "placeholders": {
+         "date": {
+            "content": "$1",
+            "example": "Ons. 12. okt. 2011"
+         }
+      }
+   },
+   "none": {
+      "description": "Det pleide å stå at dette elementet ikke tilhører noen av gruppene, som i &quot;Grupper: Ingen&quot; (i motsetning til &quot;Grupper: Gruppe A, Gruppe B, Gruppe C&quot;).",
+      "message": "Ingen"
+   },
+   "not_http_page": {
+      "message": "Sørg for at den gjeldende fanen har http- eller https-side åpnet"
+   },
+   "notification_reminder1": {
+      "description": "Første linje i innføringspåminnelsen/varslingen. Setningen fortsetter på neste linje.",
+      "message": "Sjekk ut gjennomgangen om hvordan du konfigurerer Ghostery for et mer grundig innblikk i noen av Ghosterys nøkkelfunksjoner."
+   },
+   "notification_reminder2": {
+      "description": "Andre linje for innføringspåminnelsen/varsling. Fortsetter setningen fra forrige linje.",
+      "message": "for et mer grundig innblikk i noen av Ghosterys nøkkelfunksjoner."
+   },
+   "notification_reminder_link": {
+      "description": "Kobling til veiviseren for innføring/konfigurering, del av innføringspåminnelsen/-varslingen.",
+      "message": "Konfigurer Ghostery"
+   },
+   "notification_update": {
+      "message": "Vi har oppdaget noen nye sporingsverktøy og lagt dem til i Ghostery-databasen."
+   },
+   "notification_update_link": {
+      "message": "Sjekk hva som er nytt"
+   },
+   "notification_upgrade": {
+      "message": "Vårt dedikerte og uvanlig tiltrekkende team har jobbet hardt med å slippe en ny versjon av Ghostery på markedet."
+   },
+   "notification_upgrade_link": {
+      "message": "Sjekk ut de kule, nye funksjonene og feilfiksingene i denne utgivelsen."
+   },
+   "panel_blocking_verify_account_message": {
+      "message": "Sjekk e-posten for å bekrefte kontoen din, slik at du kan synkronisere innstillingene og få tilgang til kule Ghostery-funksjoner."
+   },
+   "panel_blocking_verify_account_title": {
+      "message": "Ubekreftet konto"
+   },
+   "panel_create_account": {
+      "message": "Opprett konto"
+   },
+   "panel_email_verification_sent": {
+      "message": "$BOLD_HTML_STARTS$ Vellykket! $BOLD_HTML_END$ En konto-e-postbekreftelse er sendt til $EMAIL$",
+      "placeholders": {
+         "bold_html_end": {
+            "content": "\u003C/strong>"
+         },
+         "bold_html_starts": {
+            "content": "\u003Cstrong>"
+         },
+         "email": {
+            "content": "$1",
+            "example": "info@ghostery.com"
+         }
+      }
+   },
+   "panel_forgot_password": {
+      "message": "Glemt passordet?"
+   },
+   "panel_header_sign_in": {
+      "message": "Logg på"
+   },
+   "panel_header_verify_account": {
+      "message": "Bekreft konto"
+   },
+   "panel_help_contact_header": {
+      "message": "Hvordan kontakte oss"
+   },
+   "panel_help_faq": {
+      "message": "Vanlige spørsmål"
+   },
+   "panel_help_feedback": {
+      "message": "Ta spørreundersøkelsen vår"
+   },
+   "panel_help_license": {
+      "message": "Lisensavtale"
+   },
+   "panel_help_panel_header": {
+      "message": "Hjelp for Ghostery-nettlesereutvidelse"
+   },
+   "panel_help_privacy_statement": {
+      "message": "Personvernerklæring"
+   },
+   "panel_help_questions_header": {
+      "message": "Spørsmål og kommentarer"
+   },
+   "panel_help_support": {
+      "message": "Støtte"
+   },
+   "panel_help_version_header": {
+      "message": "Ghostery for $BROWSER$-versjon $VERSION$",
+      "placeholders": {
+         "browser": {
+            "content": "$1",
+            "example": "Firefox"
+         },
+         "version": {
+            "content": "$2",
+            "example": "6.4"
+         }
+      }
+   },
+   "panel_menu_advanced_settings": {
+      "message": "Avansert blokkering"
+   },
+   "panel_menu_help": {
+      "message": "Hjelp"
+   },
+   "panel_menu_report_broken_site": {
+      "message": "Rapporter en ødelagt side"
+   },
+   "panel_menu_settings": {
+      "message": "Innstillinger"
+   },
+   "panel_menu_signin": {
+      "message": "Logg på"
+   },
+   "panel_menu_signout": {
+      "message": "Logg av"
+   },
+   "panel_menu_submit_tracker": {
+      "message": "Send et nytt sporingsverktøy"
+   },
+   "panel_modal_account_bullet_1": {
+      "message": "Synkroniser innstillinger på tvers av og mellom nettlesere og enheter"
+   },
+   "panel_modal_account_bullet_2": {
+      "message": "Varsler for langsomme og usikre sporingsverktøy"
+   },
+   "panel_modal_account_bullet_3": {
+      "message": "Sporingsverktøy-URL-adresser"
+   },
+   "panel_modal_account_button_create_account": {
+      "message": "Opprett konto"
+   },
+   "panel_modal_account_button_maybe_later": {
+      "message": "Kanskje senere. La oss starte."
+   },
+   "panel_modal_account_button_sign_in": {
+      "message": "Har du en konto? Logg på"
+   },
+   "panel_modal_account_subtitle_1": {
+      "message": "Her er noen flotte funksjoner du får når du oppretter en konto. Den er ikke tilknyttet noen sporingsverktøydata du kan ha valgt å dele med oss:"
+   },
+   "panel_modal_account_subtitle_2": {
+      "message": "Alt du trenger er en e-postadresse og et passord."
+   },
+   "panel_modal_account_title": {
+      "message": "Opprett en konto"
+   },
+   "panel_modal_ghostrank_opt_in": {
+      "message": "Ja, gjerne."
+   },
+   "panel_modal_ghostrank_opt_out": {
+      "message": "Nei takk."
+   },
+   "panel_modal_ghostrank_p1": {
+      "message": "Ghostery er gratis fordi noen av brukerne våre anonymt og frivillig velger å dele data med oss om nettstedene og sporingsverktøyene nettleseren støter på."
+   },
+   "panel_modal_ghostrank_p2": {
+      "message": "Ghostery bruker disse dataene til å forbedre produktene våre for å hjelpe med å skape et renere, raskere og tryggere nett. $LINK_START$Lær mer$LINK_END$",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Ca class='modal-learn-more'>"
+         }
+      }
+   },
+   "panel_modal_ghostrank_p3": {
+      "message": "Ønsker du å dele sporingsverktøy-data med Ghostery?"
+   },
+   "panel_modal_ghostrank_title": {
+      "message": "Velkommen til Ghostery!"
+   },
+   "panel_modal_ghostrank_vb_p1": {
+      "message": "Ghostery er gratis fordi brukere som deg deler data med oss anonymt om nettstedene og sporingsverktøyene nettleserene deres støter på. Ghostery bruker disse dataene til å forbedre produktene våre for å hjelpe med å skape et renere, raskere og tryggere nett. $LINK_START$Lær mer$LINK_END$",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Cbr>\u003Ca class='modal-learn-more'>"
+         }
+      }
+   },
+   "panel_modal_ghostrank_vb_p1_header": {
+      "message": "Anonyme sporingsverktøydata"
+   },
+   "panel_modal_ghostrank_vb_p2": {
+      "message": "Brukerne støtter også Ghostery ved å anonymt dele data med oss om hvordan de bruker Ghostery, slik at vi får bedre innsikt i hvordan produktet brukes og hvilke funksjoner brukerne liker best. $LINK_START$Lær mer$LINK_END$",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Cbr>\u003Ca class='modal-metrics-learn-more'>"
+         }
+      }
+   },
+   "panel_modal_ghostrank_vb_p2_header": {
+      "message": "Bruksanalyser"
+   },
+   "panel_modal_ghostrank_vb_p3": {
+      "message": "Kunne du tenke deg å støtte Ghostery ved å dele sporingsverktøydata og bruksanalyser med oss anonymt?"
+   },
+   "panel_modal_ghostrank_vb_title": {
+      "message": "Støtte til Ghostery"
+   },
+   "panel_modal_ghostrank_vc_header": {
+      "message": "Hjelp oss å forbedre Ghostery"
+   },
+   "panel_modal_ghostrank_vc_p1": {
+      "message": "Vi jobber hardt hver dag for å gjøre Ghostery enda bedre for brukere som deg."
+   },
+   "panel_modal_ghostrank_vc_p2": {
+      "message": "Vi gjør dette ved å innhente anonyme bruksanalyser og slik få bedre innsikt i hvordan brukerne våre samhandler med Ghostery. På denne måten kan vi finne ut hvilke funksjoner de liker og ikke liker. Hvis du for eksempel klikker på pause, innhenter vi et ping som underretter oss om at du har brukt den funksjonen. Disse analysene er fullstendig anonyme, og er ikke knyttet til kontoen din eller personlig informasjon om deg."
+   },
+   "panel_modal_ghostrank_vc_p3": {
+      "message": "Vil du dele bruksanalysedata med Ghostery?"
+   },
+   "panel_modal_learn_more_bullet_1": {
+      "message": "Sporingsverktøy som er identifisert av Ghostery-nettleserutvidelsen"
+   },
+   "panel_modal_learn_more_bullet_10": {
+      "message": "Tidsangivelse for forespørselssiden"
+   },
+   "panel_modal_learn_more_bullet_11": {
+      "message": "Sporingsverktøy-vekt (megabyte med data som kan tilskrives hvert sporingsverktøy)"
+   },
+   "panel_modal_learn_more_bullet_12": {
+      "message": "Visning av sporingsverktøy på en besøkt nettside"
+   },
+   "panel_modal_learn_more_bullet_2": {
+      "message": "Blokkeringsstatusen til sporingsverktøyene"
+   },
+   "panel_modal_learn_more_bullet_3": {
+      "message": "Domener som er identifisert til å ha sporingsverktøy"
+   },
+   "panel_modal_learn_more_bullet_4": {
+      "message": "Tiden det tar å laste inn siden og sporingsverktøyene"
+   },
+   "panel_modal_learn_more_bullet_5": {
+      "message": "Sporingsverktøyenes plassering på siden"
+   },
+   "panel_modal_learn_more_bullet_6": {
+      "message": "Nettleseren Ghostery Browser Extension er installert"
+   },
+   "panel_modal_learn_more_bullet_7": {
+      "message": "Nettleserspråk"
+   },
+   "panel_modal_learn_more_bullet_8": {
+      "message": "Standard logginformasjon for nettserver (dvs. nettforespørsel)"
+   },
+   "panel_modal_learn_more_bullet_9": {
+      "message": "Data sendt som svar på den forespørselen"
+   },
+   "panel_modal_learn_more_end": {
+      "message": "Gå til $LINK_START$Personvernerklæring$LINK_END$ for å lære mer om informasjonspraksisen vår.",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Ca class='modal-privacy-statement'>"
+         }
+      }
+   },
+   "panel_modal_learn_more_list_title": {
+      "message": "Hvis du velger å dele dataene dine, samler Ghostery inn følgende informasjon:"
+   },
+   "panel_modal_learn_more_paragraph": {
+      "message": "Vi gjør dette ved å innhente anonyme bruksanalyser og slik få bedre innsikt i hvordan brukerne våre samhandler med Ghostery. På denne måten kan vi finne ut hvilke funksjoner de liker og ikke liker. Hvis du for eksempel klikker på pause, innhenter vi et ping som underretter oss om at du har brukt den funksjonen. Disse analysene er fullstendig anonyme, og er ikke knyttet til kontoen din eller personlig informasjon om deg."
+   },
+   "panel_modal_learn_more_subtitle": {
+      "message": "Hvilke data samler Ghostery inn?"
+   },
+   "panel_modal_metrics_learn_more_subtitle": {
+      "message": "Vi jobber hardt hver dag for å gjøre Ghostery enda bedre for brukere som deg."
+   },
+   "panel_modal_upgrade_account_blurb": {
+      "message": "$CREATE_LINK_START$Opprett en konto$CREATE_LINK_END$ eller $SIGNIN_LINK_START$Logg på$SIGNIN_LINK_END$ for å få tilgang til avanserte funksjoner.",
+      "placeholders": {
+         "create_link_end": {
+            "content": "\u003C/a>"
+         },
+         "create_link_start": {
+            "content": "\u003Ca class='update-dismiss account-dismiss create-account'>"
+         },
+         "signin_link_end": {
+            "content": "\u003C/a>"
+         },
+         "signin_link_start": {
+            "content": "\u003Ca class='update-dismiss account-dismiss sign-in'>"
+         }
+      }
+   },
+   "panel_modal_upgrade_bullet_1": {
+      "message": "Evne til å skape sterkere passord"
+   },
+   "panel_modal_upgrade_bullet_2": {
+      "message": "La til et alternativ for å skjule telleindikatoren for sporingsverktøyet på Ghostery-ikonet"
+   },
+   "panel_modal_upgrade_bullet_3": {
+      "message": "Mindre forstyrrende lilla felt"
+   },
+   "panel_modal_upgrade_bullet_4": {
+      "message": "Forbedret ytelse"
+   },
+   "panel_modal_upgrade_continue": {
+      "message": "Fortsett"
+   },
+   "panel_modal_upgrade_subtitle_1": {
+      "message": "Vi er glade for følgende nye funksjoner:"
+   },
+   "panel_modal_upgrade_title": {
+      "message": "Ghostery er oppdatert!"
+   },
+   "panel_needs_reload_paused": {
+      "message": "Ghostery stanset midlertidig. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_restrict": {
+      "message": "Sporingsverktøy på dette nettstedet er blokkert. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_resumed": {
+      "message": "Ghostery startet igjen. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_qty_blocked": {
+      "message": "sporingsverktøy er blokkert. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_qty_blocked_plural": {
+      "message": "sporingsverktøy er blokkert. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_allowed": {
+      "message": "sporingsverktøy på dette nettstedet er tillatt. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_allowed_plural": {
+      "message": "sporingsverktøy på dette nettstedet er tillatt. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_blocked": {
+      "message": "sporingsverktøy på dette nettstedet er blokkert. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_blocked_plural": {
+      "message": "sporingsverktøy på dette nettstedet er blokkert. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_unblocked": {
+      "message": "Blokkering av sporingsverktøy på dette nettstedet er opphevet. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_untrusted": {
+      "message": "Sporingsverktøy på dette nettstedet er ikke klarert. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_unblocked": {
+      "message": "Blokkering av sporingsverktøy er opphevet. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_trackers_block_all": {
+      "message": "Sporingsverktøy som er ført opp her, er blokkert. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_trackers_unblock_all": {
+      "message": "Blokkering av sporingsverktøy som er ført opp her, er opphevet. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_trust": {
+      "message": "Sporingsverktøy på dette nettstedet er tillatt. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_undo_restrict": {
+      "message": "Angre begrensning av nettstedet. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_undo_trust": {
+      "message": "Angre klarering av nettstedet. $SPAN_START$Klikk for å laste inn på nytt og se endringer.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_sign_in_to_see": {
+      "message": "$SPAN_START$Logg på$SPAN_END$ for å se langsomme og/eller usikre sporingsverktøy.",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"sign-in-link alerts-sign-in\">"
+         }
+      }
+   },
+   "panel_sign_in_trackermap": {
+      "message": "$SPAN_START$Logg på$SPAN_END$ for å vise Sporingsverktøykart.",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"sign-in-link tracker-map-sign-in\">"
+         }
+      }
+   },
+   "panel_signin_success": {
+      "message": "Du er nå pålogget som"
+   },
+   "panel_signin_success_title": {
+      "message": "Gratulerer! Ghostery-kontoen din er klar."
+   },
+   "panel_title_create_account": {
+      "message": "Opprett konto"
+   },
+   "panel_tracker_block_tooltip": {
+      "message": "Blokker på alle nettsteder"
+   },
+   "panel_tracker_breaking_page": {
+      "message": "$SPAN_START$$COUNT$ blokkert $TRACKERS$$SPAN_END$ avbryter siden.",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "4"
+         },
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"filter-link compatibility\">"
+         },
+         "trackers": {
+            "content": "$2",
+            "example": "sporingsverktøy"
+         }
+      }
+   },
+   "panel_tracker_found_sources_title": {
+      "message": "Oppdagede sporingsverktøy-URL-adresser:"
+   },
+   "panel_tracker_restrict_tooltip": {
+      "message": "Begrens på dette nettstedet"
+   },
+   "panel_tracker_signin_teaser": {
+      "description": "Melding som vises i utvidet sporingsverktøy på den blokkerende siden.",
+      "message": "$SPAN_START$Logg på$SPAN_END$ for å vise oppdagede sporingsverktøy-URL-adresser",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "panel_tracker_slow_non_secure": {
+      "message": "$SPAN_START$$COUNT$ langsom og/eller usikker $TRACKERS$$SPAN_END$ på denne siden.",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "4"
+         },
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"filter-link slow-insecure\">"
+         },
+         "trackers": {
+            "content": "$2",
+            "example": "sporingsverktøy"
+         }
+      }
+   },
+   "panel_tracker_trust_tooltip": {
+      "message": "Klarer på dette nettstedet"
+   },
+   "panel_tracker_warning_compatibility_tooltip": {
+      "message": "Blokkert sporingsverktøy avbryter siden"
+   },
+   "panel_tracker_warning_nonsecure_tooltip": {
+      "message": "Sporingsverktøyet er ikke sikkert"
+   },
+   "panel_tracker_warning_slow_nonsecure_tooltip": {
+      "message": "Sporingsverktøyet er langsomt og ikke sikkert"
+   },
+   "panel_tracker_warning_slow_tooltip": {
+      "message": "Sporingsverktøyet er langsomt"
+   },
+   "panel_verify_to_see": {
+      "message": "$SPAN_START$Verifiser kontoen$SPAN_END$ for å se langsomme og/eller usikre sporingsverktøy. Sjekk e-posten din.",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"verify-account-link\">"
+         }
+      }
+   },
+   "panel_verify_trackermap": {
+      "message": "$SPAN_START$Verifiser konto$SPAN_END$ for å vise Sporingsverktøykart. Sjekk e-posten din.",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"verify-account-link\">"
+         }
+      }
+   },
+   "panel_view_trackers": {
+      "message": "Vis sporingsverktøy"
+   },
+   "password_characters_requirements": {
+      "message": "Kun disse spesialtegnene er tillatt: !@#$%^&amp;*=+()&lt;>{}[];:,./?"
+   },
+   "password_field_label": {
+      "message": "Passord"
+   },
+   "password_field_label_required": {
+      "message": "Passord påkrevd."
+   },
+   "password_requirements": {
+      "message": "Bruk mellom 8 og 50 tegn."
+   },
+   "refresh_and_try_again": {
+      "message": "Oppdater siden og prøv på nytt"
+   },
+   "select_file_for_import": {
+      "message": "Velg .ghost-fil for importering"
+   },
+   "send_button_label": {
+      "message": "Send"
+   },
+   "server_error_message": {
+      "message": "Det virker som om vi har et teknisk problem. Prøv på nytt senere."
+   },
+   "settings_account": {
+      "message": "Konto"
+   },
+   "settings_account_email": {
+      "message": "E-postadresse"
+   },
+   "settings_account_name": {
+      "message": "Navn"
+   },
+   "settings_allow_trackers": {
+      "message": "Tillat sporingsverktøy som er opprettet av nettstedseiere"
+   },
+   "settings_allow_trackers_tooltip": {
+      "message": "Blokkering av et Facebook-sporingsverktøy kan for eksempel avbryte nettstedet."
+   },
+   "settings_announcements": {
+      "message": "Kommer med kunngjøringer"
+   },
+   "settings_auto_update": {
+      "message": "Aktiver automatiske oppdateringer fra Ghosterys sporingsverktøybibliotek"
+   },
+   "settings_block_trackers": {
+      "message": "Blokker som standard nye sporingsverktøy som blir lagt til Ghostery"
+   },
+   "settings_blocking": {
+      "message": "Blokkering"
+   },
+   "settings_bottom_left_corner": {
+      "message": "Nedre venstre hjørne"
+   },
+   "settings_bottom_right_corner": {
+      "message": "Nedre høyre hjørne"
+   },
+   "settings_defect_fixes": {
+      "message": "Slipper mindre feilretting"
+   },
+   "settings_dismiss_after": {
+      "message": "Forkast etter"
+   },
+   "settings_display_in": {
+      "message": "Vis i"
+   },
+   "settings_edit_account": {
+      "message": "Rediger konto"
+   },
+   "settings_export_error": {
+      "message": "Innstillingene dine er ikke eksportert. Prøv på nytt."
+   },
+   "settings_export_header": {
+      "message": "Eksporter innstillinger"
+   },
+   "settings_export_success": {
+      "message": "Innstillingene dine er eksportert til nedlastingsmappen din på"
+   },
+   "settings_export_text": {
+      "message": "Lagre en kopi av Ghostery-innstillingene og overfør til en annen datamaskin."
+   },
+   "settings_hide_alert_trusted": {
+      "message": "Skjul det lilla feltet på klarerte nettsteder"
+   },
+   "settings_highlight_trackers": {
+      "message": "Uthev interaktive sporingsverktøy"
+   },
+   "settings_highlight_trackers_tooltip": {
+      "message": "Noen ganger vil funksjoner som deling på sosiale medier, kommentarer, eller videospillere ikke fungere når et visst sporingsverktøy er blokkert. Hvis du ønsker å aktivere en av disse blokkerte funksjonene, klikker du på følgende ikon på siden:"
+   },
+   "settings_import_file_error": {
+      "message": "Det er feil filtype. Velg en .ghost-fil og prøv på nytt."
+   },
+   "settings_import_header": {
+      "message": "Importer innstillinger"
+   },
+   "settings_import_success": {
+      "message": "Innstillingene dine er importert til"
+   },
+   "settings_import_text": {
+      "message": "Velg en .ghost-fil som sikkerhetskopi."
+   },
+   "settings_import_warning": {
+      "message": "ADVARSEL: Dette vil overskrive alle de nåværende Ghostery-innstillingene dine."
+   },
+   "settings_individual_trackers": {
+      "message": "Klarer og begrens individuelle sporingsverktøy"
+   },
+   "settings_individual_trackers_tooltip": {
+      "message": "Velg hvilke spesifikke sporingsverktøy du vil blokkere eller tillate på et nettsted for egendefinert kontroll"
+   },
+   "settings_last_update": {
+      "message": "Sist synkronisert den"
+   },
+   "settings_never": {
+      "message": "Aldri"
+   },
+   "settings_new_features": {
+      "message": "Slipper nye funksjoner"
+   },
+   "settings_new_trackers": {
+      "message": "Legger til nye sporingsverktøy til sporingsverktøy-biblioteket"
+   },
+   "settings_notifications": {
+      "message": "Varsler"
+   },
+   "settings_notify_me": {
+      "message": "Varsle meg når Ghostery:"
+   },
+   "settings_notify_me_tooltip": {
+      "message": "Tillat at Ghostery viser meldinger i nettleseren min som er relatert til nye produktfunksjoner, oppdateringer og tilbakemeldinger fra kunder."
+   },
+   "settings_purple_box": {
+      "message": "Lilla felt"
+   },
+   "settings_replace_social": {
+      "message": "Erstatt knapper for blokkerte sosiale medier med et Ghostery-ikon"
+   },
+   "settings_required_for_patterns": {
+      "message": "påkrevd for å aktivere funksjonen"
+   },
+   "settings_required_trackers": {
+      "message": "Vis meg når jeg må tillate at et sporingsverktøy bruker et nettsteds funksjoner"
+   },
+   "settings_seconds": {
+      "message": "Sekunder"
+   },
+   "settings_share_data": {
+      "message": "Dele side- og sporingsverktøydata"
+   },
+   "settings_share_data_tooltip": {
+      "message": "Ghostery er gratis fordi noen av brukerne våre anonymt og frivillig velger å dele data med oss om nettstedene og sporingsverktøyene nettleseren støter på."
+   },
+   "settings_share_usage": {
+      "message": "Dele analyser av bruk av utvidelser"
+   },
+   "settings_share_usage_tooltip": {
+      "message": "Vi innhenter bruksanalyser for å få bedre forståelse for hvilke funksjoner brukerne liker. Hvis du for eksempel klikker på pause, innhenter vi et ping som underretter oss om at du har brukt den funksjonen."
+   },
+   "settings_show_patterns": {
+      "message": "Vis sporingsverktøy-URL-adresser"
+   },
+   "settings_show_patterns_tooltip": {
+      "message": "Du finner sporingsverktøy-URL-adresser under sporingsverktøy-beskrivelsen etter at du klikker på et sporingsverktøy."
+   },
+   "settings_show_purple_box": {
+      "message": "Vis det lilla feltet i hjørnet av nettleseren min"
+   },
+   "settings_show_purple_box_tooltip": {
+      "message": "Det lilla feltet er en sanntidsliste over sporingsverktøy som vises i hjørnet av nettleseren. Denne funksjonen vil hjelpe deg med å se nye sporingsverktøy etter hvert som de blir lagt til en nettside."
+   },
+   "settings_show_reload_banner": {
+      "message": "Vis bannervarsler for ny innlasting av side øverst i utvidelsen"
+   },
+   "settings_show_tracker_count_badge": {
+      "message": "Vis telleindikatoren for sporingsverktøy på Ghostery-ikonet i verktøylinjen til nettleseren"
+   },
+   "settings_show_trackers_banner": {
+      "message": "Vis bannervarsler for sporingsverktøy øverst i utvidelsen"
+   },
+   "settings_sign_create_text": {
+      "message": "Innstillinger fra kontoen din vil bli synkronisert til denne enheten. Opprett en konto for å synkronisere Ghostery-innstillingene på en enklere måte på alle enheter og plattformer."
+   },
+   "settings_sign_in": {
+      "message": "Logg på"
+   },
+   "settings_signin_create_header": {
+      "message": "Logg på / opprett konto"
+   },
+   "settings_support_ghostery": {
+      "message": "Støtte til Ghostery"
+   },
+   "settings_support_ghostery_by": {
+      "message": "Støtt Ghostery ved å"
+   },
+   "settings_top_left_corner": {
+      "message": "Øvre venstre hjørne"
+   },
+   "settings_top_right_corner": {
+      "message": "Øvre høyre hjørne"
+   },
+   "settings_trackers": {
+      "message": "Sporingsverktøy"
+   },
+   "settings_update_failed": {
+      "message": "Oppdateringen mislyktes. Prøv på nytt senere"
+   },
+   "settings_update_now": {
+      "message": "Oppdater nå"
+   },
+   "settings_update_success": {
+      "message": "Vellykket!"
+   },
+   "settings_update_up_to_date": {
+      "message": "Fremdeles oppdatert"
+   },
+   "short_description": {
+      "description": "En kort beskrivelse av denne utvidelsen (Ghostery).",
+      "message": "Beskytt personvernet ditt. Se hvem som sporer nettlesingen din med Ghostery."
+   },
+   "summary_alert": {
+      "description": "som i &quot;1 VARSEL&quot;",
+      "message": "Varsel"
+   },
+   "summary_alerts": {
+      "description": "som i &quot;5 VARSLER&quot;",
+      "message": "Varsler"
+   },
+   "summary_blocked": {
+      "description": "som i &quot;5 (sporingsverktøy) BLOKKERT&quot;",
+      "message": "Blokkert"
+   },
+   "summary_category_tracker": {
+      "message": "Sporingsverktøy"
+   },
+   "summary_category_trackers": {
+      "message": "Sporingsverktøy"
+   },
+   "summary_description_not_scanned_1": {
+      "message": "Ghostery skanner kun &quot;http&quot;- og &quot;https&quot;-sider."
+   },
+   "summary_description_not_scanned_2": {
+      "message": "Naviger til en annen side, så lover jeg at vi leverer varene."
+   },
+   "summary_found_on": {
+      "description": "som i &quot;5 sporingsverktøy FUNNET PÅ http://google.com&quot;",
+      "message": "funnet på"
+   },
+   "summary_map_these_trackers": {
+      "message": "Tilordne disse sporingsverktøyene"
+   },
+   "summary_page_not_scanned": {
+      "message": "Siden er ikke skannet"
+   },
+   "summary_pause_ghostery": {
+      "message": "Stans"
+   },
+   "summary_restrict_site": {
+      "message": "Begrens"
+   },
+   "summary_resume_ghostery": {
+      "message": "Gjenoppta"
+   },
+   "summary_trust_site": {
+      "message": "Klarer"
+   },
+   "summary_undo": {
+      "message": "Angre"
+   },
+   "tracker_description_getting": {
+      "message": "Henter sporingsverktøy-beskrivelse ..."
+   },
+   "tracker_description_learn_more": {
+      "message": "Fortsett til fullstendig sporingsverktøy-profil"
+   },
+   "tracker_description_none_found": {
+      "message": "Fant ingen sporingsverktøy-beskrivelse."
+   },
+   "tracker_plural": {
+      "message": "sporingsverktøy"
+   },
+   "tracker_signular": {
+      "message": "sporingsverktøy"
+   },
+   "unblocked": {
+      "description": "Velg dette for å kun vise ikke-blokkerte (umerkede) tagger i tagleseren. Skal leses som &quot;Vis ikke blokkerte&quot;.",
+      "message": "ublokkert"
+   },
+   "white_black_list_error_invalid_url": {
+      "message": "Oppgi en gyldig URL-adresse."
+   },
+   "whitelist_error_blacklist_url": {
+      "message": "Dette nettstedet har blitt fjernet fra Begrensede nettsteder-listen og lagt til Klarerte nettsteder-listen din."
+   },
+   "whitelist_error_duplicate_url": {
+      "description": "Alternativer-side-nettsted som hvitelister feilmeldinger når nettstedet hvitelister en URL-adresse som allerede befinner seg på hvitelisten.",
+      "message": "Dette nettstedet er allerede hvitelistet."
+   }
+}

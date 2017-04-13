@@ -1,0 +1,1442 @@
+{
+   "account_creation_privacy_statement": {
+      "message": "Ghostery&#39;nin $LINK_PS_START$Gizlilik Bildirimi$LINK_PS_END$&#39;nde bulunan veri uygulamalarını ve $LINK_UA_START$Lisans Anlaşması$LINK_UA_END$&#39;nda bulunan koşulları kabul ediyorum.",
+      "placeholders": {
+         "link_ps_end": {
+            "content": "\u003C/a>"
+         },
+         "link_ps_start": {
+            "content": "\u003Ca target=\"_blank\" href=\"https://www.ghostery.com/about-us/privacy-statements/ghostery-browser-extension/ghostery-browser-extension-privacy-statement/\">"
+         },
+         "link_ua_end": {
+            "content": "\u003C/a>"
+         },
+         "link_ua_start": {
+            "content": "\u003Ca target=\"_blank\" href=\"https://www.ghostery.com/about-us/privacy-statements/ghostery-browser-extension/ghostery-browser-extension-end-user-license-agreem/\">"
+         }
+      }
+   },
+   "account_signin_privacy_statement": {
+      "message": "Hesabınız gelişmiş özelliklere erişim olanağı sağlar ve bizimle paylaşmayı tercih etmiş olabileceğiniz izleyici verileriyle bağlantılı değildir. Hesap bilgilerini nasıl kullandığımızla ilgili özel bilgiler için lütfen $LINK_FAQ_START$SSS$LINK_FAQ_END$ sayfamıza bakın.",
+      "placeholders": {
+         "link_faq_end": {
+            "content": "\u003C/a>"
+         },
+         "link_faq_start": {
+            "content": "\u003Ca target=\"_blank\" href=\"https://www.ghostery.com/support/faq/ghostery-add-on/\">"
+         }
+      }
+   },
+   "all": {
+      "description": "Etiket tarayıcısının &#39;türe göre filtrele&#39; açılır menüsündeki varsayılan ayar. Herhangi bir şeyi filtrelemez. &#39;Tümünü göster&#39; olarak okunmalıdır.",
+      "message": "tümü"
+   },
+   "banner_check_your_email_title": {
+      "message": "Parolanızı sıfırlamak için lütfen birazdan e-postanızı kontrol edin."
+   },
+   "banner_no_such_account_message": {
+      "message": "Bu e-posta ve parola kombinasyonunu bulamıyoruz Bir daha deneyin."
+   },
+   "blacklist_error_duplicate_url": {
+      "message": "Bu site zaten kısıtlanmış."
+   },
+   "blacklist_error_whitelist_url": {
+      "message": "Bu site, Güvenilir Siteler listenizden kaldırılmış ve Kısıtlanmış Siteler listenize eklenmiş"
+   },
+   "blocked": {
+      "description": "Etiket tarayıcısında sadece engellenen (işaretlenen) etiketleri göstermek için bunu seçin. &#39;Engellenenleri göster&#39; olarak okunmalıdır.",
+      "message": "engellendi"
+   },
+   "blocked_redirect_action_always_title": {
+      "description": "Engellenen yeniden yönlendirme sayfasındaki &#39;Her zaman izin ver ve yeniden yükle&#39; düğmesi başlığı.",
+      "message": "Her zaman izin ver ve yeniden yükle."
+   },
+   "blocked_redirect_action_through_once_title": {
+      "description": "Engellenen yeniden yönlendirme sayfasındaki &#39;Bir kereliğine izin ver&#39; düğmesi başlığı.",
+      "message": "Gidilecek yere ulaşana kadar etiketlere izin ver."
+   },
+   "blocked_redirect_page_title": {
+      "description": "Bir yeniden yönlendirme girişimi engellendiğinde görünen blocked_redirect.html sayfa başlığı.",
+      "message": "Ghostery Bir Yeniden Yönlendirme Girişimini Engelledi."
+   },
+   "blocked_redirect_prevent": {
+      "description": "Bir yeniden yönlendirme girişimi engellendiğinde blocked_redirect.html üzerinde görünen metin. &quot;Redirect-prevent&quot; div içinde görünmelidir.",
+      "message": "Ghostery, $A_START$$APP$$A_END$ öğesinin bir parçası olan $BREAK$ $SP_O_START$$ORIGIN$$SP_END$ adresinden $SP_D_START$$DESTINATION$$SP_END$ $BREAK$adresine yapılan bir yeniden yönlendirmeyi engelledi. $BREAK$",
+      "placeholders": {
+         "a_end": {
+            "content": "\u003C/a>"
+         },
+         "a_start": {
+            "content": "\u003Ca id=\"name\" href=\"$4\" target=\"_blank\">"
+         },
+         "app": {
+            "content": "$3",
+            "example": "Çift Tıkla"
+         },
+         "break": {
+            "content": "\u003Cbr>"
+         },
+         "destination": {
+            "content": "$2"
+         },
+         "origin": {
+            "content": "$1"
+         },
+         "sp_d_start": {
+            "content": "\u003Cspan id=\"destination\">"
+         },
+         "sp_end": {
+            "content": "\u003C/span>"
+         },
+         "sp_o_start": {
+            "content": "\u003Cspan id=\"origin\">"
+         }
+      }
+   },
+   "blocked_redirect_url_content": {
+      "description": "Bir yeniden yönlendirme girişimi engellendiğinde ve bir son &#39;hedef&#39; URL&#39;si başarılı bir şekilde bulunduğunda blocked_redirect.html üzerinde görünen metin.",
+      "message": "Bu etiketin $BREAK$ $A_START$$REDIRECT_URL$$A_END$ bağlantısına yeniden yönlendirme yaptığı görülüyor. Bu bağlantı güvenli görünmüyorsa ve devam etmek istiyorsanız, $APP$ öğesine izin vermek ve yeniden yüklemek için aşağıdaki simgeye tıklayın.",
+      "placeholders": {
+         "a_end": {
+            "content": "\u003C/a>"
+         },
+         "a_start": {
+            "content": "\u003Ca href=\"$1\" class=\"ellipsis\" title=\"$1\">"
+         },
+         "app": {
+            "content": "$2",
+            "example": "Çift Tıkla"
+         },
+         "break": {
+            "content": "\u003Cbr>"
+         },
+         "redirect_url": {
+            "content": "$1"
+         }
+      }
+   },
+   "blocking_block_all": {
+      "message": "Tümünü Engelle"
+   },
+   "blocking_block_shown": {
+      "message": "Gösterilenleri Engelle"
+   },
+   "blocking_category_blocked": {
+      "description": "ör. &#39;5 tane (izleyici) ENGELLENDİ&#39;",
+      "message": "Engellendi"
+   },
+   "blocking_category_tracker": {
+      "message": "İzleyici"
+   },
+   "blocking_category_trackers": {
+      "message": "İzleyici"
+   },
+   "blocking_options_blocked": {
+      "message": "Engellendi"
+   },
+   "blocking_options_blocked_all": {
+      "message": "Kategorideki tüm izleyiciler engellendi"
+   },
+   "blocking_options_trackers": {
+      "message": "İzleyiciler"
+   },
+   "blocking_trackers": {
+      "message": "İzleyici"
+   },
+   "box_dismiss_0s": {
+      "message": "$SPAN_START$Hiçbir zaman$SPAN_END$ kapatma",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_dismiss_15s": {
+      "message": "$SPAN_START$15 saniye sonra$SPAN_END$ kapat",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_dismiss_30s": {
+      "message": "$SPAN_START$30 saniye sonra$SPAN_END$ kapat",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_dismiss_5s": {
+      "message": "$SPAN_START$5 saniye sonra$SPAN_END$ kapat",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_bl": {
+      "message": "$SPAN_START$Sol Altta$SPAN_END$ Göster",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_br": {
+      "message": "$SPAN_START$Sağ Altta$SPAN_END$ Göster",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_tl": {
+      "message": "$SPAN_START$Sol Üstte$SPAN_END$ Göster",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_tr": {
+      "message": "$SPAN_START$Sağ Üstte$SPAN_END$ Göster",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_hide": {
+      "message": "Kutuyu Gizle"
+   },
+   "box_hide_expanded": {
+      "message": "Mor Kutuyu Gizle"
+   },
+   "box_looking": {
+      "message": "Arıyor"
+   },
+   "box_options_expanded": {
+      "message": "Seçenekler"
+   },
+   "box_settings": {
+      "message": "Ayarlar"
+   },
+   "box_settings_expanded": {
+      "message": "Ghostery Ayarlarım"
+   },
+   "box_tracker": {
+      "message": "İzleyici"
+   },
+   "box_trackers": {
+      "message": "İzleyici"
+   },
+   "box_warning_compatibility": {
+      "message": "Bozuk Sayfa İzleyicileri"
+   },
+   "box_warning_nonsecure": {
+      "message": "Güvenli Olmayan İzleyiciler"
+   },
+   "box_warning_slow": {
+      "message": "Yavaş İzleyiciler"
+   },
+   "browse_button_label": {
+      "message": "Göz at..."
+   },
+   "browser_button_tooltip": {
+      "description": "Ghostery&#39;nin tarayıcı düğmesi araç ipucu.",
+      "message": "Ghostery&#39;nin bulgularını görüntüle"
+   },
+   "button_cancel": {
+      "description": "Bir onay iletişim kutusunun parçası. Buna tıklarsanız işlem iptal olur.",
+      "message": "İptal"
+   },
+   "category_advertising": {
+      "description": "Ghostery, etiketleri kategoriye göre düzenler. Bu, çok sayıda etiket kategorisinden biridir.",
+      "message": "Reklamlar"
+   },
+   "category_advertising_desc": {
+      "description": "Reklamlar etiket kategorisi için kullanıcıya yönelik açıklama.",
+      "message": "Reklam hizmetleri ya da veri toplama, davranış analizleri veya yeniden hedefleme gibi reklamcılıkla ilgili hizmetler verir."
+   },
+   "category_audio_video_player": {
+      "description": "Ghostery, etiketleri kategoriye göre düzenler. Bu, çok sayıda etiket kategorisinden biridir.",
+      "message": "Ses/Video Yürütücü"
+   },
+   "category_audio_video_player_desc": {
+      "description": "Ses/Video Yürütücü etiket kategorisi için kullanıcıya yönelik açıklama.",
+      "message": "Web sitelerinin video ve ses içeriklerini yayımlamasını, dağıtmasını ve optimize etmesini sağlar."
+   },
+   "category_comments": {
+      "description": "Ghostery, etiketleri kategoriye göre düzenler. Bu, çok sayıda etiket kategorisinden biridir.",
+      "message": "Yorumlar"
+   },
+   "category_comments_desc": {
+      "description": "Yorumlar etiket kategorisi için kullanıcıya yönelik açıklama.",
+      "message": "Makaleler ve ürün incelemeleriyle ilgili yorum bölümlerini etkinleştirir."
+   },
+   "category_customer_interaction": {
+      "description": "Ghostery, etiketleri kategoriye göre düzenler. Bu, çok sayıda etiket kategorisinden biridir.",
+      "message": "Müşteri Etkileşimi"
+   },
+   "category_customer_interaction_desc": {
+      "description": "Müşteri Etkileşimi etiket kategorisi için kullanıcıya yönelik açıklama.",
+      "message": "Sohbet, e-posta mesajları, müşteri desteği ve diğer etkileşim araçlarını içerir."
+   },
+   "category_essential": {
+      "description": "Ghostery, etiketleri kategoriye göre düzenler. Bu, çok sayıda etiket kategorisinden biridir.",
+      "message": "Gerekli Olanlar"
+   },
+   "category_essential_desc": {
+      "description": "Gerekli Olanlar etiket kategorisi için kullanıcıya yönelik açıklama.",
+      "message": "Etiket yöneticileri, gizlilik bildirimleri ve web sitesinin işlevselliği için önem taşıyan teknolojileri içerir."
+   },
+   "category_pornvertising": {
+      "description": "Ghostery, etiketleri kategoriye göre düzenler. Bu, çok sayıda etiket kategorisinden biridir.",
+      "message": "Yetişkinlere Yönelik Reklamlar"
+   },
+   "category_pornvertising_desc": {
+      "description": "Yetişkinlere Yönelik Reklamlar etiket kategorisi için kullanıcıya yönelik açıklama.",
+      "message": "Yetişkinlere yönelik içerik sunan siteler için özel olarak tasarlanmış reklam teknolojileri sunar."
+   },
+   "category_site_analytics": {
+      "description": "Ghostery, etiketleri kategoriye göre düzenler. Bu, çok sayıda etiket kategorisinden biridir.",
+      "message": "Site Analizi"
+   },
+   "category_site_analytics_desc": {
+      "description": "Site Analizi etiket kategorisi için kullanıcıya yönelik açıklama.",
+      "message": "Kullanım ve performansla ilgili verileri toplar ve analiz eder."
+   },
+   "category_social_media": {
+      "description": "Ghostery, etiketleri kategoriye göre düzenler. Bu, çok sayıda etiket kategorisinden biridir.",
+      "message": "Sosyal Medya"
+   },
+   "category_social_media_desc": {
+      "description": "Sosyal Medya etiket kategorisi için kullanıcıya yönelik açıklama.",
+      "message": "Sosyal medya siteleriyle ilgili özellikleri sitelere entegre eder."
+   },
+   "category_uncategorized": {
+      "message": "Kategorize edilmemiş"
+   },
+   "category_uncategorized_desc": {
+      "message": "Bu izleyiciler henüz kategorize edilmemiş."
+   },
+   "click2play_allow_always_tooltip": {
+      "description": "&#39;Her zaman izin ver&#39; click2play düğmesinin üzerinde görünen araç ipucu.",
+      "message": "İzin ver ve yeniden yükle."
+   },
+   "click2play_allow_once_button_tooltip": {
+      "description": "&#39;Sosyal&#39; düğmeleri yerine click2play&#39;e koyulan düğmeler üzerinde görünen araç ipucu.",
+      "message": "Ghostery $APP_NAME$ öğesini engelledi. Bir kereliğine yüklenmesine izin vermek için buraya tıklayın.",
+      "placeholders": {
+         "app_name": {
+            "content": "$1",
+            "example": "Twitter Düğmesi"
+         }
+      }
+   },
+   "click2play_allow_once_tooltip": {
+      "description": "&#39;Bir kereliğine izin ver&#39; click2play düğmesinin üzerinde görünen araç ipucu.",
+      "message": "Bir kereliğine izin ver ve yeniden yükle."
+   },
+   "click2play_blocked": {
+      "message": "Ghostery $APP_NAME$ öğesini engelledi.",
+      "placeholders": {
+         "app_name": {
+            "content": "$1",
+            "example": "SoundCloud"
+         }
+      }
+   },
+   "click2play_comment_form": {
+      "message": "Ghostery, $NAME$ tarafından sunulan yorumları engelledi.",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "click2play_review_form": {
+      "message": "Ghostery, $NAME$ tarafından sunulan incelemeleri engelledi.",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "click2play_survey_form": {
+      "message": "Ghostery, $NAME$ tarafından sunulan anketi engelledi.",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "click2play_video_form": {
+      "message": "Ghostery, $NAME$ video oynatıcısını engelledi.",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "consent_privacy": {
+      "message": "Onay gerekiyor."
+   },
+   "copyright": {
+      "description": "Sayfa alt bilgilerinde gösterilen telif hakkı mesajı.",
+      "message": "$C$ $YEAR$ $GHOSTERY$, $COMPANY_ADDRESS$ grubunun bir parçasıdır",
+      "placeholders": {
+         "c": {
+            "content": "©"
+         },
+         "company_address": {
+            "content": "$1",
+            "example": "GHOSTERY, Inc., Falanca Caddesi, Falanca Binası, New York, NY, Posta Kodu"
+         },
+         "ghostery": {
+            "content": "\u003Ca href='https://www.ghostery.com' target='_blank'>Ghostery\u003C/a>"
+         },
+         "year": {
+            "content": "2015"
+         }
+      }
+   },
+   "create_password_field_label": {
+      "message": "Parola:"
+   },
+   "dismiss": {
+      "description": "Bir bildirimi kapatma düğmesi veya bağlantı için metin.",
+      "message": "Kapat"
+   },
+   "email_address_in_use": {
+      "message": "Bu e-posta adresi zaten kullanılıyor. Lütfen başka bir tane seçin."
+   },
+   "email_confirm_field_label": {
+      "message": "E-postayı Onayla:"
+   },
+   "email_field_label": {
+      "message": "E-posta:"
+   },
+   "error_email_forgot": {
+      "message": "Hımm, bu e-postayı bulamıyorum. Başka bir tane deneyebilir misiniz?"
+   },
+   "file_was_not_selected": {
+      "message": "Dosya seçilmedi"
+   },
+   "first_name_field_label": {
+      "message": "Adı (İsteğe bağlı):"
+   },
+   "forgot_password_message": {
+      "message": "Parolanızı mı unuttunuz? Üzülmeyin, herkesin başına gelebilir. Parolanızın sıfırlanması için gerekli olan yönergeleri size e-posta ile göndereceğiz."
+   },
+   "invalid_email_confirmation": {
+      "message": "E-postalarınız eşleşmiyor."
+   },
+   "invalid_email_create": {
+      "message": "Lütfen geçerli bir e-posta adresi girin."
+   },
+   "invalid_email_forgot": {
+      "message": "Üzgünüm, gerçek bir e-posta adresi girmeniz gerekiyor."
+   },
+   "invalid_email_login": {
+      "message": "Üzgünüm, gerçek bir e-posta adresi girmeniz gerekiyor."
+   },
+   "last_name_field_label": {
+      "message": "Soyadı (İsteğe bağlı):"
+   },
+   "library_never_updated": {
+      "description": "Etiket kitaplığı güncellemeleri yapılmadığında gösterilen metin.",
+      "message": "Otomatik güncellemeler şiddetle tavsiye edilir."
+   },
+   "library_update_already_updated": {
+      "description": "Etiket kitaplığı en son sürüm olduğu için uzak sunuculardan güncellenmesine gerek olmadığında gösterilen metin.",
+      "message": "Kitaplık zaten güncel durumda."
+   },
+   "library_update_failed": {
+      "description": "Etiket kitaplığı güncelleme işlemi başarısız oldu.",
+      "message": "Üzgünüm, güncelleme başarısız oldu. Lütfen daha sonra tekrar deneyin."
+   },
+   "library_update_in_progress": {
+      "description": "Bir güncellemenin devam ettiğini gösterir (yanında değer değiştiren bir grafik olabilir).",
+      "message": "Güncelleniyor..."
+   },
+   "library_update_now_link": {
+      "message": "Şimdi güncelle."
+   },
+   "library_update_successful": {
+      "description": "Etiket kitaplığı güncelleme işlemi başarıyla tamamlandı",
+      "message": "Başarılı oldu!"
+   },
+   "library_updated_on": {
+      "description": "Bir etiket kitaplığı güncellemesi en az bir defa yapıldığında gösterilen metin.",
+      "message": "İzleyici kitaplığı en son $DATE$ tarihinde eşitlenmiş",
+      "placeholders": {
+         "date": {
+            "content": "$1",
+            "example": "Çar 12 Ekim 2011"
+         }
+      }
+   },
+   "none": {
+      "description": "Bu öğenin &quot;Gruplar: Hiçbiri&quot; gibi (Gruplar: Grup A, Grup B, Grup C&quot;nin aksine) herhangi bir gruba ait olmadığını belirtmek için kullanılır.",
+      "message": "Yok"
+   },
+   "not_http_page": {
+      "message": "Geçerli sekmenizde açık http veya https sayfası olduğundan emin olun"
+   },
+   "notification_reminder1": {
+      "description": "Rehber anımsatıcısının/bildiriminin ilk satırı. Cümle sonraki satırda devam eder.",
+      "message": "Ghostery&#39;nin temel özelliklerinden bazılarına yakından bakmak için Ghostery yapılandırma rehberine göz atın."
+   },
+   "notification_reminder2": {
+      "description": "Rehber anımsatıcısının/bildiriminin ikinci satırı. Bir önceki satırdaki cümleye devam eder.",
+      "message": "Ghostery yapılandırma rehberine göz atın."
+   },
+   "notification_reminder_link": {
+      "description": "Rehber anımsatıcısının/bildiriminin bir parçası olan, rehber/yapılandırma sihirbazı bağlantısı.",
+      "message": "Ghostery&#39;yi Kur"
+   },
+   "notification_update": {
+      "message": "Bazı yeni izleyicileri ortaya çıkardık ve Ghostery Veritabanı&#39;na ekledik."
+   },
+   "notification_update_link": {
+      "message": "Yeniliklere bir göz atın"
+   },
+   "notification_upgrade": {
+      "message": "Kendini Ghostery&#39;ye adamış olan olağanüstü çekici ekibimiz, Ghostery&#39;nin yeni bir sürümünü sizlere sunabilmek için çok çalıştı."
+   },
+   "notification_upgrade_link": {
+      "message": "Bu sürümdeki nefis yeni özelliklere ve hata düzeltmelerine bir göz atın."
+   },
+   "panel_blocking_verify_account_message": {
+      "message": "Ayarlarınızı eşitlemek ve harika Ghostery özelliklerine erişmek için lütfen e-posta kutunuzu kontrol edin ve hesabınızı doğrulayın."
+   },
+   "panel_blocking_verify_account_title": {
+      "message": "Doğrulanmamış Hesap"
+   },
+   "panel_create_account": {
+      "message": "Hesap Oluştur"
+   },
+   "panel_email_verification_sent": {
+      "message": "$BOLD_HTML_STARTS$ Başarılı! $BOLD_HTML_END$ Şu adrese bir doğrulama e-postası gönderildi: $EMAIL$",
+      "placeholders": {
+         "bold_html_end": {
+            "content": "\u003C/strong>"
+         },
+         "bold_html_starts": {
+            "content": "\u003Cstrong>"
+         },
+         "email": {
+            "content": "$1",
+            "example": "info@ghostery.com"
+         }
+      }
+   },
+   "panel_forgot_password": {
+      "message": "Parolanızı mı Unuttunuz?"
+   },
+   "panel_header_sign_in": {
+      "message": "Oturum Aç"
+   },
+   "panel_header_verify_account": {
+      "message": "Hesabı Doğrula"
+   },
+   "panel_help_contact_header": {
+      "message": "Bize Ulaşın"
+   },
+   "panel_help_faq": {
+      "message": "Sık Sorulan Sorular"
+   },
+   "panel_help_feedback": {
+      "message": "Anketimizi Doldurun"
+   },
+   "panel_help_license": {
+      "message": "Lisans Anlaşması"
+   },
+   "panel_help_panel_header": {
+      "message": "Ghostery Tarayıcı Uzantısı için Yardım"
+   },
+   "panel_help_privacy_statement": {
+      "message": "Gizlilik Bildirimi"
+   },
+   "panel_help_questions_header": {
+      "message": "Sorular ve Yorumlar"
+   },
+   "panel_help_support": {
+      "message": "Destek"
+   },
+   "panel_help_version_header": {
+      "message": "$BROWSER$ $VERSION$ sürümü için Ghostery",
+      "placeholders": {
+         "browser": {
+            "content": "$1",
+            "example": "Firefox"
+         },
+         "version": {
+            "content": "$2",
+            "example": "6.4"
+         }
+      }
+   },
+   "panel_menu_advanced_settings": {
+      "message": "Gelişmiş Engelleme"
+   },
+   "panel_menu_help": {
+      "message": "Yardım"
+   },
+   "panel_menu_report_broken_site": {
+      "message": "Bozuk sayfa bildir"
+   },
+   "panel_menu_settings": {
+      "message": "Ayarlar"
+   },
+   "panel_menu_signin": {
+      "message": "Oturum aç"
+   },
+   "panel_menu_signout": {
+      "message": "Oturumu kapat"
+   },
+   "panel_menu_submit_tracker": {
+      "message": "Yeni bir izleyici gönder"
+   },
+   "panel_modal_account_bullet_1": {
+      "message": "Tüm tarayıcılar ile cihazlarda ve bunların arasında ayarları eşitle"
+   },
+   "panel_modal_account_bullet_2": {
+      "message": "Yavaş ve güvensiz izleyicilerle ilgili uyarılar"
+   },
+   "panel_modal_account_bullet_3": {
+      "message": "İzleyici URL&#39;leri"
+   },
+   "panel_modal_account_button_create_account": {
+      "message": "Hesap Oluştur"
+   },
+   "panel_modal_account_button_maybe_later": {
+      "message": "Belki daha sonra. Haydi başlayalım."
+   },
+   "panel_modal_account_button_sign_in": {
+      "message": "Hesabınız var mı? Oturum açın"
+   },
+   "panel_modal_account_subtitle_1": {
+      "message": "Burada, hesap oluşturduğunuzda elde edeceğiniz harika özelliklerden bazılarını görebilirsiniz. Bizimle paylaşmayı tercih etmiş olabileceğiniz izleyici verileriyle bağlantılı değildir:"
+   },
+   "panel_modal_account_subtitle_2": {
+      "message": "İhtiyacınız olan tek şey bir e-posta ve parola."
+   },
+   "panel_modal_account_title": {
+      "message": "Hesap Oluştur"
+   },
+   "panel_modal_ghostrank_opt_in": {
+      "message": "Evet, paylaşmak isterim."
+   },
+   "panel_modal_ghostrank_opt_out": {
+      "message": "Hayır, teşekkürler."
+   },
+   "panel_modal_ghostrank_p1": {
+      "message": "Kullanıcılarımızın bir kısmı, tarayıcının karşılaştığı siteler ve izleyicilerle ilgili verileri isimsiz ve gönüllü olarak bizimle paylaşmayı kabul ettikleri için Ghostery ücretsiz olarak sunulmaktadır."
+   },
+   "panel_modal_ghostrank_p2": {
+      "message": "Ghostery olarak bu verileri, Web&#39;in daha temiz, daha hızlı ve daha güvenli olmasına yardımcı olacak ürünler geliştirmek amacıyla kullanıyoruz. $LINK_START$Daha Fazla Bilgi Edinin$LINK_END$",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Ca class='modal-learn-more'>"
+         }
+      }
+   },
+   "panel_modal_ghostrank_p3": {
+      "message": "İzleyici verilerini Ghostery ile paylaşmak ister misiniz?"
+   },
+   "panel_modal_ghostrank_title": {
+      "message": "Ghostery&#39;ye Hoş Geldiniz!"
+   },
+   "panel_modal_ghostrank_vb_p1": {
+      "message": "Sizin gibi kullanıcılar, tarayıcılarının karşılaştığı siteler ve izleyicilerle ilgili verileri isimsiz olarak bizimle paylaştıkları için Ghostery ücretsiz olarak sunulmaktadır. Ghostery olarak bu verileri, Web&#39;in daha temiz, daha hızlı ve daha güvenli olmasına yardımcı olacak ürünler geliştirmek amacıyla kullanıyoruz. $LINK_START$Daha Fazla Bilgi Edinin$LINK_END$",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Cbr>\u003Ca class='modal-learn-more'>"
+         }
+      }
+   },
+   "panel_modal_ghostrank_vb_p1_header": {
+      "message": "İsimsiz İzleyici Verileri"
+   },
+   "panel_modal_ghostrank_vb_p2": {
+      "message": "Kullanıcılar, ürünü nasıl kullandıklarını ve kullanmayı en çok sevdikleri özellikleri daha iyi anlamamıza yardımcı olmak için Ghostery kullanımları ile ilgili analizleri isimsiz olarak paylaşarak Ghostery&#39;yi destekliyorlar. $LINK_START$Daha Fazla Bilgi Edinin$LINK_END$",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Cbr>\u003Ca class='modal-metrics-learn-more'>"
+         }
+      }
+   },
+   "panel_modal_ghostrank_vb_p2_header": {
+      "message": "Kullanım Analizi"
+   },
+   "panel_modal_ghostrank_vb_p3": {
+      "message": "İsimsiz izleyici verileri ve kullanım analizleri paylaşarak Ghostery&#39;yi desteklemek ister misiniz?"
+   },
+   "panel_modal_ghostrank_vb_title": {
+      "message": "Ghostery&#39;yi Destekleyin"
+   },
+   "panel_modal_ghostrank_vc_header": {
+      "message": "Ghostery&#39;yi Geliştirmeye Yardımcı Olun"
+   },
+   "panel_modal_ghostrank_vc_p1": {
+      "message": "Ghostery&#39;yi sizin gibi kullanıcılarımız için daha iyi bir hale getirmek adına her gün çalışıyoruz."
+   },
+   "panel_modal_ghostrank_vc_p2": {
+      "message": "Kullanıcılarımızın sevdikleri ve sevmedikleri özellikleri belirlemek için onların Ghostery ile nasıl etkileşim kurduklarını daha iyi anlamak adına isimsiz kullanım analizleri topluyoruz. Örneğin, duraklat tuşuna tıklarsanız, bu özelliği kullandığınızı bize haber vermek için bir ping gönderiliyor. Bu analizler tamamen isimsiz olup hesabınız veya kişisel bilgilerinizle bağlantılı değildir."
+   },
+   "panel_modal_ghostrank_vc_p3": {
+      "message": "Ghostery ile kullanım analizi verilerini paylaşmak ister misiniz?"
+   },
+   "panel_modal_learn_more_bullet_1": {
+      "message": "Ghostery Tarayıcı Eklentisi tarafından tanımlanan izleyiciler"
+   },
+   "panel_modal_learn_more_bullet_10": {
+      "message": "İstek sayfası için zaman bilgisi"
+   },
+   "panel_modal_learn_more_bullet_11": {
+      "message": "İzleyicinin ağırlığı (her izleyiciye atfedilen megabayt veri miktarı)"
+   },
+   "panel_modal_learn_more_bullet_12": {
+      "message": "İzleyicilerin ziyaret edilen bir web sayfasındaki görünme durumu"
+   },
+   "panel_modal_learn_more_bullet_2": {
+      "message": "İzleyicilerin engellenme durumu"
+   },
+   "panel_modal_learn_more_bullet_3": {
+      "message": "İzleyici sunduğu belirlenmiş olan alan adları"
+   },
+   "panel_modal_learn_more_bullet_4": {
+      "message": "Sayfanın ve izleyicilerin yüklenmesi için geçen zaman"
+   },
+   "panel_modal_learn_more_bullet_5": {
+      "message": "İzleyicilerin sayfadaki konumu"
+   },
+   "panel_modal_learn_more_bullet_6": {
+      "message": "Ghostery Tarayıcı Eklentisinin yüklü olduğu tarayıcı"
+   },
+   "panel_modal_learn_more_bullet_7": {
+      "message": "Tarayıcı dili"
+   },
+   "panel_modal_learn_more_bullet_8": {
+      "message": "Standart web sunucusu kayıt bilgileri (ör. web isteği)"
+   },
+   "panel_modal_learn_more_bullet_9": {
+      "message": "Bu isteğe yanıt olarak gönderilen veriler"
+   },
+   "panel_modal_learn_more_end": {
+      "message": "Toplanan bilgilerle ilgili uygulamalarımızı öğrenmek için $LINK_START$Gizlilik Bildirimimizi$LINK_END$ okuyun.",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Ca class='modal-privacy-statement'>"
+         }
+      }
+   },
+   "panel_modal_learn_more_list_title": {
+      "message": "Verilerinizi paylaşmayı tercih ederseniz, Ghostery şu bilgileri toplar:"
+   },
+   "panel_modal_learn_more_paragraph": {
+      "message": "Kullanıcılarımızın sevdikleri ve sevmedikleri özellikleri belirlemek için onların Ghostery ile nasıl etkileşim kurduklarını daha iyi anlamak adına isimsiz kullanım analizleri topluyoruz. Örneğin, duraklat tuşuna tıklarsanız, bu özelliği kullandığınızı bize haber vermek için bir ping gönderiliyor. Bu analizler tamamen isimsiz olup hesabınız veya kişisel bilgilerinizle bağlantılı değildir."
+   },
+   "panel_modal_learn_more_subtitle": {
+      "message": "Ghostery hangi verileri toplar?"
+   },
+   "panel_modal_metrics_learn_more_subtitle": {
+      "message": "Ghostery&#39;yi sizin gibi kullanıcılarımız için daha iyi bir hale getirmek adına her gün çalışıyoruz."
+   },
+   "panel_modal_upgrade_account_blurb": {
+      "message": "Gelişmiş özelliklere erişmek için $CREATE_LINK_START$bir hesap oluşturun$CREATE_LINK_END$ veya $SIGNIN_LINK_START$Oturum Açın$SIGNIN_LINK_END$.",
+      "placeholders": {
+         "create_link_end": {
+            "content": "\u003C/a>"
+         },
+         "create_link_start": {
+            "content": "\u003Ca class='update-dismiss account-dismiss create-account'>"
+         },
+         "signin_link_end": {
+            "content": "\u003C/a>"
+         },
+         "signin_link_start": {
+            "content": "\u003Ca class='update-dismiss account-dismiss sign-in'>"
+         }
+      }
+   },
+   "panel_modal_upgrade_bullet_1": {
+      "message": "Daha güçlü parolalar oluşturma özelliği"
+   },
+   "panel_modal_upgrade_bullet_2": {
+      "message": "Ghostery simgesindeki izleyici sayısı işaretini saklama seçeneği eklendi"
+   },
+   "panel_modal_upgrade_bullet_3": {
+      "message": "Müdahale oranı azaltılmış mor kutu"
+   },
+   "panel_modal_upgrade_bullet_4": {
+      "message": "Daha yüksek performans"
+   },
+   "panel_modal_upgrade_continue": {
+      "message": "Devam"
+   },
+   "panel_modal_upgrade_subtitle_1": {
+      "message": "Bu yeni özelliklerden dolayı çok heyecanlıyız:"
+   },
+   "panel_modal_upgrade_title": {
+      "message": "Ghostery güncellendi!"
+   },
+   "panel_needs_reload_paused": {
+      "message": "Ghostery duraklatıldı. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_restrict": {
+      "message": "Bu sitedeki izleyiciler engellenmiştir. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_resumed": {
+      "message": "Ghostery sürdürülüyor. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_qty_blocked": {
+      "message": "izleyici engellenmiştir. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_qty_blocked_plural": {
+      "message": "izleyici engellenmiştir. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_allowed": {
+      "message": "izleyiciye bu sitede izin verilmiştir. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_allowed_plural": {
+      "message": "izleyiciye bu sitede izin verilmiştir. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_blocked": {
+      "message": "izleyici bu sitede engellenmiştir. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_blocked_plural": {
+      "message": "izleyici bu sitede engellenmiştir. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_unblocked": {
+      "message": "İzleyicinin engellemesi bu sitede kaldırılmıştır. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_ss_untrusted": {
+      "message": "İzleyiciye bu sitede güvenilmemektedir. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_tracker_unblocked": {
+      "message": "İzleyicinin engellemesi kaldırılmıştır. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_trackers_block_all": {
+      "message": "Burada listelenen izleyiciler engellenmiştir. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_trackers_unblock_all": {
+      "message": "Burada listelenen izleyicilerin engellemesi kaldırılmıştır. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_trust": {
+      "message": "Bu sitedeki izleyicilere izin verilmiştir. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_undo_restrict": {
+      "message": "Siteyi kısıtlama işlemini geri al. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_needs_reload_undo_trust": {
+      "message": "Siteye güvenme işlemini geri al. $SPAN_START$Sayfayı yeniden yüklemek ve değişiklikleri görmek için tıklayın.$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"needs-reload-link\">"
+         }
+      }
+   },
+   "panel_sign_in_to_see": {
+      "message": "Yavaş ve/veya güvenli olmayan izleyicileri görmek için $SPAN_START$oturum açın$SPAN_END$.",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"sign-in-link alerts-sign-in\">"
+         }
+      }
+   },
+   "panel_sign_in_trackermap": {
+      "message": "Trackermap&#39;i görüntülemek için $SPAN_START$oturum açın$SPAN_END$.",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"sign-in-link tracker-map-sign-in\">"
+         }
+      }
+   },
+   "panel_signin_success": {
+      "message": "Oturum açtığınız hesap:"
+   },
+   "panel_signin_success_title": {
+      "message": "Tebrikler! Ghostery hesabınız kullanılmaya hazır."
+   },
+   "panel_title_create_account": {
+      "message": "Hesap Oluştur"
+   },
+   "panel_tracker_block_tooltip": {
+      "message": "Tüm sitelerde engelle"
+   },
+   "panel_tracker_breaking_page": {
+      "message": "Sayfayı bozan $SPAN_START$$COUNT$ $TRACKERS$$SPAN_END$ engellendi.",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "4"
+         },
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"filter-link compatibility\">"
+         },
+         "trackers": {
+            "content": "$2",
+            "example": "izleyici"
+         }
+      }
+   },
+   "panel_tracker_found_sources_title": {
+      "message": "Tespit edilen izleyici URL&#39;leri:"
+   },
+   "panel_tracker_restrict_tooltip": {
+      "message": "Bu sitede kısıtla"
+   },
+   "panel_tracker_signin_teaser": {
+      "description": "Engelleme sayfasındaki genişletilmiş izleyicide görünen mesaj.",
+      "message": "Tespit edilen izleyici URL&#39;lerini görüntülemek için $SPAN_START$oturum açın$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "panel_tracker_slow_non_secure": {
+      "message": "Bu sayfada $SPAN_START$$COUNT$ yavaş ve/veya güvenli olmayan $TRACKERS$$SPAN_END$ var.",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "4"
+         },
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"filter-link slow-insecure\">"
+         },
+         "trackers": {
+            "content": "$2",
+            "example": "izleyici"
+         }
+      }
+   },
+   "panel_tracker_trust_tooltip": {
+      "message": "Bu sitede güven"
+   },
+   "panel_tracker_warning_compatibility_tooltip": {
+      "message": "Engellenen izleyici sayfayı bozuyor"
+   },
+   "panel_tracker_warning_nonsecure_tooltip": {
+      "message": "İzleyici güvenli değil"
+   },
+   "panel_tracker_warning_slow_nonsecure_tooltip": {
+      "message": "İzleyici yavaş ve güvenli değil"
+   },
+   "panel_tracker_warning_slow_tooltip": {
+      "message": "İzleyici yavaş"
+   },
+   "panel_verify_to_see": {
+      "message": "Yavaş ve/veya güvenli olmayan izleyicileri görmek için $SPAN_START$hesabı doğrulayın$SPAN_END$. E-postanızı kontrol edin.",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"verify-account-link\">"
+         }
+      }
+   },
+   "panel_verify_trackermap": {
+      "message": "Trackermap&#39;i görüntülemek için $SPAN_START$hesabı doğrulayın$SPAN_END$. E-postanızı kontrol edin.",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan class=\"verify-account-link\">"
+         }
+      }
+   },
+   "panel_view_trackers": {
+      "message": "İzleyicileri Görüntüle"
+   },
+   "password_characters_requirements": {
+      "message": "Sadece bu özel karakterler kullanılabilir: !@#$%^&amp;*=+()&lt;>{}[];:,./?"
+   },
+   "password_field_label": {
+      "message": "Parola"
+   },
+   "password_field_label_required": {
+      "message": "Parola gerekli."
+   },
+   "password_requirements": {
+      "message": "8 ila 50 karakter kullanın."
+   },
+   "refresh_and_try_again": {
+      "message": "Sayfayı yenileyin ve tekrar deneyin"
+   },
+   "select_file_for_import": {
+      "message": "İçeri aktarma için .ghost dosyasını seçin"
+   },
+   "send_button_label": {
+      "message": "Gönder"
+   },
+   "server_error_message": {
+      "message": "Galiba teknik bir sorun yaşıyoruz. Daha sonra tekrar deneyin."
+   },
+   "settings_account": {
+      "message": "Hesap"
+   },
+   "settings_account_email": {
+      "message": "E-posta"
+   },
+   "settings_account_name": {
+      "message": "Adı"
+   },
+   "settings_allow_trackers": {
+      "message": "Site sahipleri tarafından oluşturulan izleyicilere izin ver"
+   },
+   "settings_allow_trackers_tooltip": {
+      "message": "Örneğin, facebook.com sitesinde bir Facebook izleyicisinin engellenmesi sayfayı bozabilir."
+   },
+   "settings_announcements": {
+      "message": "Duyuru yaptığında"
+   },
+   "settings_auto_update": {
+      "message": "Ghostery izleyici kitaplığından otomatik güncellemeleri etkinleştir"
+   },
+   "settings_block_trackers": {
+      "message": "Varsayılan ayarda Ghostery&#39;ye eklenen yeni izleyicileri engelle"
+   },
+   "settings_blocking": {
+      "message": "Engelleme"
+   },
+   "settings_bottom_left_corner": {
+      "message": "Sol Alt Köşede"
+   },
+   "settings_bottom_right_corner": {
+      "message": "Sağ Alt Köşede"
+   },
+   "settings_defect_fixes": {
+      "message": "Küçük hata düzeltmeleri yayımladığında"
+   },
+   "settings_dismiss_after": {
+      "message": "Şu Süre Sonunda Kapat:"
+   },
+   "settings_display_in": {
+      "message": "Şurada Göster:"
+   },
+   "settings_edit_account": {
+      "message": "Hesabı Düzenle"
+   },
+   "settings_export_error": {
+      "message": "Ayarlarınız dışa aktarılamadı. Lütfen tekrar deneyin."
+   },
+   "settings_export_header": {
+      "message": "Ayarları Dışa Aktar"
+   },
+   "settings_export_success": {
+      "message": "Ayarlarınız şu konumdaki indirilenler klasörünüze başarıyla aktarıldı:"
+   },
+   "settings_export_text": {
+      "message": "Ghostery tercihlerinizin bir kopyasını kaydedin ve başka bir bilgisayara aktarın."
+   },
+   "settings_hide_alert_trusted": {
+      "message": "Güvenilir Web sitelerinde mor kutuyu gizle"
+   },
+   "settings_highlight_trackers": {
+      "message": "Etkileşimli İzleyicileri Vurgula"
+   },
+   "settings_highlight_trackers_tooltip": {
+      "message": "Sosyal ağ paylaşımları, yorumlar veya video oynatıcılar gibi bazı özellikler, belirli bir izleyici engellendiğinde bazen çalışmayabilir. Engellenmiş olan bu özelliklerden birine izin vermek isterseniz, sayfadaki şu simgeye tıklayın:"
+   },
+   "settings_import_file_error": {
+      "message": "Bu yanlış dosya türüdür. Lütfen bir .ghost dosyası seçin ve tekrar deneyin."
+   },
+   "settings_import_header": {
+      "message": "Ayarları İçe Aktar"
+   },
+   "settings_import_success": {
+      "message": "Ayarlarınız şu konumda başarıyla içe aktarıldı:"
+   },
+   "settings_import_text": {
+      "message": "Bir .ghost dosyası yedeklemesi seçin."
+   },
+   "settings_import_warning": {
+      "message": "UYARI: Bu işlem, geçerli Ghostery ayarlarınızın üzerine yazacaktır."
+   },
+   "settings_individual_trackers": {
+      "message": "Bireysel izleyicilere güven ve bunları kısıtla"
+   },
+   "settings_individual_trackers_tooltip": {
+      "message": "Özelleştirilmiş kontrol için bir web sitesinde hangi izleyicilerin engelleneceğini veya hangilerine izin verileceğini seçin"
+   },
+   "settings_last_update": {
+      "message": "Son eşitleme"
+   },
+   "settings_never": {
+      "message": "Hiçbir zaman"
+   },
+   "settings_new_features": {
+      "message": "Yeni özellikler yayımladığında"
+   },
+   "settings_new_trackers": {
+      "message": "İzleyici kitaplığına yeni izleyiciler eklediğinde"
+   },
+   "settings_notifications": {
+      "message": "Bildirimler"
+   },
+   "settings_notify_me": {
+      "message": "Ghostery aşağıdakileri yaptığında bana haber ver:"
+   },
+   "settings_notify_me_tooltip": {
+      "message": "Ghostery&#39;nin tarayıcımda yeni ürün özellikleri, güncellemeler ve müşteri geri bildirimleriyle ilgili mesajlar göstermesine izin ver."
+   },
+   "settings_purple_box": {
+      "message": "Mor Kutu"
+   },
+   "settings_replace_social": {
+      "message": "Engellenen sosyal ağ düğmelerini bir Ghostery simgesiyle değiştir"
+   },
+   "settings_required_for_patterns": {
+      "message": "özelliği etkinleştirmek için gerekli"
+   },
+   "settings_required_trackers": {
+      "message": "Bir sitenin özelliklerini kullanmak için bir izleyiciye izin vermem gerekiyorsa bana göster"
+   },
+   "settings_seconds": {
+      "message": "Saniye"
+   },
+   "settings_share_data": {
+      "message": "Sayfa ve izleyici verilerini paylaşarak"
+   },
+   "settings_share_data_tooltip": {
+      "message": "Kullanıcılarımızın bir kısmı, tarayıcının karşılaştığı siteler ve izleyicilerle ilgili verileri isimsiz ve gönüllü olarak bizimle paylaşmayı kabul ettikleri için Ghostery ücretsiz olarak sunulmaktadır."
+   },
+   "settings_share_usage": {
+      "message": "Eklenti kullanım analizlerini paylaşarak"
+   },
+   "settings_share_usage_tooltip": {
+      "message": "Kullanıcıların hangi özellikleri beğendiklerini daha iyi anlayabilmek için kullanım analizlerini topluyoruz. Örneğin, duraklat tuşuna tıklarsanız, bu özelliği kullandığınızı bize haber vermek için bir ping gönderiliyor."
+   },
+   "settings_show_patterns": {
+      "message": "İzleyici URL&#39;lerini göster"
+   },
+   "settings_show_patterns_tooltip": {
+      "message": "İzleyici URL&#39;leri, bir izleyiciye tıklandıktan sonra izleyici açıklamasının altında bulunabilir."
+   },
+   "settings_show_purple_box": {
+      "message": "Mor kutuyu tarayıcımın köşesinde göster"
+   },
+   "settings_show_purple_box_tooltip": {
+      "message": "Mor kutu, tarayıcınızın köşesinde gösterilen gerçek zamanlı bir tarayıcı listsiedir. Bu özellik, izleyicileri web sayfasına eklendiklerinde görebilmenize yardımcı olur."
+   },
+   "settings_show_reload_banner": {
+      "message": "Sayfa yeniden yükleme reklam bandı uyarılarını eklentinin üst kısmında göster"
+   },
+   "settings_show_tracker_count_badge": {
+      "message": "Tarayıcı araç çubuğundaki Ghostery simgesinde izleyici sayısı işaretini göster"
+   },
+   "settings_show_trackers_banner": {
+      "message": "İzleyici alarmı reklam bandı uyarılarını eklentinin üst kısmında göster"
+   },
+   "settings_sign_create_text": {
+      "message": "Hesabınızdaki ayarlar bu cihazla eşitlenecektir. Ghostery ayarlarınızı tüm cihazlarınızda ve platformlarda kolayca eşitlemek için bir hesap oluşturun."
+   },
+   "settings_sign_in": {
+      "message": "Oturum aç"
+   },
+   "settings_signin_create_header": {
+      "message": "Oturum Aç / Hesap Oluştur"
+   },
+   "settings_support_ghostery": {
+      "message": "Ghostery&#39;yi Destekleyin"
+   },
+   "settings_support_ghostery_by": {
+      "message": "Aşağıdakileri yaparak Ghostery&#39;yi destekle"
+   },
+   "settings_top_left_corner": {
+      "message": "Sol Üst Köşede"
+   },
+   "settings_top_right_corner": {
+      "message": "Sağ Üst Köşede"
+   },
+   "settings_trackers": {
+      "message": "İzleyici"
+   },
+   "settings_update_failed": {
+      "message": "Güncelleme başarısız oldu. Lütfen daha sonra tekrar deneyin"
+   },
+   "settings_update_now": {
+      "message": "Şimdi güncelle"
+   },
+   "settings_update_success": {
+      "message": "Başarılı oldu!"
+   },
+   "settings_update_up_to_date": {
+      "message": "Hala güncel"
+   },
+   "short_description": {
+      "description": "Bu eklenti için kısa bir açıklama (Ghostery).",
+      "message": "Gizliliğinizi koruyun. Ghostery ile web taramalarınızı kimin izlediğini görün."
+   },
+   "summary_alert": {
+      "description": "ör. &#39;1 UYARI&#39;",
+      "message": "Uyarı"
+   },
+   "summary_alerts": {
+      "description": "ör. &#39;5 UYARI&#39;",
+      "message": "Uyarılar"
+   },
+   "summary_blocked": {
+      "description": "ör. &#39;5 tane (izleyici) ENGELLENDİ&#39;",
+      "message": "Engellendi"
+   },
+   "summary_category_tracker": {
+      "message": "İzleyici"
+   },
+   "summary_category_trackers": {
+      "message": "İzleyici"
+   },
+   "summary_description_not_scanned_1": {
+      "message": "Ghostery sadece &quot;http&quot; ve https&quot; sayfalarını tarar."
+   },
+   "summary_description_not_scanned_2": {
+      "message": "Başka bir sayfaya geçin; bu sefer gerekeni yapacağıma söz veriyorum."
+   },
+   "summary_found_on": {
+      "description": "ör. &#39;http://google.com&#39;da 5 izleyici BULUNDU&#39;",
+      "message": "şurada bulundu"
+   },
+   "summary_map_these_trackers": {
+      "message": "Bu İzleyicileri Planla"
+   },
+   "summary_page_not_scanned": {
+      "message": "Sayfa Taranmadı"
+   },
+   "summary_pause_ghostery": {
+      "message": "Duraklat"
+   },
+   "summary_restrict_site": {
+      "message": "Kısıtla"
+   },
+   "summary_resume_ghostery": {
+      "message": "Devam Et"
+   },
+   "summary_trust_site": {
+      "message": "Güven"
+   },
+   "summary_undo": {
+      "message": "Geri al"
+   },
+   "tracker_description_getting": {
+      "message": "İzleyici açıklaması alınıyor..."
+   },
+   "tracker_description_learn_more": {
+      "message": "Tam izleyici profiline devam et"
+   },
+   "tracker_description_none_found": {
+      "message": "İzleyici açıklaması bulunamadı."
+   },
+   "tracker_plural": {
+      "message": "izleyici"
+   },
+   "tracker_signular": {
+      "message": "izleyici"
+   },
+   "unblocked": {
+      "description": "Etiket tarayıcısında sadece engellenmeyen (işaretlenmemiş) etiketleri göstermek için bunu seçin. &#39;Engellenmeyenleri göster&#39; olarak okunmalıdır.",
+      "message": "engellemesi kaldırıldı"
+   },
+   "white_black_list_error_invalid_url": {
+      "message": "Lütfen geçerli bir URL adresi girin."
+   },
+   "whitelist_error_blacklist_url": {
+      "message": "Bu site, Kısıtlanmış Siteler listenizden kaldırılmış ve Güvenilir Siteler listenize eklenmiş."
+   },
+   "whitelist_error_duplicate_url": {
+      "description": "Beyaz listede olan bir URL&#39;yi beyaz listeye alırken gösterilen seçenekler sayfası sitesi beyaz listeye alma hata mesajı.",
+      "message": "Bu site zaten beyaz listede."
+   }
+}
