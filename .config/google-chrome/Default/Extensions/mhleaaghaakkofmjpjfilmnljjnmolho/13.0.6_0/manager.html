@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Sizmek - Cookie Monster</title>
+  <link href="css/stylish-manager.css" rel="stylesheet" type="text/css">
+  <script src="libs/manager.js"></script>  
+</head>
+<body>
+  <h3>COOKIE MONSTER!</h3>
+<button  type="submit" id="remove_button">DELETE ALL COOKIES!</button>
+    <br>
+  <div id="filter_div">
+    FILTER: <input placeholder="Domain.." id="filter" type="text">
+    <button style="width:20px;">x</button>
+  </div>
+<br />
+  <div id="summary_div">
+    Showing <span id="filter_count"></span> of <span id="total_count"></span> cookie domains.
+    <span id="delete_all_button"></span>
+  </div>
+  <br />
+  <table class="tg" border="1" cellpadding="0" cellspacing="0" id="cookies">
+    <tr class="header">
+      <th >Name</th>
+      <th>Cookies</th>
+      <th></th>
+    </tr>
+    </table>
+
+</body>
+</html>

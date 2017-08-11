@@ -1,0 +1,6 @@
+2017/05/04-10:33:30.652 4481 Reusing MANIFEST /home/syphez/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2017/05/04-10:33:30.653 4481 Recovering log #4
+2017/05/04-10:33:30.686 4481 Reusing old log /home/syphez/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000004.log 
+2017/05/04-10:33:39.164 24221 Level-0 table #8: started
+2017/05/04-10:33:39.217 24221 Level-0 table #8: 4614012 bytes OK
+2017/05/04-10:33:39.224 24221 Delete type=0 #4

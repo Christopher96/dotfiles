@@ -1,0 +1,19 @@
+{
+  "discord_rpc": {
+    "installedVersion": 1
+  },
+  "discord_toaster": {
+    "installedVersion": 1
+  },
+  "discord_utils": {
+    "installedVersion": 1
+  },
+  "discord_voice": {
+    "installedVersion": 1,
+    "updateVersion": 2,
+    "updateZipfile": "/home/syphez/.config/discord/0.0.2/modules/pending/discord_voice-2.zip"
+  },
+  "discord_contact_import": {
+    "installedVersion": 1
+  }
+}

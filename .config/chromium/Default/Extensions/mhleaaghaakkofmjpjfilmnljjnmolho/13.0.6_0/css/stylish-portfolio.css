@@ -1,0 +1,481 @@
+
+@font-face{font-family:'Titillium Web';
+src:url(../fonts/titilliumweb-black-webfont.eot);
+src:url(../fonts/titilliumweb-black-webfont.eot?#iefix) 
+format("embedded-opentype"),
+url(../fonts/titilliumweb-black-webfont.svg#titillium_webblack) 
+format("svg"),url(../fonts/titilliumweb-black-webfont.woff) 
+format("woff"),url(../fonts/titilliumweb-black-webfont.ttf) 
+format("truetype");font-weight:900;font-style:normal}
+@font-face{font-family:'Titillium Web';
+src:url(../fonts/titilliumweb-bold-webfont.eot);
+src:url(../fonts/titilliumweb-bold-webfont.eot?#iefix) 
+format("embedded-opentype"),url(../fonts/titilliumweb-bold-webfont.svg#titillium_webbold) 
+format("svg"),url(../fonts/titilliumweb-bold-webfont.woff) 
+format("woff"),url(../fonts/titilliumweb-bold-webfont.ttf) format("truetype");font-weight:700;font-style:normal}
+@font-face{font-family:'Titillium Web';
+src:url(../fonts/titilliumweb-bolditalic-webfont.eot);
+src:url(../fonts/titilliumweb-bolditalic-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/titilliumweb-bolditalic-webfont.svg#titillium_webbold_italic) format("svg"),url(../fonts/titilliumweb-bolditalic-webfont.woff) format("woff"),url(../fonts/titilliumweb-bolditalic-webfont.ttf) format("truetype");font-weight:700;font-style:italic}
+@font-face{font-family:'Titillium Web';src:url(../fonts/titilliumweb-extralight-webfont.eot);src:url(../fonts/titilliumweb-extralight-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/titilliumweb-extralight-webfont.svg#titillium_webthin) format("svg"),url(../fonts/titilliumweb-extralight-webfont.woff) format("woff"),url(../fonts/titilliumweb-extralight-webfont.ttf) format("truetype");font-weight:200;font-style:normal}
+@font-face{font-family:'Titillium Web';src:url(../fonts/titilliumweb-extralightitalic-webfont.eot);src:url(../fonts/titilliumweb-extralightitalic-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/titilliumweb-extralightitalic-webfont.svg#titillium_webthin_italic) format("svg"),url(../fonts/titilliumweb-extralightitalic-webfont.woff) format("woff"),url(../fonts/titilliumweb-extralightitalic-webfont.ttf) format("truetype");font-weight:200;font-style:italic}
+@font-face{font-family:'Titillium Web';src:url(../fonts/titilliumweb-italic-webfont.eot);src:url(../fonts/titilliumweb-italic-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/titilliumweb-italic-webfont.svg#titillium_webitalic) format("svg"),url(../fonts/titilliumweb-italic-webfont.woff) format("woff"),url(../fonts/titilliumweb-italic-webfont.ttf) format("truetype");font-weight:400;font-style:italic}
+@font-face{font-family:'Titillium Web';src:url(../fonts/titilliumweb-light-webfont.eot);src:url(../fonts/titilliumweb-light-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/titilliumweb-light-webfont.svg#titillium_weblight) format("svg"),url(../fonts/titilliumweb-light-webfont.woff) format("woff"),url(../fonts/titilliumweb-light-webfont.ttf) format("truetype");font-weight:300;font-style:normal}
+@font-face{font-family:'Titillium Web';src:url(../fonts/titilliumweb-lightitalic-webfont.eot);src:url(../fonts/titilliumweb-lightitalic-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/titilliumweb-lightitalic-webfont.svg#titillium_weblight_italic) format("svg"),url(../fonts/titilliumweb-lightitalic-webfont.woff) format("woff"),url(../fonts/titilliumweb-lightitalic-webfont.ttf) format("truetype");font-weight:300;font-style:italic}
+@font-face{font-family:'Titillium Web';src:url(../fonts/titilliumweb-regular-webfont.eot);src:url(../fonts/titilliumweb-regular-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/titilliumweb-regular-webfont.svg#titillium_webregular) format("svg"),url(../fonts/titilliumweb-regular-webfont.woff) format("woff"),url(../fonts/titilliumweb-regular-webfont.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:'Titillium Web';src:url(../fonts/titilliumweb-semibold-webfont.eot);src:url(../fonts/titilliumweb-semibold-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/titilliumweb-semibold-webfont.svg#titillium_websemibold) format("svg"),url(../fonts/titilliumweb-semibold-webfont.woff) format("woff"),url(../fonts/titilliumweb-semibold-webfont.ttf) format("truetype");font-weight:600;font-style:normal}
+@font-face{font-family:'Titillium Web';src:url(../fonts/titilliumweb-semibolditalic-webfont.eot);src:url(../fonts/titilliumweb-semibolditalic-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/titilliumweb-semibolditalic-webfont.svg#titillium_websemibold_italic) format("svg"),url(../fonts/titilliumweb-semibolditalic-webfont.woff) format("woff"),url(../fonts/titilliumweb-semibolditalic-webfont.ttf) format("truetype");
+font-weight:600;font-style:italic}
+
+/* Global Styles */
+
+
+* {padding: 0; margin: 0;}
+
+html,
+body {
+    width: 360px;
+    height: 100%;
+    background-color: #0d2a4d;
+}
+
+body {
+     font-family:'Titillium Web',"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+body #content {
+    position: relative;
+}
+
+body #content #qr {
+    background: #fff;
+    padding: 5px;
+}
+
+body #content #fav {
+    display: none;
+    opacity: .95;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    padding: 3px;
+    width: 32px;
+    height: 32px;
+    margin-left: -16px;
+    margin-top: -16px;
+    border-radius: 5px;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,1); 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(44, 103, 211,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(3 ,122, 212,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(245, 241, 10,0.4); 
+}
+
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+/* Custom Button Styles */
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 5;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* Custom Horizontal Rule */
+
+hr.small {
+    max-width: 100px;
+    
+}
+
+/* Side Menu */
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    margin-right: -250px;
+    overflow-y: auto;
+    background: #222;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 22px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+#menu-toggle {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#sidebar-wrapper.active {
+    right: 250px;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.toggle {
+    margin: 5px 5px 0 0;
+}
+
+/* Header */
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.SnifferDivs{
+    text-align: right;
+    padding: 0 40px 0 0;
+    
+    color:white;
+}
+
+.quickHome{
+    text-align: center;
+    padding: 0 0 0 0;
+    color:white;
+}
+
+
+/* LIVETestingTag */
+
+.LIVETestingTag {
+    padding: 30px 0;
+    height: 600px;
+    background-color: #0d2a4d;
+}
+/* ShowmeIds */
+
+.ShowmeIds {
+    padding: 30px 0;
+    height: 600px;
+    background-color: #0d2a4d;
+}
+
+
+/* INJECT CSS */
+
+.injectCSS {
+    padding: 30px 0;
+    height: 600px;
+    background-color: #0d2a4d;
+}
+
+
+/* VASTTestPlayer */
+
+.VASTTestPlayer {
+    padding: 30px 0;
+    height: 600px;
+    background-color: #0d2a4d;
+}
+
+
+/* FontFinder */
+
+.FontFinder {
+    padding: 30px 0;
+    height: 600px;
+    background-color: #0d2a4d;
+}
+
+/* myFooterimg */
+.myFooterimg {
+    display: table;
+    width: 100%;
+    height: 80px;
+    color: #fff;
+    background: url(../img/callout.png) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* iframeItem */
+
+.iframeItem {
+    padding: 5px 0;
+ 
+}
+.iframeClassScroll{
+    width:350px;
+    height:600px;
+    border: none;
+    overflow: scroll;
+    margin:0;
+}
+.iframeClass{
+    width:340px;
+    height:600px;
+    border: none;
+    overflow: hidden;
+    margin:0;
+}
+.iframeClass::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+.iframeClassDebug{
+    width:340px;
+    height:300px;
+    border: none;
+    overflow: hidden;
+    margin:0;
+}
+.iframeClassDebug::-webkit-scrollbar { 
+    display: none; 
+}
+
+.iframeClassConversion{
+    width:340px;
+    height:230px;
+    border: none;
+    overflow: hidden;
+    margin:0;
+}
+.iframeClassConversion::-webkit-scrollbar { 
+    display: none; 
+}
+
+.IDFilter-item {
+    margin-bottom: 10px;
+}
+
+.img-iframeItem {
+    margin: 0 auto;
+}
+
+.img-iframeItem:hover {
+    opacity: 0.8;
+}
+
+
+#messageCSS{
+    font:400 12px/12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow:0 1px 0 #000000;
+    color:#FFFFFF;
+
+}
+/* Footer */
+
+footer {
+    padding: 100px 0;
+}
+
+
+/*Live Testing TAG*/
+#contact-form input[type="text"],
+#contact-form button[type="submit"] {
+    font:400 12px/12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#contact-form {
+    text-shadow:0 1px 0 #FFF;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    background:#F9F9F9;
+    padding:25px;
+}
+
+
+
+h3 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+
+h4 {
+    margin:5px 0 15px;
+    display:block;
+    font-size:13px;
+}
+#contact-form label span {
+    cursor:pointer;
+    color:#991D57;
+    display:block;
+    margin:5px 0;
+    font-weight:900;
+}
+#contact-form input[type="text"] {
+    width:100%;
+    box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    border:1px solid #CCC;
+    background:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+}
+#contact-form input[type="text"]:hover {
+    -webkit-transition:border-color 0.3s ease-in-out;
+    -moz-transition:border-color 0.3s ease-in-out;
+    transition:border-color 0.3s ease-in-out;
+    border:1px solid #AAA;
+}
+#contact-form button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #3b68fb;
+    background-image: linear-gradient(bottom, #6DB3F2 0%, #3b68fb 52%);
+    background-image: -moz-linear-gradient(bottom, #6DB3F2 0%, #3b68fb 52%);
+    background-image: -webkit-linear-gradient(bottom, #6DB3F2 0%, #3b68fb 52%);
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+#contact-form button[type="submit"]:hover {
+    background-image: linear-gradient(bottom, #3b68fb 0%, #6DB3F2 52%);
+    background-image: -moz-linear-gradient(bottom, #3b68fb 0%, #6DB3F2 52%);
+    background-image: -webkit-linear-gradient(bottom, #3b68fb 0%, #6DB3F2 52%);
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+#contact-form button[type="submit"]:active {
+    box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline:0;
+    border:1px solid #999;
+}
+::-webkit-input-placeholder {
+    color:#888;
+}
+:-moz-placeholder {
+    color:#888;
+}
+::-moz-placeholder {
+    color:#888;
+}
+:-ms-input-placeholder {
+    color:#888;
+}
+

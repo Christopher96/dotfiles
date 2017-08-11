@@ -1,0 +1,21 @@
+mono profile = '/opt/Unity/Editor/Data/Mono/lib/mono/2.0'
+Initialize mono
+Mono path[0] = '/opt/Unity/Editor/Data/Managed'
+Mono path[1] = '/opt/Unity/Editor/Data/Mono/lib/mono/2.0'
+Mono path[2] = '/opt/Unity/Editor/Data/UnityScript'
+Mono path[3] = '/opt/Unity/Editor/Data/Mono/lib/mono/2.0'
+Mono config path = '/opt/Unity/Editor/Data/Mono/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,defer=y,address=0.0.0.0:56597
+Desktop is 5760 x 1080 @ 60 Hz
+
+LICENSE SYSTEM [201787 13:45:23] No start/stop license dates set
+
+LICENSE SYSTEM [201787 13:45:23] Next license update check is after 2017-08-08T09:55:47
+
+
+ COMMAND LINE ARGUMENTS:
+/opt/Unity/Editor/Unity
+-no-throttle-updates
+[0807/134523:ERROR:browser_main_loop.cc(161)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
+[0807/134524:ERROR:renderer_main.cc(227)] Running without renderer sandbox
+[0807/134524:ERROR:gpu_process_transport_factory.cc(402)] Failed to establish GPU channel.

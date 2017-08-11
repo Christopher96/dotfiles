@@ -1,0 +1,15 @@
+2017/08/10-17:49:39.098 10529 Reusing MANIFEST /home/syphez/.config/google-chrome/Default/Session Storage/MANIFEST-000001
+2017/08/10-17:49:39.099 10529 Recovering log #1548
+2017/08/10-17:49:39.099 10529 Reusing old log /home/syphez/.config/google-chrome/Default/Session Storage/001548.log 
+2017/08/10-22:23:24.593 7669 Level-0 table #1552: started
+2017/08/10-22:23:24.800 7669 Level-0 table #1552: 20257 bytes OK
+2017/08/10-22:23:24.806 7669 Delete type=0 #1548
+2017/08/10-22:23:24.806 7669 Compacting 4@0 + 1@1 files
+2017/08/10-22:23:24.849 7669 Generated table #1553@0: 13431 keys, 395433 bytes
+2017/08/10-22:23:24.849 7669 Compacted 4@0 + 1@1 files => 395433 bytes
+2017/08/10-22:23:24.853 7669 compacted to: files[ 0 1 7 0 0 0 0 ]
+2017/08/10-22:23:24.853 7669 Delete type=2 #1552
+2017/08/10-22:23:24.853 7669 Delete type=2 #1549
+2017/08/10-22:23:24.853 7669 Delete type=2 #1547
+2017/08/10-22:23:24.853 7669 Delete type=2 #1544
+2017/08/10-22:23:24.853 7669 Delete type=2 #1541

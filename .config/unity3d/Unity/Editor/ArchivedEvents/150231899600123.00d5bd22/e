@@ -1,0 +1,2 @@
+{"type":"editor.appRunning.v1","msg":{"ts":1502318996080,"duration":44719,"focus_duration":89433,"play_duration":23540,"user_duration":6877,"local_time_offset":-3600000}}
+(1){"type":"editor.appStop.v1","msg":{"ts":1502318996081}}

@@ -1,0 +1,21 @@
+[Added Associations]
+application/zip=xarchiver.desktop;
+image/jpeg=feh.desktop;
+text/plain=atom.desktop;
+application/x-7z-compressed=xarchiver.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;xarchiver.desktop;
+application/javascript=atom.desktop;
+application/x-php=atom.desktop;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;
+video/mp4=mpv.desktop;
+application/pdf=evince.desktop;gimp.desktop;
+image/png=feh.desktop;
+application/x-compressed-tar=xarchiver.desktop;
+
+[Default Applications]
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+application/pdf=evince.desktop

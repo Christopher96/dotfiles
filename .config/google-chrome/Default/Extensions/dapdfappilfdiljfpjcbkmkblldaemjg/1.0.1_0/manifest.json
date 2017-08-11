@@ -1,0 +1,24 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "icon19.png",
+      "default_title": "Clipboard Sync"
+   },
+   "description": "Sync your clipboard to any computer running Chrome",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDUSgPKWj0QeRt5jN3SV+fyau829o0whmwgt5G7MMrUYusT2a5XxLasz5ntDHHtwTiwqJd5rFVj4GCZlK9GDf2NOhwoqF7eSw4knwm/s1of6ddW+Vrh4pLow6k53SiYip/SQl84wMGuGgXnPXGx6RqEcXclA5sWYOERE0T2m5qdowIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "21",
+   "name": "Clipboard Sync",
+   "options_page": "options.html",
+   "permissions": [ "clipboardRead", "clipboardWrite", "notifications", "storage" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ "icon32-downloading.png", "icon32-error.png" ]
+}
