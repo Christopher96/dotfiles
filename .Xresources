@@ -14,7 +14,9 @@
 ! --- Global Colors ---
 
 #define $transparent         	rgba:0000/0000/0000/B300
-#define $foreground_alt         #ffffff
+#define $foreground		#ffffff
+#define $foreground_alt       	#d90e79
+#define $background		#261F39	
 #define $highlight              #1E828C
 #define $highlight_alt          #a59f85
 #define $selected               #009bde
@@ -79,8 +81,8 @@ polybar.font:           $alt_font
 rofi.color-enabled: true
 rofi.color-window: argb:CC000000, argb:0000000, argb:0000000
 rofi.color-normal: argb:0000000, $foreground, argb:0000000, argb:0000000, $foreground_alt
-rofi.color-active: argb:0000000, $foreground, argb:0000000, argb:0000000, $foreground_alt
-rofi.color-urgent: argb:0000000, $foreground, argb:0000000, argb:0000000, $foreground_alt
+rofi.color-active: argb:0000000, $background, argb:0000000, argb:0000000, $background
+rofi.color-urgent: argb:0000000, $background, argb:0000000, argb:0000000, $background
 
 ! --- Rofi Appearance ---
 rofi.font: $captial_font 22
