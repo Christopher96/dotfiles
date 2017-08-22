@@ -1,7 +1,5 @@
 # Dependencies
-# i3lock
-# nitrogen
-# compton
+# i3lock compton nitrogen urxvt jq polybar
 
 set $mod Mod1
 set $sup Mod4
@@ -16,8 +14,8 @@ set $terminal urxvt
 
 # ================== DVI-I-1 =====================
 
-set $workspace_1 "1: "
-set $workspace_2 "2: "
+set $workspace_1 "1: "
+set $workspace_2 "2: "
 set $workspace_3 "3: "
 
 workspace $workspace_1 output DVI-I-1
@@ -73,9 +71,9 @@ bindsym $sup+u workspace $workspace_u; exec unity-editor
 
 # ================== DP-5 =====================
 
-set $workspace_a "111: "
-set $workspace_s "112: "
-set $workspace_d "113: "
+set $workspace_a "111: "
+set $workspace_s "112: "
+set $workspace_d "113: "
 
 workspace $workspace_a output DP-5
 workspace $workspace_s output DP-5
@@ -223,13 +221,16 @@ client.urgent                		$border		$background	$text		$child_border	$child_
 client.placeholder           		$border		$background	$text		$child_border	$child_border
 client.background            		$border
 
-set $floating_windows Thunar|Galculator|Pavucontrol|feh
+set $floating_windows Thunar|Galculator|Pavucontrol|feh|yad|Yad
 
-for_window [class="$floating_windows"] floating enable, position center
+for_window [class="$floating_windows"] floating enable, border pixel 0
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [class="\b(?!$floating_windows)^.*"] border pixel 1
 for_window [title="Hold on"] floating enable, position center
+
+for_window [title="cava"] floating enable, move absolute position bottom, resize set 1080 300
+assign [title="cava"] $workspace_w
 
 smart_gaps on
 gaps inner 10

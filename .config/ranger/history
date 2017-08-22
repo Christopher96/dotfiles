@@ -1,50 +1,50 @@
-set colorscheme default
-find .ranger
-shell mkdir plugins
-shell git clone https://gist.github.com/73053bb0a8b02f5d7f1674294c5fec3c.git
-linemode devicons
-vim
-open_with vim
-!git clone github.com/blindfs/vim-colorpicker
-git
-shell git clone https://github.com/blindFS/vim-colorpicker
-open_wit
-find h
-find
-tabnew
-search hello
-search vim
-find .Xre
-rename RPG
-open_with 
-rename Alert.cs
-search ranger
-find ra
-open_with q§
-find rp
-find asset
-find scr
-rename Backgroundsq
-search .con
-rename 3Atom
-rename Atom
-find .co
-find cod
-find itemse
-find 
-find th
 find ir
-find i3
 ?
 shell touch synthwave
 search .Xres
-find .vim
 open_with r
-delete
-find pol
-find .vimrc
-search vimrc
 search .Xr
-shell 
 shell dotfiles add .config
+rename windowbspwm
+rename window.sh
+rename windowbspwm.sh
+find i3
+rename windows.sh
+find .co
+search *.wav
+search wav
+shell 
+find .xres
+search Xres
+find .vim
+find .vimrc
+search .vim
+search vimrc
+search vim
+search .conf
+search i3
+search 
+search con
+search xre
 
+shell touch mail.sh
+shell chmod +x mail.sh
+find conf
+search qq
+shell polybar -r DVI-I-1
+find pol
+search xres
+delete
+search fun
+search pol
+search conf
+search conky
+search conkt
+shell touch h
+shell cavamod
+find conky
+search conk
+find conk
+shell mkdir Cava
+shell touch cavamod
+find .conk

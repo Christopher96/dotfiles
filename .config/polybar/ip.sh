@@ -16,7 +16,9 @@ if [ "$1" == "--local" ]
 fi
 
 
+FG=$(xrdb -query | awk '/polybar.foreground_alt:/ {print $2}')
+
 ip=$(cat $ipsave)
-icon1="%{F#ffffff} %{F-}"
-icon2="%{F#ffffff} %{F-}"
+icon1="%{F"$FG"} %{F-}"
+icon2="%{F"$FG"}  %{F-}"
 echo "$icon1$ip$icon2"

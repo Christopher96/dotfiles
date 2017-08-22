@@ -72,22 +72,22 @@ module-margin-right = 1
 inherit = bar/parent
 monitor = ${env:MONITOR:DVI-I-1}
 
-modules-left = i3
+modules-left = i3 w1
 modules-center = xwindow
-modules-right = pkg trash filesystem memory cpu ip
+modules-right = pkg mail trash filesystem memory cpu ip
 
 [bar/HDMI-0]
 inherit = bar/parent
 monitor = ${env:MONITOR:HDMI-0}
 
-modules-left = i3
+modules-left = i3 w2
 modules-center = xwindow
-modules-right = weather date calendar
+modules-right = weather date 
 
 [bar/DP-5]
 inherit = bar/parent
 monitor = ${env:MONITOR:DP-5}
-modules-left = i3
+modules-left = i3 w3
 modules-center = xwindow
 modules-right = pavolume volume
 
@@ -99,20 +99,30 @@ tray-background = ${colors.foreground}
 
 ; ------- MODULES --------
 
-[module/calendar]
+[module/windows]
 type = custom/script
-interval = 1
+interval = 0.1
 label = %output% 
-click-left = calendar 
+
+[module/w1]
+inherit = module/windows
+exec = ~/.config/polybar/windows.sh -m "DVI-I-1"
+
+[module/w2]
+inherit = module/windows
+exec = ~/.config/polybar/windows.sh -m "HDMI-0"
+
+[module/w3]
+inherit = module/windows
+exec = ~/.config/polybar/windows.sh -m "DP-5"
 
 [module/ip]
 type = custom/script
 format-underline = ${colors.foreground-alt}
-lnterval = 0.1
+lnterval = 1200
 label = %output%
 exec = ~/.config/polybar/ip.sh
 click-left = ~/.config/polybar/ip.sh --public
-click-right = ~/.config/polybar/ip.sh --local
 
 [module/pavolume]
 type = custom/script
@@ -125,8 +135,16 @@ click-left = ~/.config/polybar/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/pavolume.sh --up
 scroll-down = ~/.config/polybar/pavolume.sh --down
 
+[module/mail]
+type = custom/script
+interval = 1200
+format = <label>
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+exec = ~/.config/polybar/mail.sh
+
 [module/trash]
-interval = 1
+interval = 10
 format-underline = ${module/bspwm.label-focused-underline}
 type = custom/script
 exec = ~/.config/polybar/trash.sh
@@ -138,7 +156,7 @@ click-left = thunar ~/.local/share/Trash/files
 [module/weather]
 type = custom/script
 format-underline = ${module/bspwm.label-focused-underline}
-interval = 10
+interval = 100
 format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
@@ -179,20 +197,19 @@ label-indicator-underline = ${colors.secondary}
 [module/filesystem]
 type = internal/fs
 interval = 25
-
-
 mount-0 = /
-
-label-mounted = %{F#ffffff}%{F} %percentage_used%%
+format-mounted = <label-mounted>
+format-mounted-prefix = " "
+format-mounted-prefix-foreground = ${colors.foreground-alt}
+label-mounted = %percentage_used%%
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/bspwm]
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-foreground = ${colors.background}
-label-focused-background = ${colors.foreground}
+label-focused-foreground = ${colors.foreground-alt}
+label-focused-background = ${colors.background}
 label-focused-underline= ${colors.foreground-alt}
 label-focused-padding = 2
 
@@ -201,7 +218,7 @@ label-occupied-padding = 2
 
 label-urgent = %index%!
 label-urgent-foreground = ${colors.background}
-label-urgent-background = ${colors.foreground-alt}
+label-urgent-background = ${colors.foreground}
 label-urgent-underline = ${colors.selected}
 label-urgent-padding = 2
 
@@ -222,7 +239,6 @@ ws-icon-default = 
 
 label-mode-padding = 0
 label-mode-foreground = #000
-;label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
@@ -283,7 +299,6 @@ card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
-;format-underline = ${colors.foreground-alt}
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}

@@ -3,9 +3,12 @@ pac=$(checkupdates | wc -l)
 aur=$(cower -u | wc -l)
 
 check=$((pac + aur))
+
+FG=$(xrdb -query | awk '/polybar.foreground_alt:/ {print $2}')
+
 if [[ "$check" != "0" ]]
 then
-    echo "$pac %{F#ffffff}%{F-} $aur"
+    echo "$pac %{F"$FG"}%{F-} $aur"
 fi
 
 if [ "$1" == "--upgrade" ]
