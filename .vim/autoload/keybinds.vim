@@ -1,30 +1,30 @@
 :let mapleader = ","
 
-nmap <leader>q  		:bp <BAR> bd #<CR>
-nmap <leader>Q  		:bp! <BAR> bd! #<CR>
-nmap <leader>b  		:ls<CR>
-nmap <leader>w 			:w<CR>
-nmap <leader>W 			:w !sudo tee % >/dev/null<CR>
-
+map <C-n> 			:NERDTreeToggle<CR>
 map <leader>r 			:call RangerExplorer()<CR>
+
+nnoremap <C-w>  		:bp <BAR> bd #<CR>
+nnoremap <leader>q  		:bp! <BAR> bd! #<CR>
+nnoremap <C-s>			:w<CR>
+nnoremap <leader>w		:w !sudo tee % >/dev/null<CR>
 
 nnoremap <leader>d 		"_d
 vnoremap <leader>d 		"_d
 vnoremap <leader>p 		"_p
 
-"map <C-n> 			:NERDTreeToggle<CR>
+nnoremap J 			:bprevious<CR>
+nnoremap K 			:bnext<CR>
 
-nnoremap <leader><Tab> 		:bnext<CR>
-nnoremap <leader><S-Tab>	:bprevious<CR>
 nnoremap <Space> 		i_<Esc>r
 nnoremap <Backspace>		"_dd
 nnoremap <CR> 			o<ESC>
 nnoremap <Esc><Esc> 		:noh<CR>
 
+nnoremap <Tab> 			>>	
+nnoremap <S-Tab>		<<	
 vnoremap <Tab>			>><Esc>gv
 vnoremap <S-Tab>		<<<Esc>gv
-nnoremap <Tab>			>>
-nnoremap <S-Tab>		<<
+inoremap <S-Tab>		<Backspace>
 
 inoremap <expr> <C-K>   	BDG_GetDigraph() 
 
