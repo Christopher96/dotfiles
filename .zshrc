@@ -1,6 +1,7 @@
-# Set up the prompt
 source ~/.aliases.sh
 source ~/.functions.sh
+
+# Set up the prompt
 source /usr/share/antigen.zsh
 
 antigen use oh-my-zsh
@@ -51,3 +52,6 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
+stty -ixon
