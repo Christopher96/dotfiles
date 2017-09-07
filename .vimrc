@@ -1,9 +1,20 @@
-:runtime autoload/*
 :runtime plugin/*
+:runtime autoload/*
 
 "NERDtree autospawn
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+
+" Commenting blocks of code.
+autocmd FileType * 		  let b:comment_leader = '! '
+autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+autocmd FileType conf,fstab       let b:comment_leader = '# '
+autocmd FileType tex              let b:comment_leader = '% '
+autocmd FileType mail             let b:comment_leader = '> '
+autocmd FileType vim              let b:comment_leader = '" '
+
 
 if system('command -v powerline-daemon') != ''
     python3 from powerline.vim import setup as powerline_setup
@@ -38,7 +49,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
@@ -66,3 +77,16 @@ filetype plugin indent on    " required
      "
 " see :h vundle for more details or wiki for FAQ
 
+function RangerExplorer()
+    exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
+    if filereadable('/tmp/vim_ranger_current_file')
+	exec 'edit ' . system('cat /tmp/vim_ranger_current_file')
+	call system('rm /tmp/vim_ranger_current_file')
+    endif
+    redraw!
+endfun
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+let g:DVB_TrimWS = 1

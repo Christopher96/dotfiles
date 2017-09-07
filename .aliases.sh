@@ -18,7 +18,6 @@ alias rmzips="find ./* -maxdepth 0 -name \*.zip | xargs rm -rf"
 
 alias grepcmd='echo ${(k)aliases} ${(k)builtins} $(ls /bin) | sed -e "s/\s\+/\n/g" | grep -i'
 
-alias r="ranger"
 
 alias tea="tee -a"
 

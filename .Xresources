@@ -37,14 +37,15 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: xdg-open
 URxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline Bold fg5
-URxvt.depth: 32
+URxvt.depth: 24
 URxvt.internalBorder: 30
 URxvt.externalBorder: 0
 URxvt.modifier: alt
 
 !URxvt.shading: 40
-!URxvt*transparent: true
+!URxvt*transparent: false
 !URXvt*blurRadius: 15
+! URxvt.keysym.Shift-BackSpace: \033"
 
 ! -- URxvt Colors ---
 
@@ -56,7 +57,8 @@ URxvt.selected:         $selected
 
 ! -- URxvt Keybinds --
 
-!URxvt.keysym.J: ESC [ Ps Z
+URxvt.keysym.S-Return:  \033[13;2u
+URxvt.keysym.C-Return:  \033[13;5u
 
 ! --- I3 Colors ---
 
