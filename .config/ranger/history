@@ -1,50 +1,50 @@
-find ir
-?
-shell touch synthwave
-search .Xres
-open_with r
-search .Xr
-shell dotfiles add .config
-rename windowbspwm
-rename window.sh
-rename windowbspwm.sh
 find i3
-rename windows.sh
-find .co
-search *.wav
-search wav
-shell 
-find .xres
-search Xres
-find .vim
-find .vimrc
-search .vim
-search vimrc
-search vim
+shell touch cavai3ipc.py
+find vimrc
+find viml
+find
+find vi
+find vim
+find .conf
+find ra
 search .conf
-search i3
-search 
-search con
-search xre
+search ranger
+shell cdl
+shell cdl code
+edit /home/syphez/public_html/test.php
+bde
+!bde
+vim :q
+set colorscheme jungle
+set colorscheme snow
+set colorscheme default
+find vimr
+edit ! cavacheck.sh
+shell cd .Xresources
+cd .Xresources
+shell cd ~/.Xresources
+cd ~;find .Xresoucres
+cd ~;cd .config
+chain cd ~; find .Xresources
+find Xresoucres
+show hidden
+show_hidden!
+set show_hidden true
+open
 
-shell touch mail.sh
-shell chmod +x mail.sh
 find conf
-search qq
-shell polybar -r DVI-I-1
-find pol
+find 
+find tra
+shell cd %s
+deletej1
+find fu
+find xi
+search fonts
 search xres
+open_with 
+rename shits.txt
+deletey
 delete
-search fun
-search pol
+rename devicons.py
+rename devicons_linemode.py
 search conf
-search conky
-search conkt
-shell touch h
-shell cavamod
-find conky
-search conk
-find conk
-shell mkdir Cava
-shell touch cavamod
-find .conk
