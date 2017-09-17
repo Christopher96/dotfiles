@@ -1,3 +1,12 @@
+
+#define $transparent         	rgba:0000/0000/0000/B300
+#define $foreground		#ffffff
+#define $foreground_alt       	#d90e79
+#define $background		#261F39	
+#define $highlight              #1E828C
+#define $highlight_alt          #a59f85
+#define $selected               #009bde
+
 *.color0:       #1b1d1e
 *.color8:       #505354
 *.color1:       #d90e79

@@ -1,50 +1,50 @@
-find i3
-shell touch cavai3ipc.py
-find vimrc
-find viml
-find
-find vi
-find vim
-find .conf
-find ra
-search .conf
-search ranger
-shell cdl
-shell cdl code
-edit /home/syphez/public_html/test.php
-bde
-!bde
-vim :q
-set colorscheme jungle
-set colorscheme snow
-set colorscheme default
-find vimr
-edit ! cavacheck.sh
-shell cd .Xresources
-cd .Xresources
-shell cd ~/.Xresources
-cd ~;find .Xresoucres
-cd ~;cd .config
-chain cd ~; find .Xresources
-find Xresoucres
-show hidden
-show_hidden!
-set show_hidden true
-open
-
-find conf
-find 
-find tra
-shell cd %s
-deletej1
-find fu
-find xi
-search fonts
-search xres
+open_with 3
+cd 
+cd __pycache__%ent
+cd %s
+quit
 open_with 
-rename shits.txt
-deletey
+rename responsiveshizzle
+search file
+search cava
+search cav
+search wp
+search gtk
+search .wall
+search wall
+shell
+shell ./%s
+search the
+touch test.base
+open_with
+rename test
+open_with vim
+rename test.txt.base
+rename test.base
+rename 
+search us
+find 
+find sh
+search local
+search wla
+search wal
+shell sudo vim %s
 delete
-rename devicons.py
-rename devicons_linemode.py
-search conf
+shell rm -rf %s
+find us
+find lo
+find
+search 
+search pyw
+cd /usr/lib/python3.6/site-packages/pywal/scripts
+rename .Xresources
+reload_cwd
+open_with r
+shell vim -D %s
+shell vim -V9 %s
+search tmp
+search vim
+shell mkdir .tmp
+up
+
+hello

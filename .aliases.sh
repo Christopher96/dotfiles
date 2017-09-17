@@ -24,3 +24,4 @@ alias tea="tee -a"
 alias del='_del(){ mv "$1" ~/.local/share/Trash/files}; _del'
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias dotfilesadd="dotfiles ls-files | xargs -I{} git --git-dir=$HOME/.dotfiles --work-tree=$HOME add {}"

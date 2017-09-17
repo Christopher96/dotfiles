@@ -1,14 +1,14 @@
-function cdl(){
+cdl(){
     cd $1
     ls
 }
 
-function mkcd(){
+mkcd(){
     mkdir $1
     cd $1
 }
 
-function apmy(){
+apmy(){
     sudo systemctl $1 apache2
     sudo systemctl $1 mysql
 }
@@ -25,6 +25,14 @@ urlencode() {
 	*) printf '%%%X' "'$char" ;;
       esac
     done
+}
+
+r() {
+    if [ -z "$RANGER_LEVEL" ]; then
+        SHELL=/usr/local/bin/r.shell ranger
+    else
+        exit
+    fi
 }
 
 # Fetches credentials from .gitconfig (don't add this config file to dotfiles repo)

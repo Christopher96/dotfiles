@@ -106,34 +106,34 @@ label = %output%
 
 [module/w1]
 inherit = module/windows
-exec = ~/.config/polybar/windows.sh -m "DVI-I-1"
+exec = ~/.config/polybar/bin/windows.sh -m "DVI-I-1"
 
 [module/w2]
 inherit = module/windows
-exec = ~/.config/polybar/windows.sh -m "HDMI-0"
+exec = ~/.config/polybar/bin/windows.sh -m "HDMI-0"
 
 [module/w3]
 inherit = module/windows
-exec = ~/.config/polybar/windows.sh -m "DP-5"
+exec = ~/.config/polybar/bin/windows.sh -m "DP-5"
 
 [module/ip]
 type = custom/script
 format-underline = ${colors.foreground-alt}
 lnterval = 1200
 label = %output%
-exec = ~/.config/polybar/ip.sh
-click-left = ~/.config/polybar/ip.sh --public
+exec = ~/.config/polybar/bin/ip.sh
+click-left = ~/.config/polybar/bin/ip.sh --public
 
 [module/pavolume]
 type = custom/script
 format-underline = ${colors.foreground-alt}
 enterval = 1
 label = %output%
-exec = ~/.config/polybar/pavolume.sh
+exec = ~/.config/polybar/bin/pavolume.sh
 click-right = exec pavucontrol
-click-left = ~/.config/polybar/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/pavolume.sh --up
-scroll-down = ~/.config/polybar/pavolume.sh --down
+click-left = ~/.config/polybar/bin/pavolume.sh --togmute
+scroll-up = ~/.config/polybar/bin/pavolume.sh --up
+scroll-down = ~/.config/polybar/bin/pavolume.sh --down
 
 [module/mail]
 type = custom/script
@@ -141,13 +141,13 @@ interval = 1200
 format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-exec = ~/.config/polybar/mail.sh
+exec = ~/.config/polybar/bin/mail.sh
 
 [module/trash]
 interval = 10
 format-underline = ${module/bspwm.label-focused-underline}
 type = custom/script
-exec = ~/.config/polybar/trash.sh
+exec = ~/.config/polybar/bin/trash.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 click-right = rm -rf ~/.local/share/Trash/files/* ;exec paplay /usr/share/sounds/freedesktop/stereo/trash-empty.oga
@@ -160,7 +160,7 @@ interval = 100
 format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-exec = ~/.config/polybar/weather.py
+exec = ~/.config/polybar/bin/weather.py
 
 [module/pkg]
 type = custom/script
@@ -169,8 +169,8 @@ interval = 1200
 format = <label>
 ;format-underline = #dc322f
 label = "%output:0:30%"
-exec = ~/.config/polybar/pkg.sh
-click-left = ~/.config/polybar/pkg.sh --upgrade
+exec = ~/.config/polybar/bin/pkg.sh
+click-left = ~/.config/polybar/bin/pkg.sh --upgrade
 
 [module/xwindow]
 type = internal/xwindow

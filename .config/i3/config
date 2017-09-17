@@ -136,7 +136,7 @@ bindsym $mod+f 		      exec "rofi -show drun -modi drun,run,window,ssh"
 bindsym $mod+Shift+f          fullscreen toggle
 
 
-bindsym $mod+x		      exec xrdb -merge ~/.Xresources
+bindsym $mod+x		      exec xrdb ~/.Xresources
 bindsym $mod+Shift+x	      exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+z                layout toggle split
@@ -221,16 +221,14 @@ client.urgent                		$border		$background	$text		$child_border	$child_
 client.placeholder           		$border		$background	$text		$child_border	$child_border
 client.background            		$border
 
-set $floating_windows Thunar|Galculator|Pavucontrol|feh|yad|Yad
+set $floating_windows Thunar|Galculator|Pavucontrol|feh|yad|Yad|Wpg
 
 for_window [class="$floating_windows"] floating enable, border pixel 0
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [class="\b(?!$floating_windows)^.*"] border pixel 1
 for_window [title="Hold on"] floating enable, position center
-
-for_window [title="cava"] floating enable, move absolute position bottom, resize set 1080 300
-assign [title="cava"] $workspace_w
+for_window [instance=".*-CAVA"] floating disable, border pixel 0, move scratchpad
 
 smart_gaps on
 gaps inner 10
@@ -260,4 +258,4 @@ exec --no-startup-id polybar -r DP-5
 exec --no-startup-id polybar -r HDMI-0
 exec --no-startup-id polybar -r DVI-I-1
 exec --no-startup-id ckb --background
-#excec --no-startup-id conky -c ~/.config/conky/infinity_v2/conkyrc
+exec ~/.config/i3/bin/cavai3ipc.py DVI-I-1
