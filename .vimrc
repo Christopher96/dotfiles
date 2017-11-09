@@ -9,13 +9,15 @@
 " AUTOCOMMANDS {{{
 
 " Commenting blocks of code.
-autocmd FileType * 		  let b:comment_leader = '! '
-autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-autocmd FileType conf,fstab       let b:comment_leader = '# '
-autocmd FileType tex              let b:comment_leader = '% '
-autocmd FileType mail             let b:comment_leader = '> '
-autocmd FileType vim              let b:comment_leader = '" '
+let b:comment_leader = '! '
+
+autocmd FileType javascript,c,cpp,java,scala,css,scss   let b:comment_leader = '// '
+autocmd FileType sh,ruby,python							let b:comment_leader = '# '
+autocmd FileType conf,fstab								let b:comment_leader = '# '
+autocmd FileType tex									let b:comment_leader = '% '
+autocmd FileType mail									let b:comment_leader = '> '
+autocmd FileType vim									let b:comment_leader = '" '
+autocmd FileType html									let b:comment_leader = '<!-- '
 
 " Resize splits when window is resized
 au VimResized * exe "normal! \<c-w>="
@@ -29,6 +31,12 @@ augroup line_return
         \     execute 'normal! g`"zvzz' |
         \ endif
 augroup END
+
+au BufWrite .vimrc :breakdel * :source ~/.vimrc
+au BufWrite keybinds.vim :breakdel * :source ~/.vim/autoload/keybinds.vim
+
+au FocusGained,BufEnter * :checktime
+au CursorHold,CursorHoldI * checktime
 
 " }}}
 
@@ -52,7 +60,18 @@ set smartcase
 set hlsearch          
 set encoding=utf8    
 set fillchars=vert:\ 
-set shiftwidth=4
+set autoread
+
+set tabstop=4       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+
+set shiftwidth=4    " Indents will have a width of 4
+
+set softtabstop=4   " Sets the number of columns for a TAB
+
+set expandtab       " Expand TABs to spaces
 
 set backup
 set noswapfile
@@ -62,25 +81,10 @@ set undodir=~/.vim/tmp/undo//
 
 " }}}
 
-" POWERLINE {{{
-
-if system('command -v powerline-daemon') != ''
-    python3 from powerline.vim import setup as powerline_setup
-    python3 powerline_setup()
-    python3 del powerline_setup
-    set laststatus=2
-    set noshowmode
-endif
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_powerline_fonts = 1
-
-" }}}
 
 " COLORS {{{
 
-colorscheme delek
+" colorscheme delek
 syntax enable
 
 " }}}
@@ -112,6 +116,8 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ap/vim-css-color'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'djoshea/vim-autoread'
 
 " All of your Plugins must be added before the following line
 call vundle#end()	    " required
@@ -131,17 +137,37 @@ filetype plugin indent on    " required
 
 " RANGER {{{
 
-function RangerExplorer()
-    exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
-    if filereadable('/tmp/vim_ranger_current_file')
-	exec 'edit ' . system('cat /tmp/vim_ranger_current_file')
-	call system('rm /tmp/vim_ranger_current_file')
-    endif
-    redraw!
-endfun
+" function RangerExplorer()
+"     exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
+"     if filereadable('/tmp/vim_ranger_current_file')
+" 	exec 'edit ' . system('cat /tmp/vim_ranger_current_file')
+" 	call system('rm /tmp/vim_ranger_current_file')
+"     endif
+"     redraw!
+" endfun
 
 " }}}
 
-"NERDtree autospawn
+" POWERLINE {{{
+
+if system('command -v powerline-daemon') != ''
+    python3 from powerline.vim import setup as powerline_setup
+    python3 powerline_setup()
+    python3 del powerline_setup
+    set laststatus=2
+    set noshowmode
+endif
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='zenburn'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
+" }}}
+"'NERDtree autospawn
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

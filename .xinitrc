@@ -1,5 +1,7 @@
 xset +fp ~/.fonts
 xset fp rehash
 
-if [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+x="~/.cache/wal/colors.Xresources"
+
+[[ -f $x ]] && xrdb -I$HOME $x
 exec i3

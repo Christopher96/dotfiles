@@ -88,7 +88,7 @@ bindsym $mod+Shift+s move container to workspace $workspace_s; workspace $worksp
 bindsym $mod+Shift+d move container to workspace $workspace_d; workspace $workspace_d
 
 bindsym $sup+a workspace $workspace_a; exec --no-startup-id i3-msg 'workspace $workspace_a; exec google-chrome "http://youtube.com"'
-bindsym $sup+s workspace $workspace_s; exec google-chrome
+bindsym $sup+s workspace $workspace_s; exec urxvt -e mpsyt
 bindsym $sup+d workspace $workspace_d; exec skypeforlinux
 
 #assign [title="YouTube"] $workspace_a
@@ -126,17 +126,18 @@ bindsym $sup+0 move container to workspace $workspace_10; workspace $workspace_1
 
 # ================== Keybinds =====================
 
+# MOD1 BINDINGS
 
 bindcode $mod+49              kill
 
 bindsym $mod+r                reload
 bindsym $mod+Shift+r          restart
 
-bindsym $mod+f 		      exec "rofi -show drun -modi drun,run,window,ssh"
+bindsym $mod+f 		      exec "rofi -show drun -modi drun,run,ssh"
 bindsym $mod+Shift+f          fullscreen toggle
 
 
-bindsym $mod+x		      exec xrdb ~/.Xresources
+bindsym $mod+x		      exec xrdb ~/.cache/wal/colors.Xresources
 bindsym $mod+Shift+x	      exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+z                layout toggle split
@@ -160,7 +161,7 @@ bindsym $mod+l		            focus right
 bindsym $mod+Shift+h          move left
 bindsym $mod+Shift+j          move down
 bindsym $mod+Shift+k          move up
-bindsym $mod+Shift+l	        move right
+bindsym $mod+Shift+l	      move right
 
 bindsym $mod+Shift+Left       move left
 bindsym $mod+Shift+Down       move down
@@ -170,10 +171,10 @@ bindsym $mod+Shift+Right      move right
 bindsym $mod+Tab              workspace back_and_forth
 bindsym $mod+Shift+Tab        move container to workspace back_and_forth; workspace back_and_forth
 
-bindsym $mod+Ctrl+h                resize shrink width 5 px or 5 ppt
-bindsym $mod+Ctrl+j                resize grow height 5 px or 5 ppt
-bindsym $mod+Ctrl+k                resize shrink height 5 px or 5 ppt
-bindsym $mod+Ctrl+l                resize grow width 5 px or 5 ppt
+bindsym $mod+Ctrl+h                resize shrink width 30 px or 30 ppt
+bindsym $mod+Ctrl+j                resize grow height 30 px or 30 ppt
+bindsym $mod+Ctrl+k                resize shrink height 30 px or 30 ppt
+bindsym $mod+Ctrl+l                resize grow width 30 px or 30 ppt
 
 bindsym $mod+Shift+minus      move scratchpad
 bindsym $mod+minus            scratchpad show
@@ -184,8 +185,30 @@ bindsym $mod+Shift+BackSpace	exec ~/.config/i3/bin/lock.sh
 
 bindsym $mod+Return 					exec $terminal
 
+# SUPER BINDINGS
+
+bindsym $sup+g 			exec gyazo
+
+# F-KEY BINDINGS
+
+bindsym $mod+F1			exec wal -i /mnt/share/Backgrounds/5lFWCfD.jpg
+bindsym $mod+F2			exec wal -i /mnt/share/Backgrounds/3iooxbD.jpg
+bindsym $mod+F3			exec wal -i /mnt/share/Backgrounds/381812_1280.jpg
+bindsym $mod+F4			exec wal -i /mnt/share/Backgrounds/1339262301565.jpg
+bindsym $mod+F5			exec wal -i /mnt/share/Backgrounds/1361000718153.jpg
+bindsym $mod+F6			exec wal -i /mnt/share/Backgrounds/1362081489285.jpg
+bindsym $mod+F7			exec wal -i /mnt/share/Backgrounds/1363193246835.jpg
+bindsym $mod+F8			exec wal -i /mnt/share/Backgrounds/1445446796007.jpg
+bindsym $mod+F9			exec wal -i /mnt/share/Backgrounds/1460394691885.jpg
+bindsym $mod+F10		exec wal -i /mnt/share/Backgrounds/1460396747868.jpg
+bindsym $mod+F11		exec wal -i /mnt/share/Backgrounds/BHdIV4f.jpg
+bindsym $mod+F12		exec wal -i /mnt/share/Backgrounds/LB6EMz9.jpg
+
+# OTHER BINDINGS
+
 bindsym --release Print 	exec --no-startup-id scrot
 bindsym --release Shift+Print 	exec --no-startup-id scrot -s
+
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
@@ -214,7 +237,7 @@ set_from_resource $indicator		 	i3wm.indicator	 		#222222
 set_from_resource $child_border 		i3wm.child_border 		#444444
 
 # class                       		border		background	text		indicator	child_border
-client.focused                		$border 	$background	$text		$border		$border
+client.focused                		$border 	$background	$text		$child_border	$child_border
 client.focused_inactive       		$border 	$background	$text		$child_border	$child_border
 client.unfocused              		$border		$background	$text		$child_border	$child_border
 client.urgent                		$border		$background	$text		$child_border	$child_border
@@ -226,7 +249,7 @@ set $floating_windows Thunar|Galculator|Pavucontrol|feh|yad|Yad|Wpg
 for_window [class="$floating_windows"] floating enable, border pixel 0
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
-for_window [class="\b(?!$floating_windows)^.*"] border pixel 1
+for_window [class="\b(?!$floating_windows)^.*"] border none
 for_window [title="Hold on"] floating enable, position center
 for_window [instance=".*-CAVA"] floating disable, border pixel 0, move scratchpad
 
@@ -251,11 +274,12 @@ gaps outer 5
 # }
 
 
-exec_always nitrogen --restore
+# exec_always nitrogen --restore
 exec_always compton --config ~/.config/compton.conf
 
 exec --no-startup-id polybar -r DP-5
 exec --no-startup-id polybar -r HDMI-0
 exec --no-startup-id polybar -r DVI-I-1
 exec --no-startup-id ckb --background
+exec --no-startup-id gulp --cwd ~/Code/home serve
 exec ~/.config/i3/bin/cavai3ipc.py DVI-I-1

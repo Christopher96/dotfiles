@@ -124,8 +124,3 @@ github-list() {
     curl -u "$username:$token" https://api.github.com/user/repos -X GET -s -w "%{http_code}" -d '{"affiliation":"owner"}' | grep "full_name" | cut -d\" -f4
 }
 
-
-
-
-
-
