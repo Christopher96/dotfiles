@@ -137,7 +137,7 @@ bindsym $mod+f 		      exec "rofi -show drun -modi drun,run,ssh"
 bindsym $mod+Shift+f          fullscreen toggle
 
 
-bindsym $mod+x		      exec xrdb ~/.cache/wal/colors.Xresources
+bindsym $mod+x		      exec xrdb ~/.Xresources
 bindsym $mod+Shift+x	      exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+z                layout toggle split

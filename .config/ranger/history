@@ -1,10 +1,3 @@
-find ckb
-find au
-search ckb
-rename
-rename scope.sh.bak
-rename 
-rename scope.s.bk
 rename scope.sh
 shell 
 search vsco
@@ -32,7 +25,6 @@ touch index.html
 shell curl http://www.vim.org/scripts/download_script.php?src_id=10609 > autoclose.vim
 shell curl
 shell curl http://www.vim.org/scripts/download_script.php?src_id=10609
-open_with vim
 mkdir .zsh
 find fun
 rename .functions.zsh
@@ -44,7 +36,15 @@ rename Backgrounds
 delete
 search zsh
 find 
-find cac
-find wa
 open_with 2to3
 find zsh
+find cac
+find wa
+find tmu
+touch keymaps.zsh
+find us
+find sh
+find xq
+open_with vim
+touch .Xresources
+find zp

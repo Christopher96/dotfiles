@@ -38,6 +38,8 @@ nnoremap <leader>z		zMzvzz
 
 " CTRL MAPPINGS
 
+
+
 let g:AutoPairsShortcutFastWrap = '<C-e>'
 
 "map <C-n> 			:NERDTreeToggle<CR>
