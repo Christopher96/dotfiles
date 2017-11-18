@@ -8,17 +8,6 @@
 
 " AUTOCOMMANDS {{{
 
-" Commenting blocks of code.
-let b:comment_leader = '! '
-
-autocmd FileType javascript,c,cpp,java,scala,css,scss   let b:comment_leader = '// '
-autocmd FileType sh,ruby,python							let b:comment_leader = '# '
-autocmd FileType conf,fstab								let b:comment_leader = '# '
-autocmd FileType tex									let b:comment_leader = '% '
-autocmd FileType mail									let b:comment_leader = '> '
-autocmd FileType vim									let b:comment_leader = '" '
-autocmd FileType html									let b:comment_leader = '<!-- '
-
 " Resize splits when window is resized
 au VimResized * exe "normal! \<c-w>="
 
@@ -32,8 +21,8 @@ augroup line_return
         \ endif
 augroup END
 
-au BufWrite .vimrc :breakdel * :source ~/.vimrc
-au BufWrite keybinds.vim :breakdel * :source ~/.vim/autoload/keybinds.vim
+au BufWrite .vimrc :source ~/.vimrc
+au BufWrite keybinds.vim :source ~/.vim/autoload/keybinds.vim
 
 au FocusGained,BufEnter * :checktime
 au CursorHold,CursorHoldI * checktime
@@ -102,8 +91,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'vim-scripts/tComment'
 Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'OmniSharp/omnisharp-vim'
@@ -118,6 +106,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'djoshea/vim-autoread'
+Plugin 'alvan/vim-closetag'
 
 " All of your Plugins must be added before the following line
 call vundle#end()	    " required

@@ -42,3 +42,4 @@ alias ls="run_ls"
 alias dir="run_dir"
 alias vdir="run_vdir"
 
+alias tmuxk="tmux ls | grep : | cut -d. -f1 | awk '{print substr(\$1, 0, length(\$1)-1)}' | xargs kill"

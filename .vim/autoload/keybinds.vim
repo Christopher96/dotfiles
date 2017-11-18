@@ -18,41 +18,29 @@ noremap <leader>rS	 	:set operatorfunc=RangerBrowseSplit<CR>g@
 noremap <leader>rV	 	:set operatorfunc=RangerBrowseVSplit<CR>g@
 
 " Buffers
-nnoremap <leader>q  		:bp! <BAR> bd! #<CR>
-nnoremap <leader>s		:w !sudo tee % >/dev/null<CR>
-
-" Commenting blocks of code.
-noremap <silent> <leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-noremap <silent> <leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
-
-" Clipboard
-nnoremap <leader>y		"+y
-vnoremap <leader>y		"+y
-inoremap <leader>p		<Esc>"+pa
-nnoremap <leader>p		"+p
+nnoremap <leader>q  	:bp! <BAR> bd! #<CR>
+nnoremap <leader>s	    :w !sudo tee % >/dev/null<CR>
 
 " Folding
-
 nnoremap <leader>z		zMzvzz
 
 
 " CTRL MAPPINGS
 
-
+" Clipboard
+vnoremap <C-y>          "+y
+nnoremap <C-p>		    "+p
+inoremap <C-p>		    <Esc>"+pa
+inoremap <C-P>		    <Esc>"+Pa
 
 let g:AutoPairsShortcutFastWrap = '<C-e>'
 
-"map <C-n> 			:NERDTreeToggle<CR>
 map 	 <C-q>  		:bp <BAR> bd #<CR>
 nnoremap <C-s>			:w<CR>
 inoremap <C-s>			<Esc>:w<CR>
 vnoremap <C-s>			<Esc>:w<CR>
 nnoremap <C-i> 			i_<Esc>r
 map	 <silent> <C-c>		<C-c>:noh<CR>
-
-" Plugins
-" <C-Y> Emmet
-" <C-N>, <C-U> Multiple Cursors
 
 " Quick edit
 nnoremap <C-e>v			:e ~/.vimrc<CR>
@@ -61,6 +49,11 @@ nnoremap <C-e>p			:e ~/.config/polybar/config<CR>
 nnoremap <C-e>x			:e ~/.Xresources<CR>
 nnoremap <C-e>b			:e ~/.vim/autoload/keybinds.vim<CR>
 nnoremap <C-e>z			:e ~/.zshrc<CR>
+
+" Plugins
+" <C-Y> Emmet
+" <C-N>, <C-U> Multiple Cursors
+
 
 " KEY MAPPINGS
 nnoremap J 			:bprevious<CR>
@@ -94,6 +87,7 @@ nnoremap <CR> 			o<Esc>
 " <F8> NextColor
 
 
+
 " TAB MAPPINGS
 nnoremap <Tab> 			>>	
 nnoremap <S-Tab>		<<	
@@ -103,12 +97,15 @@ inoremap <S-Tab>		<Backspace>
 map 	 <Esc><Esc>		:noh<CR>
 
 
+
 " ARROW MAPPINGS
 vmap  <expr>  <LEFT>   		DVB_Drag('left')                        
 vmap  <expr>  <RIGHT>  		DVB_Drag('right')                       
 vmap  <expr>  <DOWN>   		DVB_Drag('down')                        
 vmap  <expr>  <UP>     		DVB_Drag('up')                          
 vmap  <expr>  D        		DVB_Duplicate()                         
+
+
 
 " F-KEYS
 map   <f12> 			:!ctags -R .<cr>

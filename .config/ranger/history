@@ -1,22 +1,6 @@
-rename scope.sh
-shell 
-search vsco
-shell code .
-find scr
-find w
-find vs
-search 
-search
-search usr
-search shar
-find x1
-touch mpv.sh
-find bo
-shell sudo rm %s
 open_with hq
 open_with lhh
 mkdir mnt
-
 mkdir remote
 rename .mnt
 find mnt
@@ -33,18 +17,34 @@ rename aliases.zsh
 rename functions.zsh
 find zs
 rename Backgrounds
-delete
 search zsh
-find 
 open_with 2to3
-find zsh
-find cac
-find wa
-find tmu
 touch keymaps.zsh
 find us
 find sh
 find xq
-open_with vim
 touch .Xresources
 find zp
+rename compton.conf__
+rename compton.conf
+open_with '
+open_with 
+find bo
+find def
+delete
+find gr
+find gru
+open_with vim
+filter 
+
+search xinit
+find xre
+find tra
+find 
+find cac
+find wa
+rename .tmux.conf
+find zsh
+mkdir Desktop
+find tmu
+find xres

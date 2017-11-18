@@ -30,9 +30,9 @@ bindsym $mod+Shift+1 move container to workspace $workspace_1; workspace $worksp
 bindsym $mod+Shift+2 move container to workspace $workspace_2; workspace $workspace_2
 bindsym $mod+Shift+3 move container to workspace $workspace_3; workspace $workspace_3
 
-bindsym $sup+1 workspace $workspace_1; exec google-chrome "https://outlook.office365.com/owa/\?bO\=1\#path\=/mail/inbox"
-bindsym $sup+2 workspace $workspace_2; exec google-chrome
-bindsym $sup+3 workspace $workspace_3; exec $terminal
+bindsym $mod+Ctrl+1 workspace $workspace_1; exec google-chrome "https://outlook.office365.com/owa/\?bO\=1\#path\=/mail/inbox"
+bindsym $mod+Ctrl+2 workspace $workspace_2; exec google-chrome
+bindsym $mod+Ctrl+3 workspace $workspace_3; exec $terminal
 
 #assign [title="E-post"] $workspace_1
 
@@ -60,10 +60,10 @@ bindsym $mod+Shift+w move container to workspace $workspace_w; workspace $worksp
 bindsym $mod+Shift+e move container to workspace $workspace_e; workspace $workspace_e
 bindsym $mod+Shift+u move container to workspace $workspace_u; workspace $workspace_u
 
-bindsym $sup+q workspace $workspace_q; exec atom
-bindsym $sup+w workspace $workspace_w; exec google-chrome
-bindsym $sup+e workspace $workspace_e; exec $terminal
-bindsym $sup+u workspace $workspace_u; exec unity-editor
+bindsym $mod+Ctrl+q workspace $workspace_q; exec atom
+bindsym $mod+Ctrl+w workspace $workspace_w; exec google-chrome
+bindsym $mod+Ctrl+e workspace $workspace_e; exec $terminal
+bindsym $mod+Ctrl+u workspace $workspace_u; exec unity-editor
 
 #assign [title="New Tab"] $workspace_w
 
@@ -87,9 +87,9 @@ bindsym $mod+Shift+a move container to workspace $workspace_a; workspace $worksp
 bindsym $mod+Shift+s move container to workspace $workspace_s; workspace $workspace_s
 bindsym $mod+Shift+d move container to workspace $workspace_d; workspace $workspace_d
 
-bindsym $sup+a workspace $workspace_a; exec --no-startup-id i3-msg 'workspace $workspace_a; exec google-chrome "http://youtube.com"'
-bindsym $sup+s workspace $workspace_s; exec urxvt -e mpsyt
-bindsym $sup+d workspace $workspace_d; exec skypeforlinux
+bindsym $mod+Ctrl+a workspace $workspace_a; exec --no-startup-id i3-msg 'workspace $workspace_a; exec google-chrome "http://youtube.com"'
+bindsym $mod+Ctrl+s workspace $workspace_s; exec urxvt -e mpsyt
+bindsym $mod+Ctrl+d workspace $workspace_d; exec skypeforlinux
 
 #assign [title="YouTube"] $workspace_a
 #assign [title="$terminal DP-5"] $workspace_d
@@ -133,17 +133,17 @@ bindcode $mod+49              kill
 bindsym $mod+r                reload
 bindsym $mod+Shift+r          restart
 
-bindsym $mod+f 		      exec "rofi -show drun -modi drun,run,ssh"
+bindsym $mod+f 		          exec "rofi -show drun -modi drun,run,ssh"
 bindsym $mod+Shift+f          fullscreen toggle
 
 
-bindsym $mod+x		      exec xrdb ~/.Xresources
+bindsym $mod+x		          exec xrdb ~/.Xresources
 bindsym $mod+Shift+x	      exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+z                layout toggle split
 
-bindsym $mod+c                layout tabbed
-bindsym $mod+Shift+c          layout stacked
+# bindsym $mod+z                layout tabbed
+# bindsym $mod+Shift+z          layout stacked
 
 bindsym $mod+v                split v
 bindsym $mod+Shift+v          split h
@@ -181,13 +181,14 @@ bindsym $mod+minus            scratchpad show
 
 bindsym $mod+Shift+Delete			exec reboot
 bindsym $mod+Shift+End				exec shutdown -h now
-bindsym $mod+Shift+BackSpace	exec ~/.config/i3/bin/lock.sh
+bindsym $mod+Shift+BackSpace	    exec ~/.config/i3/bin/lock.sh
 
 bindsym $mod+Return 					exec $terminal
 
 # SUPER BINDINGS
 
-bindsym $sup+g 			exec gyazo
+bindsym $sup+g 			        exec gyazo
+bindsym $sup+l                  exec dm-tool lock
 
 # F-KEY BINDINGS
 

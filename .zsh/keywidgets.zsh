@@ -1,4 +1,11 @@
+#tmux
+# function tmux() {
 
+#     zle accept-line
+# }
+#
+# zle -N tmux
+# bindkey "^t" tmux
 # up
 	function up_widget() {
 		BUFFER="cd .."
@@ -25,13 +32,13 @@
 # 	bindkey "^g" git_prepare
 
 # home
-	function goto_home() { 
-		BUFFER="cd ~/"$BUFFER
-		zle end-of-line
-		zle accept-line
-	}
-	zle -N goto_home
-	bindkey "^h" goto_home
+# function goto_home() { 
+#     BUFFER="cd ~/"$BUFFER
+#     zle end-of-line
+#     zle accept-line
+# }
+# zle -N goto_home
+# bindkey "^h" goto_home
 
 # Edit and rerun
 #	function edit_and_run() {
@@ -42,12 +49,12 @@
 #	bindkey "^v" edit_and_run
 
 # LS
-	function ctrl_l() {
-		BUFFER="ls"
-		zle accept-line
-	}
-	zle -N ctrl_l
-	bindkey "^l" ctrl_l
+# function ctrl_l() {
+# 	BUFFER="ls"
+# 	zle accept-line
+# }
+# zle -N ctrl_l
+# bindkey "^l" ctrl_l
 
 # Enter
 	function enter_line() {
