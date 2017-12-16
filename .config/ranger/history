@@ -1,50 +1,50 @@
-open_with 3
-cd 
-cd __pycache__%ent
-cd %s
-quit
-open_with 
-rename responsiveshizzle
-search file
-search cava
-search cav
-search wp
-search gtk
-search .wall
-search wall
-shell
-shell ./%s
-search the
-touch test.base
-open_with
-rename test
-open_with vim
-rename test.txt.base
-rename test.base
-rename 
-search us
-find 
-find sh
-search local
-search wla
-search wal
-shell sudo vim %s
-delete
-shell rm -rf %s
+open_with hq
+open_with lhh
+mkdir mnt
+mkdir remote
+rename .mnt
+find mnt
+open_with qqq
+touch index.html
+shell curl http://www.vim.org/scripts/download_script.php?src_id=10609 > autoclose.vim
+shell curl
+shell curl http://www.vim.org/scripts/download_script.php?src_id=10609
+mkdir .zsh
+find fun
+rename .functions.zsh
+rename .aliases.zsh
+rename aliases.zsh
+rename functions.zsh
+find zs
+rename Backgrounds
+search zsh
+open_with 2to3
+touch keymaps.zsh
 find us
-find lo
-find
-search 
-search pyw
-cd /usr/lib/python3.6/site-packages/pywal/scripts
-rename .Xresources
-reload_cwd
-open_with r
-shell vim -D %s
-shell vim -V9 %s
-search tmp
-search vim
-shell mkdir .tmp
-up
+find sh
+find xq
+touch .Xresources
+find zp
+rename compton.conf__
+rename compton.conf
+open_with '
+open_with 
+find bo
+find def
+delete
+find gr
+find gru
+open_with vim
+filter 
 
-hello
+search xinit
+find xre
+find tra
+find 
+find cac
+find wa
+rename .tmux.conf
+find zsh
+mkdir Desktop
+find tmu
+find xres

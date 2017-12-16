@@ -1,4 +1,8 @@
 ':/home/syphez
-f:/home/syphez/.config/polybar
-m:/home/syphez/.config/polybar
-F:/home/syphez/.config/polybar
+i:/home/syphez/.config/i3
+h:/home/syphez
+p:/home/syphez/.config/polybar
+r:/home/syphez/.config/ranger
+u:/home/syphez
+v:/home/syphez/.vim
+R:/
