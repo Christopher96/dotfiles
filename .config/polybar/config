@@ -67,43 +67,22 @@ module-margin-right = 1
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
-
-
-[bar/DVI-I-1]
+[bar/top]
 inherit = bar/parent
-monitor = ${env:MONITOR:DVI-I-1}
+monitor = ${env:MONITOR:LVDS-1}
 
-modules-left = i3 w1
+modules-left = i3 windows
 modules-center = xwindow
-modules-right = pkg mail trash filesystem memory cpu ip
+modules-right = weather date
 
-[bar/HDMI-0]
+[bar/bottom]
 inherit = bar/parent
-monitor = ${env:MONITOR:HDMI-0}
+monitor = ${env:MONITOR:LVDS-1}
 
-modules-left = i3 w2
-modules-center = xwindow
-modules-right = weather date 
+modules-left = crypto 
+modules-right = mpv
 
-[bar/HDMI-0-bottom]
-inherit = bar/parent
-monitor = ${env:MONITOR:HDMI-0}
 bottom = true
-
-modules-left = crypto
-
-[bar/DP-5]
-inherit = bar/parent
-monitor = ${env:MONITOR:DP-5}
-modules-left = i3 w3
-modules-center = xwindow
-modules-right = mpv pavolume volume
-
-;tray-position = right
-;tray-padding = 10
-;tray-transparent = true
-tray-background = ${colors.foreground}
-
 
 ; ------- MODULES --------
 
@@ -111,18 +90,7 @@ tray-background = ${colors.foreground}
 type = custom/script
 interval = 0.1
 label = %output% 
-
-[module/w1]
-inherit = module/windows
-exec = ~/.config/polybar/bin/windows.sh -m "DVI-I-1"
-
-[module/w2]
-inherit = module/windows
-exec = ~/.config/polybar/bin/windows.sh -m "HDMI-0"
-
-[module/w3]
-inherit = module/windows
-exec = ~/.config/polybar/bin/windows.sh -m "DP-5"
+exec = ~/.config/polybar/bin/windows.sh -m "LVDS-1"
 
 [module/ip]
 type = custom/script

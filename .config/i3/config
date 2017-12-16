@@ -254,9 +254,9 @@ for_window [class="\b(?!$floating_windows)^.*"] border none
 for_window [title="Hold on"] floating enable, position center
 for_window [instance=".*-CAVA"] floating disable, border pixel 0, move scratchpad
 
-smart_gaps on
-gaps inner 10
-gaps outer 5
+#smart_gaps on
+#gaps inner 10
+#gaps outer 5
 
 
 #i3blocks configuration
@@ -278,10 +278,7 @@ gaps outer 5
 # exec_always nitrogen --restore
 exec_always compton --config ~/.config/compton.conf
 
-exec --no-startup-id polybar -r DP-5
-exec --no-startup-id polybar -r HDMI-0
-exec --no-startup-id polybar -r HDMI-0-bottom
-exec --no-startup-id polybar -r DVI-I-1
-exec --no-startup-id ckb --background
-exec --no-startup-id gulp --cwd ~/Code/home serve
-exec ~/.config/i3/bin/cavai3ipc.py DVI-I-1
+exec --no-startup-id polybar -r top
+exec --no-startup-id polybar -r bottom
+
+exec ~/.config/i3/bin/cavai3ipc.py LVDS-1

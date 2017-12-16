@@ -31,7 +31,6 @@ open_with '
 open_with 
 find bo
 find def
-delete
 find gr
 find gru
 open_with vim
@@ -48,3 +47,4 @@ find zsh
 mkdir Desktop
 find tmu
 find xres
+delete

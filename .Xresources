@@ -3,10 +3,10 @@
 !  Global Fonts
 !-----------------------
  
-#define $main_font               ProFont For Powerline
+#define $main_font               ProFontIIx Nerd Font
 #define $alt_font                DEC Terminal
 #define $captial_font            Visitor TT1 BRK
-#define $font_size               15
+#define $font_size               12
 
 #define $main_font_xft           xft:$main_font:style=Regular:size=$font_size
 #define $main_font_pango         $main_font $font_size
