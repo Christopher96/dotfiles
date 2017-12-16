@@ -1,0 +1,183 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main() {
+
+	srand(time(0));
+
+	char tecken;
+	int saldoin = 0;
+	int saldo = 0;
+	int bet = 0;
+	int vinst = 0;
+	int dicecomputer1 = 0;
+	int dicecomputer2 = 0;
+	int diceplayer1 = 0;
+	int diceplayer2 = 0; 
+	bool deposit = true;
+	bool betbool = true;
+	bool spelbool = true;
+	bool game = true;
+
+	/*Detta är en while loop som kommer köras tills att ett korekt belopp skrivs in.*/
+	while (game == true) {
+	
+		int player = 0;
+		int computer = 0;
+
+		system("cls");
+
+		cout << endl << "hello game!!!" << endl << endl;
+		cout << "This game is about throwing two dice at a time, and compete against the computer. The participant who strikes highest dice wins the round. Best of three wins!!!" << endl;
+		cout << endl << "The amount may not exceed 5000 or be less than 100. " << endl << endl << "Add money to balace: ";
+
+		do {
+			cin >> saldoin;
+			if ((saldoin < 0) || (saldoin > 5000) || (saldoin < 100)) {
+				cout << endl << "The amount may not exceed 5000 or be less than 100! " << endl << endl << "Please enter a correct amount: ";
+			}
+
+			else {
+				system("cls");
+				saldo = saldo + saldoin;
+				cout << endl << "Your balance is now: " << saldo << endl << endl;
+				system("pause");
+				deposit = false;
+			}
+		} while (deposit == true);
+
+		do {
+			system("cls");
+			cout << endl << "Game start!" << endl << endl;
+			system("pause");
+			system("cls");
+
+			cout << endl << "Bett money: 100, 300 or 500 " << endl << ":";
+
+			/* Detta är en loop som ser till att man inte kan sattsa ett annat belopp än vad som är angivet i spelet */
+			cin >> bet;
+
+			/* Här ska jag nog lägga till en till loop för om man har för lite pengar på saldot. Eller ska jag göra så att man inte kan sätta in mindre än 100 */
+
+			if ((bet > saldo) || (bet != 100) && (bet != 300) && (bet != 500)) {
+				cout << "Bet is incorrect. Try again: ";
+			}
+
+			else {
+				system("cls");
+				//vinst = vinst - bet;
+				saldo = saldo - bet;
+				cout << endl << "Your bet is " << bet << " And your balance is now: " << saldo << endl << endl;
+				system("pause");
+				system("cls");
+				betbool = false;
+			}
+		} while (betbool == true);
+
+		cout << endl << "Play first round. Throw dice" << endl << endl;
+		system("pause");
+		system("cls");
+
+		do {
+
+			/* Det här är vad som gör tal till randome */
+				diceplayer1 = rand() % 6 + 1;
+				diceplayer2 = rand() % 6 + 1;
+				dicecomputer1 = rand() % 6 + 1;
+				dicecomputer2 = rand() % 6 + 1;
+
+			/* Det är här resultaten från varje omgång visas */
+			cout << endl << "Your score is: " << diceplayer1 << " & " << diceplayer2 << endl;
+			cout << endl << "The computers score is: " << dicecomputer1 << " & " << dicecomputer2 << endl << endl;
+
+			/*Detta är första delen av loopen som tar reda på om någon av spelarena har vunnit mer än två gånger*/
+			if (computer == 2) {
+				system("cls");
+				cout << endl << "The computer won this game! Better luck next time." << endl << endl;
+				system("pause");
+				system("cls");
+				vinst = vinst - bet;
+				spelbool = false;
+				break;
+			}
+
+			else if (player == 2) {
+				system("cls");
+				vinst = vinst + (bet * 2);
+				saldo = bet * 2 + saldo;
+				cout << endl << "You won the game!!! " << endl << endl;
+				system("pause");
+				system("cls");
+				spelbool = false;
+				break;
+			}
+
+			if (diceplayer1 > diceplayer2) {
+
+			}
+
+			else {
+				diceplayer1 = diceplayer2;
+			}
+
+			if (dicecomputer1 > dicecomputer2) {
+
+			}
+
+			else {
+				dicecomputer1 = dicecomputer2;
+			}
+
+			if (diceplayer1 > dicecomputer1) {
+				//spelare
+				player++;
+				cout << endl << "You won the round!!! " << "The score is: " << endl << "Computer: " << computer << endl << "Player: " << player << endl << endl;
+				system("pause");
+				system("cls");
+			}
+
+			else if (diceplayer1 < dicecomputer1) {
+				//dator
+				computer++;
+				cout << endl << "The computer won the round :( " << "The score is: " << endl << "Computer:" << computer << endl << "Player: " << player << endl << endl;
+				system("pause");
+				system("cls");
+			}
+
+			else {
+				//lika
+				cout << "It's a draw. Replay the round! " << endl << endl;
+				system("pause");
+				system("cls");
+			}
+
+			/*Detta är den andra delen loopen som räkar ut resultatet för varje runda. Här adderas också vid vinnst */
+
+		} while (spelbool == true);
+
+		betbool == true;
+		deposit == true;
+
+		cout << endl << "Your balance is: " << saldo << " and your current proffit/loss is: " << vinst << endl;
+		cout << endl << "Play again? Yes (y) No (n)" << endl << endl;
+		cin >> tecken;
+
+		if ((tecken == 'Y') || (tecken == 'y')) {
+			deposit = true;
+		}
+
+		else if (tecken == 'N' || tecken == 'n') {
+			cout << endl << "Thanks for playing! " << endl << endl;
+			system("pause");
+			system("cls");
+			game = false;
+		}
+
+		else {
+			cout << "invalid" << endl;
+		}
+	}
+
+	return 0;
+}

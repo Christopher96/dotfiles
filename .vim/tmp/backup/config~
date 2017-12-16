@@ -136,7 +136,6 @@ click-left = ~/.config/polybar/bin/ip.sh --public
 type = custom/script
 interval = 5
 format = <label>
-format-prefix = " "
 format-prefix-foreground = ${colors.foreground_alt}
 label = %output%
 exec = ~/.config/polybar/bin/crypto.py bitcoin ethereum iota eos request-network

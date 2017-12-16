@@ -25,7 +25,7 @@ nnoremap <leader>s	    :w !sudo tee % >/dev/null<CR>
 nnoremap <leader>z		zMzvzz
 
 " Auto indent current file
-nmap <leader>ai mzgg=G`z
+nmap <leader>i mzgg=G`z
 
 " CTRL MAPPINGS
 

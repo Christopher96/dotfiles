@@ -171,10 +171,10 @@ bindsym $mod+Shift+Right      move right
 bindsym $mod+Tab              workspace back_and_forth
 bindsym $mod+Shift+Tab        move container to workspace back_and_forth; workspace back_and_forth
 
-bindsym $mod+Ctrl+h                resize shrink width 30 px or 30 ppt
-bindsym $mod+Ctrl+j                resize grow height 30 px or 30 ppt
-bindsym $mod+Ctrl+k                resize shrink height 30 px or 30 ppt
-bindsym $mod+Ctrl+l                resize grow width 30 px or 30 ppt
+bindsym $mod+Ctrl+h                resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+j                resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+k                resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+l                resize grow width 10 px or 10 ppt
 
 bindsym $mod+Shift+minus      move scratchpad
 bindsym $mod+minus            scratchpad show
@@ -280,6 +280,7 @@ exec_always compton --config ~/.config/compton.conf
 
 exec --no-startup-id polybar -r DP-5
 exec --no-startup-id polybar -r HDMI-0
+exec --no-startup-id polybar -r HDMI-0-bottom
 exec --no-startup-id polybar -r DVI-I-1
 exec --no-startup-id ckb --background
 exec --no-startup-id gulp --cwd ~/Code/home serve

@@ -1,0 +1,7 @@
+#
+import os
+
+HOME = os.getenv("HOME", os.getenv("USERPROFILE"))
+CACHE_DIR = os.path.join(HOME, ".cache", "wal")
+
+print(CACHE_DIR) 

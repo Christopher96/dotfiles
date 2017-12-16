@@ -1,0 +1,11 @@
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-root',
+    template: '<tasks></tasks>',
+    styleUrls: ['./component.css']
+})
+
+export class AppComponent {
+    title = 'swaggity';
+}

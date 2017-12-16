@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+theme="$(wpg -c)"
+xrdb ~/.Xresources
+
+pkill polybar
+
+polybar -r DP-5 >/dev/null 2>&1 &
+polybar -r HDMI-0 >/dev/null 2>&1 &
+polybar -r DVI-I-1 >/dev/null 2>&1 &
