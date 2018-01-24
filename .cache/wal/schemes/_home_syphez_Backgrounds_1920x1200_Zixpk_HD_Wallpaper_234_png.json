@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/syphez/Backgrounds/1920x1200_Zixpk_HD_Wallpaper_234.png",
+    "special": {
+        "background": "#070907",
+        "foreground": "#FCD7E0",
+        "cursor": "#FCD7E0"
+    },
+    "colors": {
+        "color0": "#070907",
+        "color1": "#355A88",
+        "color2": "#5E6393",
+        "color3": "#A37593",
+        "color4": "#6F88A7",
+        "color5": "#CCA8BF",
+        "color6": "#E4A1A2",
+        "color7": "#FCD7E0",
+        "color8": "#6a6b6a",
+        "color9": "#355A88",
+        "color10": "#5E6393",
+        "color11": "#A37593",
+        "color12": "#6F88A7",
+        "color13": "#CCA8BF",
+        "color14": "#E4A1A2",
+        "color15": "#FCD7E0"
+    }
+}

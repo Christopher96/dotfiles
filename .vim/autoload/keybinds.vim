@@ -1,6 +1,9 @@
 " LEADER MAPPINGS
 :let mapleader = ","
 
+" Emmet
+let g:user_emmet_leader_key=','
+
 " Ranger file explorer
 noremap <leader>rr	 	:wa<CR>:RangerEdit<CR>
 noremap <leader>rv	 	:wa<CR>:RangerVSplit<CR>
@@ -14,37 +17,36 @@ noremap <leader>rT	 	:set operatorfunc=RangerBrowseTab<CR>g@
 noremap <leader>rS	 	:set operatorfunc=RangerBrowseSplit<CR>g@
 noremap <leader>rV	 	:set operatorfunc=RangerBrowseVSplit<CR>g@
 
-" Quick edit
-noremap <leader>ev		:w<CR>:e ~/.vimrc<CR>
-noremap <leader>ei		:w<CR>:e ~/.config/i3/config<CR>
-noremap <leader>ep		:w<CR>:e ~/.config/polybar/config<CR>
-noremap <leader>ex		:w<CR>:e ~/.Xresources<CR>
-noremap <leader>eb		:w<CR>:e ~/.vim/autoload/keybinds.vim<CR>
-
 " Buffers
-nnoremap <leader>q  		:bp! <BAR> bd! #<CR>
-nnoremap <leader>s		:w !sudo tee % >/dev/null<CR>
-
-" Commenting blocks of code.
-noremap <silent> <leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-noremap <silent> <leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
-
-" Clipboard
-nnoremap <leader>y		"+y
-vnoremap <leader>y		"+y
-inoremap <leader>p		<Esc>"+pa
-nnoremap <leader>p		"+p
+nnoremap <leader>q  	:bp! <BAR> bd! #<CR>
+nnoremap <leader>s	    :w !sudo tee % >/dev/null<CR>
 
 " Folding
-
 nnoremap <leader>z		zMzvzz
 
+" Auto indent current file
+nmap <leader>ai mzgg=G`z
 
 " CTRL MAPPINGS
 
+" CtrlP
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" YCM 
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
+
+
+" Clipboard
+nnoremap <C-y>          "+y
+vnoremap <C-y>          "+y
+nnoremap <C-p>		    "+p
+vnoremap <C-p>		    "+p
+inoremap <C-p>		    <Esc>"+pa
+
 let g:AutoPairsShortcutFastWrap = '<C-e>'
 
-"map <C-n> 			:NERDTreeToggle<CR>
 map 	 <C-q>  		:bp <BAR> bd #<CR>
 nnoremap <C-s>			:w<CR>
 inoremap <C-s>			<Esc>:w<CR>
@@ -52,10 +54,17 @@ vnoremap <C-s>			<Esc>:w<CR>
 nnoremap <C-i> 			i_<Esc>r
 map	 <silent> <C-c>		<C-c>:noh<CR>
 
+" Quick edit
+nnoremap <C-e>v			:e ~/.vimrc<CR>
+nnoremap <C-e>i			:e ~/.config/i3/config<CR>
+nnoremap <C-e>p			:e ~/.config/polybar/config<CR>
+nnoremap <C-e>x			:e ~/.Xresources<CR>
+nnoremap <C-e>b			:e ~/.vim/autoload/keybinds.vim<CR>
+nnoremap <C-e>z			:e ~/.zshrc<CR>
+
 " Plugins
 " <C-Y> Emmet
 " <C-N>, <C-U> Multiple Cursors
-
 
 
 " KEY MAPPINGS
@@ -63,10 +72,11 @@ nnoremap J 			:bprevious<CR>
 nnoremap K 			:bnext<CR>
 nnoremap n			nzzzv
 nnoremap N			Nzzzv
-nnoremap H			^
-vnoremap H			^
-nnoremap L			g_
-vnoremap L			g_
+
+nnoremap H			g0
+vnoremap H			g0
+nnoremap L			g$
+vnoremap L			g$
 
 " vCoolor color picker
 let g:vcoolor_map = 'gco'
@@ -95,8 +105,10 @@ nnoremap <Tab> 			>>
 nnoremap <S-Tab>		<<	
 vnoremap <Tab>			>><Esc>gv
 vnoremap <S-Tab>		<<<Esc>gv
-inoremap <S-Tab>		<Backspace>
 map 	 <Esc><Esc>		:noh<CR>
+
+vnoremap <		    	>><Esc>gv
+vnoremap >		        <<<Esc>gv
 
 
 " ARROW MAPPINGS
@@ -106,3 +118,7 @@ vmap  <expr>  <DOWN>   		DVB_Drag('down')
 vmap  <expr>  <UP>     		DVB_Drag('up')                          
 vmap  <expr>  D        		DVB_Duplicate()                         
 
+
+
+" F-KEYS
+map   <f12> 			:!ctags -R .<cr>

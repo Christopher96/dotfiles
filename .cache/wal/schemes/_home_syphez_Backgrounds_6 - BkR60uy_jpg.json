@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/syphez/Backgrounds/6 - BkR60uy.jpg",
+    "special": {
+        "background": "#0C1213",
+        "foreground": "#63959B",
+        "cursor": "#63959B"
+    },
+    "colors": {
+        "color0": "#0C1213",
+        "color1": "#263A47",
+        "color2": "#324B4F",
+        "color3": "#375869",
+        "color4": "#4E6361",
+        "color5": "#9F8C65",
+        "color6": "#497188",
+        "color7": "#63959B",
+        "color8": "#6d7071",
+        "color9": "#263A47",
+        "color10": "#324B4F",
+        "color11": "#375869",
+        "color12": "#4E6361",
+        "color13": "#9F8C65",
+        "color14": "#497188",
+        "color15": "#63959B"
+    }
+}

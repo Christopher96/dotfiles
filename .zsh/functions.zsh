@@ -74,10 +74,16 @@ github-create() {
     response=$(curl -u "$username:$token" https://api.github.com/user/repos -d '{"name":"'$repo_name'"}' -s -o /tmp/curl_output -w "%{http_code}")
 
     if [ "$response" -gt "300" ]; then
-	cat /tmp/curl_output
+        cat /tmp/curl_output
     else
-	echo " done."
-	echo -n "Pushing local code to remote ..."
+
+    echo "Initializing git repository"
+    git init
+    echo "Adding all files to stage"
+    git add -A
+    echo "Making first commit"
+    git commit -m "first commit"
+	echo "Pushing local code to remote ..."
 	git remote add origin git@github.com:$username/$repo_name.git > /dev/null 2>&1
 	git push -u origin master > /dev/null 2>&1
 	echo " done."
@@ -124,8 +130,12 @@ github-list() {
     curl -u "$username:$token" https://api.github.com/user/repos -X GET -s -w "%{http_code}" -d '{"affiliation":"owner"}' | grep "full_name" | cut -d\" -f4
 }
 
+github-get() {
+    github-auth
 
+    repo_name=$1
 
+    dir_name=`basename $(pwd)`
 
-
-
+    git clone "https://github.com/$username/$repo_name.git"
+}

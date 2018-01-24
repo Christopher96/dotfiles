@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/syphez/Backgrounds/electro_music_wallpaper_by_xmk_designzx-d3gl8hc.jpg",
+    "special": {
+        "background": "#020203",
+        "foreground": "#FEFEFF",
+        "cursor": "#FEFEFF"
+    },
+    "colors": {
+        "color0": "#020203",
+        "color1": "#A536C3",
+        "color2": "#D32EFE",
+        "color3": "#359AA7",
+        "color4": "#1FEFFD",
+        "color5": "#9EA6B1",
+        "color6": "#D5D6DC",
+        "color7": "#FEFEFF",
+        "color8": "#676767",
+        "color9": "#A536C3",
+        "color10": "#D32EFE",
+        "color11": "#359AA7",
+        "color12": "#1FEFFD",
+        "color13": "#9EA6B1",
+        "color14": "#D5D6DC",
+        "color15": "#FEFEFF"
+    }
+}

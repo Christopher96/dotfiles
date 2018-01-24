@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/syphez/Backgrounds/Namnl\u00f6s.png",
+    "special": {
+        "background": "#1C1C1E",
+        "foreground": "#DFD4C7",
+        "cursor": "#DFD4C7"
+    },
+    "colors": {
+        "color0": "#1C1C1E",
+        "color1": "#798528",
+        "color2": "#B4995C",
+        "color3": "#747A85",
+        "color4": "#837D88",
+        "color5": "#7A8794",
+        "color6": "#949495",
+        "color7": "#DFD4C7",
+        "color8": "#767678",
+        "color9": "#798528",
+        "color10": "#B4995C",
+        "color11": "#747A85",
+        "color12": "#837D88",
+        "color13": "#7A8794",
+        "color14": "#949495",
+        "color15": "#DFD4C7"
+    }
+}

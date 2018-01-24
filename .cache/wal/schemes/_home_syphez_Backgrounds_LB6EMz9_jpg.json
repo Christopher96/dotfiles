@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/syphez/Backgrounds/LB6EMz9.jpg",
+    "special": {
+        "background": "#120E1B",
+        "foreground": "#DE9DD2",
+        "cursor": "#DE9DD2"
+    },
+    "colors": {
+        "color0": "#120E1B",
+        "color1": "#5B169D",
+        "color2": "#3D0FC1",
+        "color3": "#671FCC",
+        "color4": "#A94AC0",
+        "color5": "#AB55D6",
+        "color6": "#E6A0AF",
+        "color7": "#DE9DD2",
+        "color8": "#706e76",
+        "color9": "#5B169D",
+        "color10": "#3D0FC1",
+        "color11": "#671FCC",
+        "color12": "#A94AC0",
+        "color13": "#AB55D6",
+        "color14": "#E6A0AF",
+        "color15": "#DE9DD2"
+    }
+}

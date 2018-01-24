@@ -1,5 +1,6 @@
 
 #define $transparent         	rgba:0000/0000/0000/B300
+#define $transparent_alt        rgba:0000/0000/0000/B300
 #define $foreground		#ffffff
 #define $foreground_alt       	#d90e79
 #define $background		#261F39	

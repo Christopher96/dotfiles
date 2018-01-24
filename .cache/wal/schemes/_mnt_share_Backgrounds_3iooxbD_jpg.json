@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/mnt/share/Backgrounds/3iooxbD.jpg",
+    "special": {
+        "background": "#070328",
+        "foreground": "#CFBA90",
+        "cursor": "#CFBA90"
+    },
+    "colors": {
+        "color0": "#070328",
+        "color1": "#605058",
+        "color2": "#9B162B",
+        "color3": "#E71A30",
+        "color4": "#955A54",
+        "color5": "#DE5148",
+        "color6": "#D99A6C",
+        "color7": "#CFBA90",
+        "color8": "#6a677e",
+        "color9": "#605058",
+        "color10": "#9B162B",
+        "color11": "#E71A30",
+        "color12": "#955A54",
+        "color13": "#DE5148",
+        "color14": "#D99A6C",
+        "color15": "#CFBA90"
+    }
+}

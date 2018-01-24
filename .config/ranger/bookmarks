@@ -1,8 +1,8 @@
-':/home/syphez/.config/i3
-i:/home/syphez/.config/i3
+R:/
 h:/home/syphez
+i:/home/syphez/.config/i3
 p:/home/syphez/.config/polybar
 r:/home/syphez/.config/ranger
-u:/home/syphez
 v:/home/syphez/.vim
-R:/
+':/home/syphez
+u:/home/syphez

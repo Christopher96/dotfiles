@@ -1,6 +1,3 @@
-# Set up the prompt
-source ~/.aliases.sh
-source ~/.functions.sh
 
 uname=$(uname)
 if [[ "$uname" == "Darwin" ]]; then
@@ -10,10 +7,8 @@ else
 fi
 
 antigen use oh-my-zsh
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+antigen bundle heroku
+antigen bundle vi-mode
 antigen bundle extract
 antigen bundle dirhistory
 antigen bundle history
@@ -23,13 +18,16 @@ antigen bundle cp
 antigen bundle archlinux
 antigen bundle nyan
 antigen bundle rand-quote
+antigen bundle b4b4r07/zsh-vimode-visual
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
+
 
 setopt dotglob
 setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -40,6 +38,7 @@ HISTFILE=~/.zsh_history
 autoload -Uz compinit
 compinit
 
+# Colors for LS
 if whence dircolors >/dev/null; then
     eval "$(dircolors -b)"
     zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -64,5 +63,12 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
-stty -ixon
+# Colors for LESS
+export LESS='-R'
+eval "$(SHELL=/bin/sh lesspipe.sh)"
+
+
+# Source additional files
+for file in ~/.zsh/*; do
+    source "$file"
+done
