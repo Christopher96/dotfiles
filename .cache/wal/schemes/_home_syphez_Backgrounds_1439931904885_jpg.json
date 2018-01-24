@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/syphez/Backgrounds/1439931904885.jpg",
+    "special": {
+        "background": "#221118",
+        "foreground": "#F2E7D3",
+        "cursor": "#F2E7D3"
+    },
+    "colors": {
+        "color0": "#221118",
+        "color1": "#61A3BD",
+        "color2": "#B8ADA0",
+        "color3": "#DCCBA3",
+        "color4": "#EEDCB9",
+        "color5": "#F2E1B7",
+        "color6": "#F3E1BD",
+        "color7": "#F2E7D3",
+        "color8": "#7a7074",
+        "color9": "#61A3BD",
+        "color10": "#B8ADA0",
+        "color11": "#DCCBA3",
+        "color12": "#EEDCB9",
+        "color13": "#F2E1B7",
+        "color14": "#F3E1BD",
+        "color15": "#F2E7D3"
+    }
+}

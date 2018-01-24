@@ -29,10 +29,21 @@ nmap <leader>ai mzgg=G`z
 
 " CTRL MAPPINGS
 
+" CtrlP
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" YCM 
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
+
+
 " Clipboard
+nnoremap <C-y>          "+y
 vnoremap <C-y>          "+y
 nnoremap <C-p>		    "+p
-inoremap <C-p>		    <Esc>l"+pa
+vnoremap <C-p>		    "+p
+inoremap <C-p>		    <Esc>"+pa
 
 let g:AutoPairsShortcutFastWrap = '<C-e>'
 
@@ -94,9 +105,10 @@ nnoremap <Tab> 			>>
 nnoremap <S-Tab>		<<	
 vnoremap <Tab>			>><Esc>gv
 vnoremap <S-Tab>		<<<Esc>gv
-inoremap <S-Tab>		<Backspace>
 map 	 <Esc><Esc>		:noh<CR>
 
+vnoremap <		    	>><Esc>gv
+vnoremap >		        <<<Esc>gv
 
 
 " ARROW MAPPINGS

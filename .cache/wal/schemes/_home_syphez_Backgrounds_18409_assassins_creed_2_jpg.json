@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/syphez/Backgrounds/18409_assassins_creed_2.jpg",
+    "special": {
+        "background": "#010101",
+        "foreground": "#F9F7F3",
+        "cursor": "#F9F7F3"
+    },
+    "colors": {
+        "color0": "#010101",
+        "color1": "#92725D",
+        "color2": "#988676",
+        "color3": "#596B8E",
+        "color4": "#A4A09B",
+        "color5": "#C9BFB4",
+        "color6": "#DAD6D0",
+        "color7": "#F9F7F3",
+        "color8": "#666666",
+        "color9": "#92725D",
+        "color10": "#988676",
+        "color11": "#596B8E",
+        "color12": "#A4A09B",
+        "color13": "#C9BFB4",
+        "color14": "#DAD6D0",
+        "color15": "#F9F7F3"
+    }
+}

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<account version='1.0'>
+	<account>
+		<protocol>prpl-facebook</protocol>
+		<name>tofflan555</name>
+		<password>grodlor123</password>
+		<alias>syphez</alias>
+		<statuses>
+			<status type='available' name='Available' active='true'>
+				<attributes/>
+			</status>
+			<status type='away' name='Away' active='false'>
+				<attributes/>
+			</status>
+			<status type='invisible' name='Invisible' active='false'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Offline' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<settings>
+			<setting name='show-self' type='bool'>1</setting>
+			<setting name='stoken' type='string'>338056611</setting>
+			<setting name='mark-read-available' type='bool'>0</setting>
+			<setting name='cid' type='string'>pS36BwkquTHcQGJIKEfG</setting>
+			<setting name='did' type='string'>491d5d78-491e-4f4a-9beb-9ec1ce2e6a16</setting>
+			<setting name='show-unread' type='bool'>1</setting>
+			<setting name='token' type='string'>EAADo1TDZCuu8BAKpebMIAZC6qw1YlEp2C5gH0HRgzsVPUCuom5cB3EZCfolnkYHuPhOe2PpVR7KJZA1KCkilPObDpGTjlqkrebNo2nAYx8IrHjJQCZBj7cODUJKFUy33CJ7jDxmw7mj2yAficix6qRpBAN3QP38trc02WdgmvjQZDZD</setting>
+			<setting name='mid' type='string'>1229161433</setting>
+			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='sync-interval' type='int'>5</setting>
+			<setting name='group-chat-open' type='bool'>1</setting>
+			<setting name='uid' type='string'>1588065733</setting>
+			<setting name='mark-read' type='bool'>1</setting>
+		</settings>
+		<settings ui='gnt-purple'>
+			<setting name='auto-login' type='bool'>1</setting>
+		</settings>
+		<current_error/>
+	</account>
+	<account>
+		<protocol>prpl-skypeweb</protocol>
+		<name>christopher.sizmek</name>
+		<password>v97hwg9hzyk2</password>
+		<alias>Christopher</alias>
+		<statuses>
+			<status type='Online' name='Online' active='true'>
+				<attributes>
+					<attribute id='message' value='+hj'/>
+				</attributes>
+			</status>
+			<status type='Away' name='Away' active='false'>
+				<attributes>
+					<attribute id='message' value='I&apos;m not here right now'/>
+				</attributes>
+			</status>
+			<status type='Busy' name='Do Not Disturb' active='false'>
+				<attributes/>
+			</status>
+			<status type='Hidden' name='Invisible' active='false'>
+				<attributes/>
+			</status>
+			<status type='Offline' name='Offline' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<settings>
+			<setting name='show-typing-as-text' type='bool'>1</setting>
+			<setting name='show-typing-as-icon' type='bool'>1</setting>
+			<setting name='last_message_timestamp' type='int'>1516221262</setting>
+			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='' type='bool'>0</setting>
+			<setting name='refresh-token'/>
+		</settings>
+		<settings ui='gnt-purple'>
+			<setting name='auto-login' type='bool'>1</setting>
+		</settings>
+		<current_error/>
+	</account>
+</account>

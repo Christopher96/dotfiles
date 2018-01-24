@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/syphez/Backgrounds/oakley-pendulum-2310409.jpg",
+    "special": {
+        "background": "#000913",
+        "foreground": "#30C0D4",
+        "cursor": "#30C0D4"
+    },
+    "colors": {
+        "color0": "#000913",
+        "color1": "#116060",
+        "color2": "#006775",
+        "color3": "#03728B",
+        "color4": "#3E63B7",
+        "color5": "#C07791",
+        "color6": "#03919F",
+        "color7": "#30C0D4",
+        "color8": "#666b71",
+        "color9": "#116060",
+        "color10": "#006775",
+        "color11": "#03728B",
+        "color12": "#3E63B7",
+        "color13": "#C07791",
+        "color14": "#03919F",
+        "color15": "#30C0D4"
+    }
+}

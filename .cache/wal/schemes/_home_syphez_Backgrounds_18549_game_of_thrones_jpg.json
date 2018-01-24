@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/syphez/Backgrounds/18549_game_of_thrones.jpg",
+    "special": {
+        "background": "#000000",
+        "foreground": "#FCFCFB",
+        "cursor": "#FCFCFB"
+    },
+    "colors": {
+        "color0": "#000000",
+        "color1": "#706E6D",
+        "color2": "#847E7A",
+        "color3": "#A19F9E",
+        "color4": "#C4BFBA",
+        "color5": "#D2D1D0",
+        "color6": "#E9E9E8",
+        "color7": "#FCFCFB",
+        "color8": "#666666",
+        "color9": "#706E6D",
+        "color10": "#847E7A",
+        "color11": "#A19F9E",
+        "color12": "#C4BFBA",
+        "color13": "#D2D1D0",
+        "color14": "#E9E9E8",
+        "color15": "#FCFCFB"
+    }
+}

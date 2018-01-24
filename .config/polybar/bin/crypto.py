@@ -18,6 +18,13 @@ def main(argv):
                         output += ticker[0]['symbol'].upper()
                         output += "%{F-}"
                         output += ' $' + '%.2f' % float(ticker[0]['price_usd']) + ' '
+                        
+                        change = float(ticker[0]['percent_change_24h']);
+                        color  = '#23dd55'
+                        if change < 0:
+                            color = '#dd2c23'
+
+                        output += '%{F'+color+'}('+str(change)+'%)%{F-} '
                 except Exception as e:
                    print(e) 
                 

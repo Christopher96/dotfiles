@@ -21,8 +21,11 @@ augroup line_return
         \ endif
 augroup END
 
-au BufWrite .vimrc :source ~/.vimrc
-au BufWrite keybinds.vim :source ~/.vim/autoload/keybinds.vim
+augroup reload_vimrc
+    autocmd!
+    autocmd BufWritePost $MYVIMRC breakdel *
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
 
 au FocusGained,BufEnter * :checktime
 au CursorHold,CursorHoldI * checktime
@@ -64,17 +67,16 @@ set expandtab       " Expand TABs to spaces
 
 set backup
 set noswapfile
-set backupdir=~/.vim/tmp/backup//
-set directory=~/.vim/tmp/swap//
-set undodir=~/.vim/tmp/undo//
+set backupdir=~/.vim/tmp
+set directory=~/.vim/tmp
+set undodir=~/.vim/tmp
 
 " }}}
 
-
 " COLORS {{{
 
-" colorscheme delek
 syntax enable
+" colorscheme wal
 
 " }}}
 
@@ -91,22 +93,52 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" Helpers
 Plugin 'vim-scripts/tComment'
 Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'KabbAmine/vCoolor.vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Snippets
+Plugin 'sirver/UltiSnips'
+Plugin 'honza/vim-snippets'
+
+" Syntax
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'burnettk/vim-angular'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'othree/yajs.vim'
+Plugin 'mitsuhiko/vim-jinja'
+
+" Theme
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'KabbAmine/vCoolor.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-dispatch'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ap/vim-css-color'
 Plugin 'ryanoasis/vim-devicons'
+
+" Autocomplete
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'djoshea/vim-autoread'
+Plugin 'tpope/vim-surround'
 Plugin 'alvan/vim-closetag'
+
+" Other
+Plugin 'djoshea/vim-autoread'
+Plugin 'OmniSharp/omnisharp-vim'
+
+" Ultisnips {{{
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+"}}}
 
 " All of your Plugins must be added before the following line
 call vundle#end()	    " required
@@ -157,6 +189,3 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
 " }}}
-"'NERDtree autospawn
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

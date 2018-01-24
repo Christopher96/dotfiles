@@ -1,5 +1,0 @@
-#!/bin/bash
-x="~/.cache/wal/colors.Xresources"
-
-[[ -f $x ]] && xrdb -merge -I$HOME $x
-echo "hello"

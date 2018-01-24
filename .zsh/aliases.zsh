@@ -3,7 +3,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias grep='grep --color'
 
-alias sizmekvpn='sudo openconnect vpn.mediamind.com --authgroup SIZMEK_ISRAEL -u christopher.gauffin'
+alias sizmekvpn='sudo openconnect vpn.mediamind.com --authgroup Sizmek -u christopher.gauffin'
 
 alias monitors='xrandr -q | grep " connected" | cut -d ' ' -f1'
 

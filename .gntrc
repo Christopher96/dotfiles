@@ -1,0 +1,100 @@
+[GntWM::binding]
+c-a = action-list
+c-n = window-next
+c-p = window-prev
+c-w = window-close
+c-o = window-list
+c-d = dump-screen
+c-, = shift-left
+c-. = shift-right
+c-' = start-move
+c-+ = start-resize
+c-q = wm-quit
+c-r = refresh-screen
+c-s = workspace-list
+c-t = window-tag
+c-T = place-tagged
+c-C = toggle-clipboard
+? = help-for-widget
+c-c-j = window-scroll-down
+c-c-k = window-scroll-up
+# The following action is still incomplete, and doesn't have a default binding
+# switch-window-n
+# Other actions: window-next-urgent, window-prev-urgent
+
+# For the sample custom window manager
+[GntS::binding]
+c-b = toggle-buddylist
+
+# For the irssi window manager
+[Irssi::binding]
+c-L = move-right
+c-H = move-left
+c-J = move-down
+c-K = move-up
+
+[GntBox::binding]
+tab = focus-next
+right = focus-next
+l = focus-next
+left = focus-prev
+h = focus-prev
+
+[GntComboBox::binding]
+down = dropdown
+j = dropdown
+up = dropdown
+k = dropdown
+
+[GntEntry::binding]
+c-a = cursor-home
+home = cursor-home
+K = cursor-home
+c-e = cursor-end
+end = cursor-end
+J = cursor-end
+backspace = delete-prev
+del = delete-next
+c-d = delete-next
+c-u = delete-start
+c-k = delete-end
+c-b = cursor-prev
+left = cursor-prev
+c-h = cursor-prev
+right = cursor-next
+c-l = cursor-next
+tab = suggest-show
+down = suggest-next
+j = suggest-next
+up = suggest-prev
+k = suggest-prev
+page-down = suggest-next-page
+page-up = suggest-prev-page
+c-w = delete-prev-word
+a-b = cursor-prev-word
+a-f = cursor-next-word
+a-d = delete-next-word
+c-v = clipboard-paste
+c-p = history-prev
+c-n = history-next
+c-r = history-search
+c-up = history-prev
+c-k = history-prev
+c-down = history-next
+c-j = history-next
+
+[GntTree::binding]
+up = move-up
+k = move-up
+down = move-down
+j = move-down
+c-n = move-down
+c-p = move-up
+pageup = page-up
+pagedown = page-down
+backspace = move-parent
+home = move-first
+K = move-first
+end = move-last
+J = move-last
+# Following is the default binding for the context-menu

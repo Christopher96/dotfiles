@@ -1,7 +1,22 @@
 import os
+import types
+import requests
 from ranger.api.commands import Command
 from ranger.core.loader import CommandLoader
-import types
+
+class fetch(Command):
+    def execute(self):
+        cwd = self.fm.thisdir
+        original_path = cwd.path
+        parts = self.line.split()
+        url = parts[1]
+        base = os.path.basename(url)
+        basePath = original_path+"/"+base
+        r = requests.get(url, stream=True)
+        if r.status_code == 200:
+            with open(basePath, 'wb') as f:
+                for chunk in r:
+                    f.write(chunk)
 
 class extracthere(Command):
     def execute(self):

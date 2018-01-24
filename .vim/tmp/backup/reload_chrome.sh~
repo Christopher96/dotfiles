@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-if [ $(pgrep chrome) ]; then
-    killall chrome
-    google-chrome -restore-last-session &
-fi
