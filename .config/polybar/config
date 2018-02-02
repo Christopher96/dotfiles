@@ -12,15 +12,14 @@ background_alt = ${xrdb:polybar.background_alt:#000000}
 foreground = ${xrdb:polybar.foreground:#ffffff}
 foreground_alt = ${xrdb:polybar.foreground_alt:#ffffff}
 selected = ${xrdb:polybar.selected:#ffffff}
-hello = #f00
 
 [bar/parent]
-font-0 = ${xrdb:polybar.font:pixelsize=12}
-font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
-font-2 = fontawesome:pixelsize=12;1
+font-0 = ${xrdb:polybar.font_0}
+font-1 = ${xrdb:polybar.font_1}
+font-2 = ${xrdb:polybar.font_2}
 
 width = 100%
-height = 35
+height = 30
 
 fixed-center = true
 
@@ -37,37 +36,31 @@ radius = 0
 ;background-7 = #803e0a53
 ;background-8 = #4D400a53
 ;background-9 = #1A490a53
-background = ${colors.background}
+background = #00000000
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 6
 line-color = ${colors.selected}
 
-;border-left-size = 11
-;order-top-size = 0
-;order-right-size = 11
-border-bottom-size = 0
+border-left-size = 10
+border-right-size = 10
+border-top-size = 10
+border-bottom-size = -5
 
 ;bottom = true
 
 padding-left = 2
 padding-right = 2
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 0
+module-margin-right = 0
 
-;wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
-
-
 
 [bar/DVI-I-1]
 inherit = bar/parent
@@ -75,8 +68,8 @@ monitor = ${env:MONITOR:DVI-I-1}
 
 modules-left = i3 w1
 modules-center = xwindow
-modules-right = pkg mail trash wlan eth
-
+modules-right = ramp-left wlan eth
+;pkg mail trash 
 [bar/HDMI-0]
 inherit = bar/parent
 monitor = ${env:MONITOR:HDMI-0}
@@ -124,6 +117,24 @@ exec = ~/.config/polybar/bin/windows.sh -m "HDMI-0"
 inherit = module/windows
 exec = ~/.config/polybar/bin/windows.sh -m "DP-5"
 
+[module/ramp-left]
+type = custom/text
+
+content = %{T2}◢%{T-}
+content-font = 2
+content-foreground = ${colors.foreground_alt}
+; content-background = #00a0000a
+content-padding = 0
+
+[module/ramp-right]
+type = custom/text
+
+content = %{T2}◤%{T-}
+content-font = 2
+content-foreground = ${colors.foreground_alt}
+; content-background = #00a0000a
+content-padding = 0
+
 [module/ip]
 type = custom/script
 ; format-underline = ${colors.foreground_alt}
@@ -168,33 +179,44 @@ scroll-down = ~/.config/polybar/bin/pavolume.sh --down
 [module/mail]
 type = custom/script
 interval = 1200
-format = <label>
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground_alt}
+
+format = " "<label>
+
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.foreground_alt}
+
 exec = ~/.config/polybar/bin/mail.sh
 
 [module/trash]
 interval = 10
-;format-underline = ${module/bspwm.label-focused-underline}
 type = custom/script
+
+format = " "<label>
 exec = ~/.config/polybar/bin/trash.sh
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground_alt}
+
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.foreground_alt}
+
+label-underline = ${colors.foreground_alt}
+
 click-right = rm -rf ~/.local/share/Trash/files/* ;exec paplay /usr/share/sounds/freedesktop/stereo/trash-empty.oga
 click-left = thunar ~/.local/share/Trash/files
 
 [module/weather]
 type = custom/script
-;format-underline = ${module/bspwm.label-focused-underline}
 interval = 100
-format = <label>
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground_alt}
+format = " "<label>
+
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.foreground_alt}
+
 exec = ~/.config/polybar/bin/weather.py
 
 [module/pkg]
 type = custom/script
-;format-underline = ${module/bspwm.label-focused-underline}
 interval = 1200
 format = <label>
 ;format-underline = #dc322f
@@ -204,7 +226,6 @@ click-left = ~/.config/polybar/bin/pkg.sh --upgrade
 
 [module/xwindow]
 type = internal/xwindow
-;format-underline = ${module/bspwm.label-focused-underline}
 label = %title:0:100:...%
 ;format-foreground = ${colors.selected}
 
@@ -234,63 +255,30 @@ format-mounted-prefix-foreground = ${colors.foreground_alt}
 label-mounted = %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-foreground = ${colors.foreground_alt}
-label-focused-background = ${colors.background}
-label-focused-underline= ${colors.foreground_alt}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-foreground = ${colors.foreground}
-label-urgent-background = ${colors.background}
-label-urgent-underline = ${colors.selected}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground_alt}
-label-empty-padding = 2
-
 [module/i3]
 type = internal/i3
 
-format = <label-state> <label-mode>
 pin-workspaces = true
 strip-wsnumbers = true
 index-sort = true
-wrapping-scroll = false
 
-ws-icon-default = 
+format = <label-state>
 
-label-mode-padding = 0
-label-mode-foreground = #000
+label-focused = %icon%
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background}
 
-; focused = Active workspace on focused monitor
-label-focused = %name%
-label-focused-foreground = ${module/bspwm.label-focused-foreground}
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %name%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
-
-; visible = Active workspace on unfocused monitor
-label-visible = %name%
-;label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %icon%
-label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
+; label-separator = 
+; label-separator-padding = 2
+; label-separator-foreground = #ffb52a
+;
+; label-unfocused = %icon%
+; label-unfocused-foreground = ${colors.foreground}
+;
+; label-visible = %icon%
+;
+; label-urgent = %icon%
+; label-urgent-foreground = ${colors.foreground}
 
 [module/mpd]
 type = internal/mpd
@@ -348,13 +336,19 @@ type = internal/network
 interface = wlan0
 interval = 3.0
 
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground_alt}
+format-connected-prefix = ""
+format-connected-prefix-foreground = ${colors.foreground}
+format-connected-prefix-background = ${colors.foreground_alt}
+
+format-connected-suffix = "%{T3}%{T-}"
 
 format-connected = <label-connected>
 ; format-connected-underline = ${colors.foreground_alt}
 
-label-connected = %essid% %downspeed%
+label-connected = "%{T3}%{T-}%essid% %downspeed%"
+label-connected-foreground = ${colors.foreground_alt}
+; label-connected-underline = ${colors.foreground}
+label-connected-background = ${colors.foreground}
 
 [module/eth]
 type = internal/network
@@ -379,8 +373,9 @@ date-alt = " %Y/%m/%d %A"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground_alt}
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.foreground_alt}
 ;format-underline = #0a6cf5
 
 label = %date% %time%
@@ -461,14 +456,43 @@ menu-2-1 = Cancel
 menu-2-1-exec = menu-open-0
 
 [settings]
+; The throttle settings lets the eventloop swallow up til X events
+; if they happen within Y millisecond after first event was received.
+; This is done to prevent flood of update event.
+;
+; For example if 5 modules emit an update event at the same time, we really
+; just care about the last one. But if we wait too long for events to swallow
+; the bar would appear sluggish so we continue if timeout
+; expires or limit is reached.
+throttle-output = 5
+throttle-output-for = 10
+
+; Time in milliseconds that the input handler will wait between processing events
+throttle-input-for = 30
+
+; Reload upon receiving XCB_RANDR_SCREEN_CHANGE_NOTIFY events
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
+
+; Compositing operators
+; @see: https://www.cairographics.org/manual/cairo-cairo-t.html#cairo-operator-t
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+; Define fallback values used by all module formats
+format-foreground = 
+format-background = 
+format-underline =
+format-overline = 
+format-spacing = 0
+format-padding = 0
+format-margin = 0
+format-offset =
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini

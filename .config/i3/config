@@ -88,7 +88,7 @@ bindsym $mod+Shift+s move container to workspace $workspace_s; workspace $worksp
 bindsym $mod+Shift+d move container to workspace $workspace_d; workspace $workspace_d
 
 bindsym $mod+Ctrl+a workspace $workspace_a; exec --no-startup-id i3-msg 'workspace $workspace_a; exec google-chrome "http://youtube.com"'
-bindsym $mod+Ctrl+s workspace $workspace_s; exec urxvt -e mpsyt
+bindsym $mod+Ctrl+s workspace $workspace_s; exec google-chrome
 bindsym $mod+Ctrl+d workspace $workspace_d; exec skypeforlinux
 
 #assign [title="YouTube"] $workspace_a
@@ -283,10 +283,10 @@ exec_always compton --config ~/.config/compton.conf
 # exec_always --no-startup-id polybar -r HDMI-0-bottom
 # exec_always --no-startup-id polybar -r DP-5
 
-exec --no-startup-id polybar -r DVI-I-1
-exec --no-startup-id polybar -r HDMI-0
 # exec --no-startup-id polybar -r HDMI-0-bottom
-exec --no-startup-id polybar -r DP-5
+exec_always --no-startup-id polybar -r DVI-I-1
+exec_always --no-startup-id polybar -r HDMI-0
+exec_always --no-startup-id polybar -r DP-5
 exec --no-startup-id ckb --background
 exec --no-startup-id gulp --cwd ~/Code/home serve
 exec ~/.config/i3/bin/cavai3ipc.py DVI-I-1

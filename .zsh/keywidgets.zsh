@@ -33,7 +33,7 @@ bindkey "" up_widget
 
 # home
 function goto_home() { 
-    BUFFER="cd ~/"$BUFFER
+    BUFFER="cd ~"
     zle end-of-line
     zle accept-line
 }
@@ -49,12 +49,12 @@ bindkey "" goto_home
 #	bindkey "^v" edit_and_run
 
 # LS
-function ctrl_l() {
+function ls() {
 	BUFFER="ls"
 	zle accept-line
 }
-zle -N ctrl_l
-bindkey "" ctrl_l
+zle -N ls
+    bindkey "" ls
 
 # Sudo
 function add_sudo() {

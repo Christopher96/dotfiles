@@ -1,13 +1,3 @@
-search x86
-search libjson
-rename 
-rename libjsoncpp.so.11
-delete
-find/
-search mnt
-find osb
-touch 
-rename task.service.ts
 rename auth.service.ts_
 rename auth.service.ts
 touch crypto
@@ -20,7 +10,6 @@ rename home.html
 mkdir controllers
 touch userCtrl.js
 find gr
-open_with
 find defa
 rename Desktop
 open_with 
@@ -40,11 +29,22 @@ find scr
 find gtkq
 fetch https://github.com/neeasade/pkgbuilds/blob/master/gtkrc-reload/gtkrc-reload.c
 fetch https://raw.githubusercontent.com/neeasade/pkgbuilds/master/gtkrc-reload/gtkrc-reload.c
-find xres
-find wa
 shell 
 find 
 open_with vimm
-open_with vim
 find ca
+find mn
+shell dfsjdlfkjs
+delete
+find xres
+find gtk
+find conf
+find gtk-3
+find
+search monon
+find fon
+open_with vim
 find cac
+find wa
+find scs
+open_with

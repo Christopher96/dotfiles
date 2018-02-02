@@ -48,7 +48,7 @@ inoremap <C-p>		    <Esc>"+pa
 let g:AutoPairsShortcutFastWrap = '<C-e>'
 
 map 	 <C-q>  		:bp <BAR> bd #<CR>
-nnoremap <C-s>			:w<CR>
+nnoremap <C-s>			:w !sudo tee % >/dev/null<CR>
 inoremap <C-s>			<Esc>:w<CR>
 vnoremap <C-s>			<Esc>:w<CR>
 nnoremap <C-i> 			i_<Esc>r
@@ -61,6 +61,9 @@ nnoremap <C-e>p			:e ~/.config/polybar/config<CR>
 nnoremap <C-e>x			:e ~/.Xresources<CR>
 nnoremap <C-e>b			:e ~/.vim/autoload/keybinds.vim<CR>
 nnoremap <C-e>z			:e ~/.zshrc<CR>
+
+nnoremap <C-k>          {
+nnoremap <C-j>          }
 
 " Plugins
 " <C-Y> Emmet
@@ -75,8 +78,17 @@ nnoremap N			Nzzzv
 
 nnoremap H			g0
 vnoremap H			g0
-nnoremap L			g$
-vnoremap L			g$
+
+nnoremap L			$
+vnoremap L			$
+
+nnoremap yH			y0
+nnoremap dH			d0
+nnoremap cH			c0
+
+nnoremap yL			y$
+nnoremap dL			d$
+nnoremap cL			c$
 
 " vCoolor color picker
 let g:vcoolor_map = 'gco'
@@ -99,7 +111,6 @@ nnoremap <CR> 			o<Esc>
 " <F8> NextColor
 
 
-
 " TAB MAPPINGS
 nnoremap <Tab> 			>>	
 nnoremap <S-Tab>		<<	
@@ -117,7 +128,6 @@ vmap  <expr>  <RIGHT>  		DVB_Drag('right')
 vmap  <expr>  <DOWN>   		DVB_Drag('down')                        
 vmap  <expr>  <UP>     		DVB_Drag('up')                          
 vmap  <expr>  D        		DVB_Duplicate()                         
-
 
 
 " F-KEYS

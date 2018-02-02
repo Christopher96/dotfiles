@@ -3,9 +3,9 @@
 !  Global Fonts
 !-----------------------
  
-#define $main_font               ProFontIIx Nerd Font Mono
-#define $alt_font                DEC Terminal
-#define $captial_font            Visitor TT1 BRK
+#define $main_font               ProFontIIx Nerd Font
+#define $alt_font                Visitor TT1 BRK
+#define $captial_font            Visitor TT1 BRK Bold
 #define $font_size               12
 
 #define $main_font_xft           xft:$main_font:style=Regular:size=$font_size
@@ -27,7 +27,7 @@
 !  Xft Settings
 !------------------------
 
-Xft*dpi:  	82
+Xft*dpi:  	    82
 Xft*antialias:  true
 Xft*hinting:    true
 Xft*rgba:       rgb
@@ -55,7 +55,6 @@ URxvt.depth: 24
 URxvt.internalBorder: 30
 URxvt.externalBorder: 0
 URxvt.letterSpace: 0
-
 !URxvt.shading: 40
 !URxvt*transparent: false
 !URXvt*blurRadius: 15
@@ -99,7 +98,9 @@ i3wm.font:		    $main_font
 !  Polybar Settings
 !------------------------
 
-polybar.font:           $alt_font
+polybar.font_0:         $alt_font:size=10
+polybar.font_1:         $main_font:size=12
+polybar.font_2:         $main_font:size=30
 polybar.background:     $background
 polybar.background_alt: $background_alt
 polybar.foreground:     $foreground

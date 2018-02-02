@@ -4,5 +4,5 @@ i:/home/syphez/.config/i3
 p:/home/syphez/.config/polybar
 r:/home/syphez/.config/ranger
 v:/home/syphez/.vim
-':/usr/lib/python3.6/site-packages/pywal/templates
+':/home/syphez/.config/polybar
 u:/home/syphez
