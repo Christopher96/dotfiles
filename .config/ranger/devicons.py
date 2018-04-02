@@ -96,6 +96,7 @@ file_node_extensions = {
     'xml'      : '',
     'log'      : '',
     'avi'      : '',
+    'mov'      : '',
     'mpeg'     : '',
     'mpg'      : '',
     'mkv'      : '',
@@ -128,6 +129,7 @@ file_node_extensions = {
 }
 
 dir_node_exact_matches = {
+# English
     '.git'                             : '',
     'Desktop'                          : '',
     'Documents'                        : '',
@@ -138,6 +140,38 @@ dir_node_exact_matches = {
     'Public'                           : '',
     'Templates'                        : '',
     'Videos'                           : '',
+# French
+    'Bureau'                           : '',
+    'Documents'                        : '',
+    'Téléchargements'                  : '',
+    'Musique'                          : '',
+    'Images'                           : '',
+    'Publique'                         : '',
+    'Vidéos'                           : '',
+# Portuguese
+    'Área de trabalho'                 : '',
+    'Documentos'                       : '',
+    'Música'                           : '',
+    'Imagens'                          : '',
+    'Público'                          : '',
+    'Modelos'                          : '',
+    'Vídeos'                           : '',
+# Italian
+    'Scrivania'                        : '',
+    'Documenti'                        : '',
+    'Scaricati'                        : '',
+    'Musica'                           : '',
+    'Immagini'                         : '',
+    'Pubblici'                         : '',
+    'Modelli'                          : '',
+    'Video'                            : '',
+# German
+    'Schreibtisch'                     : '',
+    'Dokumente'                        : '',
+    'Musik'                            : '',
+    'Bilder'                           : '',
+    'Öffentlich'                       : '',
+    'Vorlagen'                         : '',
 }
 
 file_node_exact_matches = {

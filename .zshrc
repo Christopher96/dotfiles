@@ -69,6 +69,6 @@ eval "$(SHELL=/bin/sh lesspipe.sh)"
 
 
 # Source additional files
-for file in ~/.zsh/*; do
+for file in ~/.zshrc.d/*; do
     source "$file"
 done

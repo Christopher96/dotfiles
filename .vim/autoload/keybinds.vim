@@ -1,4 +1,4 @@
-" LEADER MAPPINGS
+" --- LEADER MAPPINGS ---
 :let mapleader = ","
 
 " Emmet
@@ -25,9 +25,15 @@ nnoremap <leader>s	    :w !sudo tee % >/dev/null<CR>
 nnoremap <leader>z		zMzvzz
 
 " Auto indent current file
-nmap <leader>ai mzgg=G`z
+nmap <leader>i mzgg=G`z
 
-" CTRL MAPPINGS
+" vCoolor
+let g:vcoolor_map = '<leader>c'
+let g:vcool_ins_hsl_map = '<leader>ch'		" Insert hsl color.
+let g:vcool_ins_rgba_map = '<leader>ca'		" Insert rgba color.
+let g:vcool_ins_rgb_map = '<leader>cr'		" Insert rgb color.
+
+" --- CTRL MAPPINGS ---
 
 " CtrlP
 let g:ctrlp_map = '<c-f>'
@@ -44,11 +50,12 @@ vnoremap <C-y>          "+y
 nnoremap <C-p>		    "+p
 vnoremap <C-p>		    "+p
 inoremap <C-p>		    <Esc>"+pa
+nnoremap <C-x>          "+dd
 
 let g:AutoPairsShortcutFastWrap = '<C-e>'
 
 map 	 <C-q>  		:bp <BAR> bd #<CR>
-nnoremap <C-s>			:w !sudo tee % >/dev/null<CR>
+nnoremap <C-s>			:w<CR>
 inoremap <C-s>			<Esc>:w<CR>
 vnoremap <C-s>			<Esc>:w<CR>
 nnoremap <C-i> 			i_<Esc>r
@@ -70,7 +77,7 @@ nnoremap <C-j>          }
 " <C-N>, <C-U> Multiple Cursors
 
 
-" KEY MAPPINGS
+" --- KEY MAPPINGS ---
 nnoremap J 			:bprevious<CR>
 nnoremap K 			:bnext<CR>
 nnoremap n			nzzzv
@@ -90,14 +97,7 @@ nnoremap yL			y$
 nnoremap dL			d$
 nnoremap cL			c$
 
-" vCoolor color picker
-let g:vcoolor_map = 'gco'
-let g:vcool_ins_rgb_map = 'gcr'
-let g:vcool_ins_hsl_map = 'gch'
-let g:vcool_ins_rgba_map = 'gcb'
-
-
-" GENERAL MAPPINGS
+" --- GENERAL MAPPINGS ---
 
 " Folding
 nnoremap <silent> <Space> 	@=(foldlevel('.')?'za':"\<Space>")<CR>
@@ -106,12 +106,10 @@ nnoremap <S-BS>			k"_dd
 nnoremap <BS>			"_dd
 nnoremap <S-CR>			O<Esc>
 nnoremap <CR> 			o<Esc>
-
-" Plugins
-" <F8> NextColor
+inoremap <expr> <CR> Expander()
 
 
-" TAB MAPPINGS
+" --- TAB MAPPINGS ---
 nnoremap <Tab> 			>>	
 nnoremap <S-Tab>		<<	
 vnoremap <Tab>			>><Esc>gv
@@ -122,7 +120,7 @@ vnoremap <		    	>><Esc>gv
 vnoremap >		        <<<Esc>gv
 
 
-" ARROW MAPPINGS
+" --- ARROW MAPPINGS ---
 vmap  <expr>  <LEFT>   		DVB_Drag('left')                        
 vmap  <expr>  <RIGHT>  		DVB_Drag('right')                       
 vmap  <expr>  <DOWN>   		DVB_Drag('down')                        
@@ -130,5 +128,6 @@ vmap  <expr>  <UP>     		DVB_Drag('up')
 vmap  <expr>  D        		DVB_Duplicate()                         
 
 
-" F-KEYS
+" --- F-KEYS ---
 map   <f12> 			:!ctags -R .<cr>
+

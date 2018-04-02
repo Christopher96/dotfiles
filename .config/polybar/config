@@ -7,6 +7,7 @@
 ;=====================================================
 
 [colors]
+transparent = #4D000000
 background = ${xrdb:polybar.background:#000000}
 background_alt = ${xrdb:polybar.background_alt:#000000}
 foreground = ${xrdb:polybar.foreground:#ffffff}
@@ -19,7 +20,7 @@ font-1 = ${xrdb:polybar.font_1}
 font-2 = ${xrdb:polybar.font_2}
 
 width = 100%
-height = 30
+height = 35
 
 fixed-center = true
 
@@ -36,21 +37,21 @@ radius = 0
 ;background-7 = #803e0a53
 ;background-8 = #4D400a53
 ;background-9 = #1A490a53
-background = #00000000
+background = ${colors.transparent}
 foreground = ${colors.foreground}
 
-line-size = 6
+line-size = 5
 line-color = ${colors.selected}
 
 border-left-size = 10
 border-right-size = 10
-border-top-size = 10
-border-bottom-size = -5
+border-top-size = 5
+border-bottom-size = -6
 
 ;bottom = true
 
 padding-left = 2
-padding-right = 2
+; padding-right = 2
 
 module-margin-left = 0
 module-margin-right = 0
@@ -68,15 +69,15 @@ monitor = ${env:MONITOR:DVI-I-1}
 
 modules-left = i3 w1
 modules-center = xwindow
-modules-right = ramp-left wlan eth
+modules-right = sl wlan sr eth
 ;pkg mail trash 
 [bar/HDMI-0]
 inherit = bar/parent
 monitor = ${env:MONITOR:HDMI-0}
 
-modules-left = i3 w2
+modules-left = arch i3 w2
 modules-center = xwindow
-modules-right = weather date 
+modules-right = empty sl weather sr sl date sr
 
 [bar/HDMI-0-bottom]
 inherit = bar/parent
@@ -90,7 +91,7 @@ inherit = bar/parent
 monitor = ${env:MONITOR:DP-5}
 modules-left = i3 w3
 modules-center = xwindow
-modules-right = mpv pavolume volume
+modules-right = mpv sl pavolume sr-invert volume
 
 ;tray-position = right
 ;tray-padding = 10
@@ -102,7 +103,7 @@ tray-background = ${colors.foreground}
 
 [module/windows]
 type = custom/script
-interval = 0.1
+interval = 0.5
 label = %output% 
 
 [module/w1]
@@ -117,23 +118,31 @@ exec = ~/.config/polybar/bin/windows.sh -m "HDMI-0"
 inherit = module/windows
 exec = ~/.config/polybar/bin/windows.sh -m "DP-5"
 
-[module/ramp-left]
+[module/sl]
 type = custom/text
+content = %{O0}%{T3}%{T-}
+content-foreground = ${colors.foreground}
 
-content = %{T2}◢%{T-}
-content-font = 2
-content-foreground = ${colors.foreground_alt}
-; content-background = #00a0000a
-content-padding = 0
-
-[module/ramp-right]
+[module/sl-thin]
 type = custom/text
-
-content = %{T2}◤%{T-}
-content-font = 2
+content = %{T3}%{T-}
 content-foreground = ${colors.foreground_alt}
-; content-background = #00a0000a
-content-padding = 0
+
+[module/sr-thin]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = ${colors.foreground_alt}
+
+[module/sr]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = ${colors.foreground_alt}
+
+[module/arch]
+type = custom/text
+content = %{O-30}%{T3}%{T-}
+content-foreground = ${colors.foreground}
+content-padding = 3
 
 [module/ip]
 type = custom/script
@@ -145,12 +154,13 @@ click-left = ~/.config/polybar/bin/ip.sh --public
 
 [module/crypto]
 type = custom/script
-interval = 5
+interval = 30
 format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground_alt}
 label = %output%
 exec = ~/.config/polybar/bin/crypto.py bitcoin ethereum litecoin iota eos request-network icon cindicator aion cardano kucoin-shares
+exec-if = ~/.config/polybar/bin/ifonline.sh
 
 [module/mpv]
 type = custom/script
@@ -167,10 +177,15 @@ label = %output%
 
 [module/pavolume]
 type = custom/script
-;format-underline = ${colors.foreground_alt}
-enterval = 1
+interval = 1
+format = <label>
+
 label = %output%
+label-foreground = ${colors.foreground_alt}
+label-background = ${colors.foreground}
+
 exec = ~/.config/polybar/bin/pavolume.sh
+
 click-right = exec pavucontrol
 click-left = ~/.config/polybar/bin/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/bin/pavolume.sh --up
@@ -192,14 +207,18 @@ exec = ~/.config/polybar/bin/mail.sh
 interval = 10
 type = custom/script
 
-format = " "<label>
+format = <label>
 exec = ~/.config/polybar/bin/trash.sh
 
-format-prefix = "  "
+format-prefix =  
 format-prefix-foreground = ${colors.foreground}
 format-prefix-background = ${colors.foreground_alt}
+format-suffix = %{T2}%{T-}
 
-label-underline = ${colors.foreground_alt}
+label = %{T2}%{T-}%output%
+label-foreground = ${colors.foreground_alt}
+label-background = ${colors.foreground}
+
 
 click-right = rm -rf ~/.local/share/Trash/files/* ;exec paplay /usr/share/sounds/freedesktop/stereo/trash-empty.oga
 click-left = thunar ~/.local/share/Trash/files
@@ -207,13 +226,18 @@ click-left = thunar ~/.local/share/Trash/files
 [module/weather]
 type = custom/script
 interval = 100
-format = " "<label>
+format = <label>
 
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.foreground_alt}
+format-prefix = 
+format-prefix-foreground = ${colors.foreground_alt}
+format-prefix-background = ${colors.foreground}
+
+label = "%{T2}%{T-}%output%"
+label-background = ${colors.foreground_alt}
+label-foreground = ${colors.foreground}
 
 exec = ~/.config/polybar/bin/weather.py
+exec-if = ~/.config/polybar/bin/ifonline.sh
 
 [module/pkg]
 type = custom/script
@@ -264,18 +288,19 @@ index-sort = true
 
 format = <label-state>
 
-label-focused = %icon%
-label-focused-foreground = ${colors.foreground}
-label-focused-background = ${colors.background}
+label-focused = ${env:POLY_I3_FOCUSED}
+label-focused-foreground = ${colors.foreground_alt}
+label-focused-padding = 0
 
-; label-separator = 
+label-unfocused = ${env:POLY_I3_UNFOCUSED}
+label-unfocused-foreground = ${colors.foreground}
+
+label-visible = ${env:POLY_I3_UNFOCUSED}
+label-visible-foreground = ${colors.foreground}
+
+; label-separator = |
 ; label-separator-padding = 2
-; label-separator-foreground = #ffb52a
-;
-; label-unfocused = %icon%
-; label-unfocused-foreground = ${colors.foreground}
-;
-; label-visible = %icon%
+; label-separator-foreground = ${colors.foreground_alt}
 ;
 ; label-urgent = %icon%
 ; label-urgent-foreground = ${colors.foreground}
@@ -337,18 +362,16 @@ interface = wlan0
 interval = 3.0
 
 format-connected-prefix = ""
-format-connected-prefix-foreground = ${colors.foreground}
-format-connected-prefix-background = ${colors.foreground_alt}
-
-format-connected-suffix = "%{T3}%{T-}"
+format-connected-prefix-foreground = ${colors.foreground_alt}
+format-connected-prefix-background = ${colors.foreground}
 
 format-connected = <label-connected>
 ; format-connected-underline = ${colors.foreground_alt}
+; format-connected-overline = ${colors.foreground_alt}
 
-label-connected = "%{T3}%{T-}%essid% %downspeed%"
-label-connected-foreground = ${colors.foreground_alt}
-; label-connected-underline = ${colors.foreground}
-label-connected-background = ${colors.foreground}
+label-connected = "%essid% %downspeed%"
+label-connected-foreground = ${colors.foreground}
+label-connected-background = ${colors.foreground_alt}
 
 [module/eth]
 type = internal/network
@@ -368,17 +391,18 @@ type = internal/date
 interval = 1
 
 date =
-date-alt = " %Y/%m/%d %A"
+date-alt = "%Y/%m/%d %A "
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.foreground_alt}
-;format-underline = #0a6cf5
+format-prefix =  
+format-prefix-foreground = ${colors.foreground_alt}
+format-prefix-background = ${colors.foreground}
 
-label = %date% %time%
+label = %{T2}%{T-}%date%%time%
+label-background = ${colors.foreground_alt}
+label-foreground = ${colors.foreground}
 
 [module/volume]
 type = internal/volume

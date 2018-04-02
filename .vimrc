@@ -109,11 +109,14 @@ Plugin 'honza/vim-snippets'
 " Syntax
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'burnettk/vim-angular'
+Plugin 'hail2u/vim-css3-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'othree/yajs.vim'
 Plugin 'mitsuhiko/vim-jinja'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'posva/vim-vue'
 
 " Theme
 Plugin 'vim-airline/vim-airline'
@@ -189,3 +192,4 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
 " }}}
+

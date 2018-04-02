@@ -8,7 +8,7 @@ floating_modifier $mod
 
 font pango:DEC Terminal 11
 
-set $browser chromium
+set $browser firefox
 set $terminal urxvt
 
 
@@ -30,8 +30,8 @@ bindsym $mod+Shift+1 move container to workspace $workspace_1; workspace $worksp
 bindsym $mod+Shift+2 move container to workspace $workspace_2; workspace $workspace_2
 bindsym $mod+Shift+3 move container to workspace $workspace_3; workspace $workspace_3
 
-bindsym $mod+Ctrl+1 workspace $workspace_1; exec google-chrome "https://outlook.office365.com/owa/\?bO\=1\#path\=/mail/inbox"
-bindsym $mod+Ctrl+2 workspace $workspace_2; exec google-chrome
+bindsym $mod+Ctrl+1 workspace $workspace_1; exec $browser "https://outlook.office365.com/owa/\?bO\=1\#path\=/mail/inbox"
+bindsym $mod+Ctrl+2 workspace $workspace_2; exec $browser
 bindsym $mod+Ctrl+3 workspace $workspace_3; exec $terminal
 
 #assign [title="E-post"] $workspace_1
@@ -61,7 +61,7 @@ bindsym $mod+Shift+e move container to workspace $workspace_e; workspace $worksp
 bindsym $mod+Shift+u move container to workspace $workspace_u; workspace $workspace_u
 
 bindsym $mod+Ctrl+q workspace $workspace_q; exec atom
-bindsym $mod+Ctrl+w workspace $workspace_w; exec google-chrome
+bindsym $mod+Ctrl+w workspace $workspace_w; exec $browser
 bindsym $mod+Ctrl+e workspace $workspace_e; exec $terminal
 bindsym $mod+Ctrl+u workspace $workspace_u; exec unity-editor
 
@@ -87,8 +87,8 @@ bindsym $mod+Shift+a move container to workspace $workspace_a; workspace $worksp
 bindsym $mod+Shift+s move container to workspace $workspace_s; workspace $workspace_s
 bindsym $mod+Shift+d move container to workspace $workspace_d; workspace $workspace_d
 
-bindsym $mod+Ctrl+a workspace $workspace_a; exec --no-startup-id i3-msg 'workspace $workspace_a; exec google-chrome "http://youtube.com"'
-bindsym $mod+Ctrl+s workspace $workspace_s; exec google-chrome
+bindsym $mod+Ctrl+a workspace $workspace_a; exec --no-startup-id i3-msg 'workspace $workspace_a; exec $browser "http://youtube.com"'
+bindsym $mod+Ctrl+s workspace $workspace_s; exec $browser
 bindsym $mod+Ctrl+d workspace $workspace_d; exec skypeforlinux
 
 #assign [title="YouTube"] $workspace_a
@@ -122,7 +122,7 @@ bindsym $sup+9 move container to workspace $workspace_8; workspace $workspace_8
 bindsym $sup+8 move container to workspace $workspace_9; workspace $workspace_9
 bindsym $sup+0 move container to workspace $workspace_10; workspace $workspace_10
 
-
+bindsym $mod+Ctrl+y exec $browser https://youtube.com
 
 # ================== Keybinds =====================
 
@@ -179,9 +179,9 @@ bindsym $mod+Ctrl+l                resize grow width 10 px or 10 ppt
 bindsym $mod+Shift+minus      move scratchpad
 bindsym $mod+minus            scratchpad show
 
-bindsym $mod+Shift+Delete			exec reboot
+bindsym $mod+Shift+Home			    exec reboot
 bindsym $mod+Shift+End				exec shutdown -h now
-bindsym $mod+Shift+BackSpace	    exec ~/.config/i3/bin/lock.sh
+bindsym $mod+Shift+backSpace	    exec ~/.config/i3/bin/lock.sh
 
 bindsym $mod+Return 					exec $terminal
 
@@ -192,18 +192,18 @@ bindsym $sup+l                  exec dm-tool lock
 
 # F-KEY BINDINGS
 
-bindsym $mod+F1			exec wal -i /mnt/share/Backgrounds/5lFWCfD.jpg
-bindsym $mod+F2			exec wal -i /mnt/share/Backgrounds/3iooxbD.jpg
-bindsym $mod+F3			exec wal -i /mnt/share/Backgrounds/381812_1280.jpg
-bindsym $mod+F4			exec wal -i /mnt/share/Backgrounds/1339262301565.jpg
-bindsym $mod+F5			exec wal -i /mnt/share/Backgrounds/1361000718153.jpg
-bindsym $mod+F6			exec wal -i /mnt/share/Backgrounds/1362081489285.jpg
-bindsym $mod+F7			exec wal -i /mnt/share/Backgrounds/1363193246835.jpg
-bindsym $mod+F8			exec wal -i /mnt/share/Backgrounds/1445446796007.jpg
-bindsym $mod+F9			exec wal -i /mnt/share/Backgrounds/1460394691885.jpg
-bindsym $mod+F10		exec wal -i /mnt/share/Backgrounds/1460396747868.jpg
-bindsym $mod+F11		exec wal -i /mnt/share/Backgrounds/BHdIV4f.jpg
-bindsym $mod+F12		exec wal -i /mnt/share/Backgrounds/LB6EMz9.jpg
+bindsym $mod+F1			exec wal -i /mnt/share/backgrounds/5lFWCfD.jpg
+bindsym $mod+F2			exec wal -i /mnt/share/backgrounds/3iooxbD.jpg
+bindsym $mod+F3			exec wal -i /mnt/share/backgrounds/381812_1280.jpg
+bindsym $mod+F4			exec wal -i /mnt/share/backgrounds/1339262301565.jpg
+bindsym $mod+F5			exec wal -i /mnt/share/backgrounds/1361000718153.jpg
+bindsym $mod+F6			exec wal -i /mnt/share/backgrounds/1362081489285.jpg
+bindsym $mod+F7			exec wal -i /mnt/share/backgrounds/1363193246835.jpg
+bindsym $mod+F8			exec wal -i /mnt/share/backgrounds/1445446796007.jpg
+bindsym $mod+F9			exec wal -i /mnt/share/backgrounds/1460394691885.jpg
+bindsym $mod+F10		exec wal -i /mnt/share/backgrounds/1460396747868.jpg
+bindsym $mod+F11		exec wal -i /mnt/share/backgrounds/BHdIV4f.jpg
+bindsym $mod+F12		exec wal -i /mnt/share/backgrounds/LB6EMz9.jpg
 
 # OTHER BINDINGS
 
@@ -254,8 +254,8 @@ for_window [class="\b(?!$floating_windows)^.*"] border none
 for_window [title="Hold on"] floating enable, position center
 for_window [instance=".*-CAVA"] floating disable, border pixel 0, move scratchpad
 
-smart_gaps on
-gaps inner 10
+# smart_gaps on
+gaps inner 5
 gaps outer 5
 
 
@@ -278,15 +278,18 @@ gaps outer 5
 # exec_always nitrogen --restore
 exec_always compton --config ~/.config/compton.conf
 
-# exec_always --no-startup-id polybar -r DVI-I-1
-# exec_always --no-startup-id polybar -r HDMI-0
-# exec_always --no-startup-id polybar -r HDMI-0-bottom
-# exec_always --no-startup-id polybar -r DP-5
-
-# exec --no-startup-id polybar -r HDMI-0-bottom
 exec_always --no-startup-id polybar -r DVI-I-1
 exec_always --no-startup-id polybar -r HDMI-0
+exec_always --no-startup-id polybar -r HDMI-0-bottom
 exec_always --no-startup-id polybar -r DP-5
+
+# exec --no-startup-id polybar -r HDMI-0-bottom
+# exec --no-startup-id polybar -r DVI-I-1
+# exec --no-startup-id polybar -r HDMI-0
+# exec --no-startup-id polybar -r DP-5
+
+# exec --no-startup-id gulp --cwd ~/Code/home serve
+# exec ~/.config/i3/bin/cavai3ipc.py DVI-I-1
+#
+exec --no-startup-id wal -R
 exec --no-startup-id ckb --background
-exec --no-startup-id gulp --cwd ~/Code/home serve
-exec ~/.config/i3/bin/cavai3ipc.py DVI-I-1

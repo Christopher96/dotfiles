@@ -117,8 +117,6 @@ function volMuteStatus {
 
 }
 
-FG=$(xrdb -query | awk '/polybar.foreground_alt:/ {print $2}')
-
 case "$1" in
         --up)
                 volUp
@@ -149,9 +147,9 @@ case "$1" in
 		volMuteStatus
                 if [ ${curStatus} = 'yes' ]
                 then
-			echo "%{F"$FG"}%{F-} $curVol%"
+			echo " $curVol%"
 		else
-			echo "%{F"$FG"}%{F-} $curVol%"
+			echo " $curVol%"
 		fi
         ;;
 esac

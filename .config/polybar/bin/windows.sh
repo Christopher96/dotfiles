@@ -50,7 +50,7 @@ for wid in $WINDOWS; do
 	if [[ "$wid" = "$FOCUSED" ]]; then
 		win="$(printf "%s" "%{F"$FG"}%{F-} $wclass")"
 	else
-		win="%{T3}%{T-} $wclass"
+		win=" $wclass"
 	fi
 
 	windowlist="$windowlist $win"

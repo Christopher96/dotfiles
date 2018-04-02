@@ -3,15 +3,15 @@
 	"name": "pywal-theme",
 	"type": "dark",
 	"colors": {
-		"editor.background": "#04021A",
-		"editor.foreground": "#D7C2A8",
-		"activityBarBadge.background": "#5D134E",
-		"sideBarTitle.foreground": "#D7C2A8"
+		"editor.background": "#080808",
+		"editor.foreground": "#99E5FD",
+		"activityBarBadge.background": "#535353",
+		"sideBarTitle.foreground": "#99E5FD"
 	},
 	"tokenColors": [
 		{
 			"settings": {
-				"foreground": "#D7C2A8",
+				"foreground": "#99E5FD",
 				"background": "#263238ff"
 			}
 		},
@@ -33,7 +33,7 @@
 				"string constant.other.placeholder"
 			],
 			"settings": {
-				"foreground": "#D7C2A8"
+				"foreground": "#99E5FD"
 			}
 		},
 		{
@@ -444,7 +444,7 @@
 				"punctuation.definition.list_item.markdown"
 			],
 			"settings": {
-				"foreground": "#D7C2A8"
+				"foreground": "#99E5FD"
 			}
 		},
 		{
@@ -462,7 +462,7 @@
 				"text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown"
 			],
 			"settings": {
-				"foreground": "#5D134E"
+				"foreground": "#535353"
 			}
 		},
 		{
@@ -547,8 +547,8 @@
 				"markup.quote punctuation.definition.blockquote.markdown"
 			],
 			"settings": {
-				"background": "#5D134E",
-				"foreground": "#5D134E"
+				"background": "#535353",
+				"foreground": "#535353"
 			}
 		},
 		{
@@ -623,7 +623,7 @@
 				"punctuation.section.class.end"
 			],
 			"settings": {
-				"foreground": "#D7C2A8"
+				"foreground": "#99E5FD"
 			}
 		},
 		{
@@ -632,7 +632,7 @@
 				"variable.language.fenced.markdown"
 			],
 			"settings": {
-				"foreground": "#5D134E"
+				"foreground": "#535353"
 			}
 		},
 		{
@@ -643,7 +643,7 @@
 			"settings": {
 				"fontStyle": "bold",
 				"background": "#00000050",
-				"foreground": "#5D134E"
+				"foreground": "#535353"
 			}
 		},
 		{
@@ -652,7 +652,7 @@
 				"markup.table"
 			],
 			"settings": {
-				"foreground": "#D7C2A8"
+				"foreground": "#99E5FD"
 			}
 		},
 		{
