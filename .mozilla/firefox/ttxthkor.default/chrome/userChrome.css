@@ -1,0 +1,51 @@
+panelview,
+#PlacesChevronPopup,
+#nav-bar-customization-target,
+#PersonalToolbar,
+#tabbrowser-tabs {
+    background-color: #04021A !important;
+}
+
+#PersonalToolbar,
+#navigator-toolbox {
+    background-image: none !important; 
+}
+tab.tabbrowser-tab[selected=true] {
+    border-left: 2px solid #c8a4a4 !important;
+}
+
+tab.tabbrowser-tab[selected=true] .tab-content {
+    background-color: #9E1238 !important;
+    color: #c8a4a4;
+}
+
+toolbarbutton {
+    background-color: #04021A !important;
+    color: #9E1238 !important;
+    fill: #9E1238 !important;
+}
+
+toolbarbutton:hover {
+    --backbutton-hover-background: #9E1238 !important;
+    color: #c8a4a4 !important;
+    fill: #c8a4a4 !important;
+}
+
+#reload-button:hover .toolbarbutton-icon,
+panelview toolbarbutton:hover,
+#nav-bar toolbarbutton:not(#reload-button):hover > *{
+    background-color: #9E1238 !important;
+}
+
+#PersonalToolbar toolbarbutton {
+    margin: 0;
+    padding: .5em !important;
+}
+
+#PersonalToolbar toolbarbutton:hover {
+    background-color: #9E1238 !important;
+}
+
+#PlacesChevronPopup > * {
+    background-color: #04021A !important;
+}
