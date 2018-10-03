@@ -133,6 +133,9 @@ bindcode $mod+49              kill
 bindsym $mod+r                reload
 bindsym $mod+Shift+r          restart
 
+bindsym $mod+p                exec pkill -USR1 polybar
+bindsym $mod+Shift+p          exec pkill polybar
+
 bindsym $mod+f 		          exec "rofi -show drun -modi drun,run,ssh"
 bindsym $mod+Shift+f          fullscreen toggle
 
@@ -207,14 +210,14 @@ bindsym $mod+F12		exec wal -i /mnt/share/backgrounds/LB6EMz9.jpg
 
 # OTHER BINDINGS
 
-bindsym --release Print 	exec --no-startup-id scrot
+bindsym --release Print 	    exec --no-startup-id scrot
 bindsym --release Shift+Print 	exec --no-startup-id scrot -s
 
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
 bindsym XF86AudioLowerVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
-bindsym XF86AudioMute 		exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+bindsym XF86AudioMute 		    exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp 	exec xbacklight -inc 20 # increase screen brightness
@@ -231,11 +234,11 @@ bindsym XF86AudioPrev 				exec playerctl previous
 
 # Color theme set from Xresources with fallback values
 set_from_resource $border 			i3wm.border 			#444444
-set_from_resource $background 			i3wm.background 		#2d2d2d
-set_from_resource $foreground			i3wm.foreground 		#ffffff
-set_from_resource $text 			i3wm.text 			#444444
-set_from_resource $indicator		 	i3wm.indicator	 		#222222
-set_from_resource $child_border 		i3wm.child_border 		#444444
+set_from_resource $background 		i3wm.background 		#2d2d2d
+set_from_resource $foreground		i3wm.foreground 		#ffffff
+set_from_resource $text 			i3wm.text 			    #444444
+set_from_resource $indicator		i3wm.indicator	 		#222222
+set_from_resource $child_border 	i3wm.child_border 		#444444
 
 # class                       		border		background	text		indicator	child_border
 client.focused                		$border 	$background	$text		$child_border	$child_border

@@ -279,6 +279,10 @@ format-mounted-prefix-foreground = ${colors.foreground_alt}
 label-mounted = %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 
+[module/i3gen]
+type = custom/script
+exec = $HOME/.config/polybar/bin/i3.sh
+
 [module/i3]
 type = internal/i3
 
@@ -298,12 +302,12 @@ label-unfocused-foreground = ${colors.foreground}
 label-visible = ${env:POLY_I3_UNFOCUSED}
 label-visible-foreground = ${colors.foreground}
 
-; label-separator = |
-; label-separator-padding = 2
-; label-separator-foreground = ${colors.foreground_alt}
-;
-; label-urgent = %icon%
-; label-urgent-foreground = ${colors.foreground}
+label-separator = |
+label-separator-padding = 2
+label-separator-foreground = ${colors.foreground_alt}
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.foreground}
 
 [module/mpd]
 type = internal/mpd
