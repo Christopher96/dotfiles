@@ -17,11 +17,11 @@
 !  Global Colors
 !-----------------------
 
-#define $foreground             #99E5FD
-#define $foreground_alt         #535353
-#define $background             #080808
-#define $background_alt         #464545
-#define $cursorColor            #99E5FD
+#define $foreground             {color15}
+#define $foreground_alt         {color10}
+#define $background             {color0}
+#define $background_alt         {color1}
+#define $cursorColor            {color7}
 
 !------------------------
 !  Xft Settings
@@ -137,35 +137,35 @@ rofi.line-padding: 15
 !----------------------
 
 ! Colors 0-15.
-*.color0: #080808
-*color0:  #080808
-*.color1: #464545
-*color1:  #464545
-*.color2: #535353
-*color2:  #535353
-*.color3: #65696A
-*color3:  #65696A
-*.color4: #0B7091
-*color4:  #0B7091
-*.color5: #268EB0
-*color5:  #268EB0
-*.color6: #56BDDF
-*color6:  #56BDDF
-*.color7: #99E5FD
-*color7:  #99E5FD
-*.color8: #6a6a6a
-*color8:  #6a6a6a
-*.color9: #464545
-*color9:  #464545
-*.color10: #535353
-*color10:  #535353
-*.color11: #65696A
-*color11:  #65696A
-*.color12: #0B7091
-*color12:  #0B7091
-*.color13: #268EB0
-*color13:  #268EB0
-*.color14: #56BDDF
-*color14:  #56BDDF
-*.color15: #99E5FD
-*color15:  #99E5FD
+*.color0: #08080B
+*color0:  #08080B
+*.color1: #9E285E
+*color1:  #9E285E
+*.color2: #B24E50
+*color2:  #B24E50
+*.color3: #EBA24D
+*color3:  #EBA24D
+*.color4: #270B98
+*color4:  #270B98
+*.color5: #5B169D
+*color5:  #5B169D
+*.color6: #3D0FC1
+*color6:  #3D0FC1
+*.color7: #aa86dd
+*color7:  #aa86dd
+*.color8: #765d9a
+*color8:  #765d9a
+*.color9: #9E285E
+*color9:  #9E285E
+*.color10: #B24E50
+*color10:  #B24E50
+*.color11: #EBA24D
+*color11:  #EBA24D
+*.color12: #270B98
+*color12:  #270B98
+*.color13: #5B169D
+*color13:  #5B169D
+*.color14: #3D0FC1
+*color14:  #3D0FC1
+*.color15: #aa86dd
+*color15:  #aa86dd
