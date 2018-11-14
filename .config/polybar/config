@@ -69,7 +69,7 @@ monitor = ${env:MONITOR:DVI-I-1}
 
 modules-left = i3 w1
 modules-center = xwindow
-modules-right = sl wlan sr eth
+modules-right = sl wlan sr eth sl ip sr
 ;pkg mail trash 
 [bar/HDMI-0]
 inherit = bar/parent
@@ -91,15 +91,16 @@ inherit = bar/parent
 monitor = ${env:MONITOR:DP-5}
 modules-left = i3 w3
 modules-center = xwindow
-modules-right = mpv sl pavolume sr-invert volume
+modules-right = sl drive sr mpv sl pavolume sr-invert volume
 
-;tray-position = right
-;tray-padding = 10
-;tray-transparent = true
+tray-position = right
+tray-padding = 10
+tray-transparent = true
 tray-background = ${colors.foreground}
 
-
-; ------- MODULES --------
+;
+; CUSTOM MODULES
+;
 
 [module/windows]
 type = custom/script
@@ -144,13 +145,36 @@ content = %{O-30}%{T3}%{T-}
 content-foreground = ${colors.foreground}
 content-padding = 3
 
+
 [module/ip]
 type = custom/script
-; format-underline = ${colors.foreground_alt}
-lnterval = 1200
-label = %output%
+lnterval = 5000
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground_alt}
+format-prefix-background = ${colors.foreground}
+
+label = "%{T2}%{T-}%output%"
+label-background = ${colors.foreground_alt}
+label-foreground = ${colors.foreground}
+
 exec = ~/.config/polybar/bin/ip.sh
-click-left = ~/.config/polybar/bin/ip.sh --public
+click-left = ~/.config/polybar/bin/ip.sh --public 
+click-right = ~/.config/polybar/bin/ip.sh --local
+
+[module/drive]
+type = custom/script
+lnterval = 5000
+
+format-prefix =  
+format-prefix-foreground = ${colors.foreground_alt}
+format-prefix-background = ${colors.foreground}
+
+label = "%{T2}%{T-}%output%"
+label-background = ${colors.foreground_alt}
+label-foreground = ${colors.foreground}
+
+exec = ~/.config/polybar/bin/drive.sh
 
 [module/crypto]
 type = custom/script
@@ -193,7 +217,7 @@ scroll-down = ~/.config/polybar/bin/pavolume.sh --down
 
 [module/mail]
 type = custom/script
-interval = 1200
+interval = 5000
 
 format = " "<label>
 
@@ -241,12 +265,42 @@ exec-if = ~/.config/polybar/bin/ifonline.sh
 
 [module/pkg]
 type = custom/script
-interval = 1200
+interval = 5000
 format = <label>
-;format-underline = #dc322f
 label = "%output:0:30%"
 exec = ~/.config/polybar/bin/pkg.sh
 click-left = ~/.config/polybar/bin/pkg.sh --upgrade
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = 
+;label-open-foreground = ${colors.secondary}
+label-close = Cancel
+;label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground_alt}
+
+menu-0-0 = Reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = Shutdown
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = Cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = Shutdown
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = Shutdown
+menu-2-0-exec = sudo shutdown -h now
+menu-2-1 = Cancel
+menu-2-1-exec = menu-open-0
+
+;
+; INTERNAL MODULES
+;
 
 [module/xwindow]
 type = internal/xwindow
@@ -278,10 +332,6 @@ format-mounted-prefix = " "
 format-mounted-prefix-foreground = ${colors.foreground_alt}
 label-mounted = %percentage_used%%
 label-unmounted = %mountpoint% not mounted
-
-[module/i3gen]
-type = custom/script
-exec = $HOME/.config/polybar/bin/i3.sh
 
 [module/i3]
 type = internal/i3
@@ -456,32 +506,6 @@ ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground_alt}
 
-[module/powermenu]
-type = custom/menu
-
-format-spacing = 1
-
-label-open = 
-;label-open-foreground = ${colors.secondary}
-label-close = Cancel
-;label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground_alt}
-
-menu-0-0 = Reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = Shutdown
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = Cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = Shutdown
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = Shutdown
-menu-2-0-exec = sudo shutdown -h now
-menu-2-1 = Cancel
-menu-2-1-exec = menu-open-0
 
 [settings]
 ; The throttle settings lets the eventloop swallow up til X events

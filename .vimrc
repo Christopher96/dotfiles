@@ -1,4 +1,3 @@
-
 " RUNTIME {{{
 
 :runtime plugin/*
@@ -16,9 +15,9 @@ au VimResized * exe "normal! \<c-w>="
 augroup line_return
     au!
     au BufReadPost *
-        \ if line("'\"") > 0 && line("'\"") <= line("$") |
-        \     execute 'normal! g`"zvzz' |
-        \ endif
+                \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                \     execute 'normal! g`"zvzz' |
+                \ endif
 augroup END
 
 augroup reload_vimrc
@@ -26,6 +25,8 @@ augroup reload_vimrc
     autocmd BufWritePost $MYVIMRC breakdel *
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
+
+autocmd BufWritePost $HOME/.vim/autoload/keybinds.vim source $HOME/.vim/autoload/keybinds.vim
 
 au FocusGained,BufEnter * :checktime
 au CursorHold,CursorHoldI * checktime
@@ -55,9 +56,9 @@ set fillchars=vert:\
 set autoread
 
 set tabstop=4       " The width of a TAB is set to 4.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 4.
+" Still it is a \t. It is just that
+" Vim will interpret it to be having
+" a width of 4.
 
 set shiftwidth=4    " Indents will have a width of 4
 
@@ -103,7 +104,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " Snippets
-Plugin 'sirver/UltiSnips'
+" Plugin 'sirver/UltiSnips'
 Plugin 'honza/vim-snippets'
 
 " Syntax
@@ -119,6 +120,7 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'posva/vim-vue'
 
 " Theme
+Plugin 'dylanaraps/wal.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ap/vim-css-color'
@@ -139,8 +141,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" If you want :UltiSnipsEdit to split your window.yet g:UltiSnipsEditSplit="vertical"
 "}}}
 
 " All of your Plugins must be added before the following line
@@ -192,4 +193,3 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
 " }}}
-

@@ -61,6 +61,8 @@ vnoremap <C-s>			<Esc>:w<CR>
 nnoremap <C-i> 			i_<Esc>r
 map	 <silent> <C-c>		<C-c>:noh<CR>
 
+nnoremap <C-e>          :w<CR>:!./%<CR>
+
 " Quick edit
 nnoremap <C-e>v			:e ~/.vimrc<CR>
 nnoremap <C-e>i			:e ~/.config/i3/config<CR>
@@ -73,6 +75,7 @@ nnoremap <C-k>          {
 nnoremap <C-j>          }
 
 " Plugins
+vnoremap <silent> <C-r> :call VReplace()<cr>
 " <C-Y> Emmet
 " <C-N>, <C-U> Multiple Cursors
 
@@ -126,8 +129,3 @@ vmap  <expr>  <RIGHT>  		DVB_Drag('right')
 vmap  <expr>  <DOWN>   		DVB_Drag('down')                        
 vmap  <expr>  <UP>     		DVB_Drag('up')                          
 vmap  <expr>  D        		DVB_Duplicate()                         
-
-
-" --- F-KEYS ---
-map   <f12> 			:!ctags -R .<cr>
-

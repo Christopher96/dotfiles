@@ -18,7 +18,7 @@
 !-----------------------
 
 #define $foreground             {color15}
-#define $foreground_alt         {color10}
+#define $foreground_alt         {color5}
 #define $background             {color0}
 #define $background_alt         {color1}
 #define $cursorColor            {color7}
@@ -76,7 +76,7 @@ URxvt.selected:         $foreground_alt
 URxvt.keysym.Mod4-t: string:tmux -u\n
 URxvt.keysym.Mod4-a: string:tmux attach\n
 
-# Scrolling
+! Scrolling
 URxvt.keysym.Mod4-u: command:\033]720;30\007
 URxvt.keysym.Mod4-d: command:\033]721;30\007
 URxvt.keysym.Mod4-k: command:\033]720;1\007
@@ -132,40 +132,48 @@ rofi.bw: 0
 !rofi.eh: 2
 rofi.line-padding: 15
 
+
+!----------------------
+! XPDF
+!----------------------
+
+xpdf*matteColor: {color0}
+
 !----------------------
 ! General colors
 !----------------------
 
 ! Colors 0-15.
-*.color0: #08080B
-*color0:  #08080B
-*.color1: #9E285E
-*color1:  #9E285E
-*.color2: #B24E50
-*color2:  #B24E50
-*.color3: #EBA24D
-*color3:  #EBA24D
-*.color4: #270B98
-*color4:  #270B98
-*.color5: #5B169D
-*color5:  #5B169D
-*.color6: #3D0FC1
-*color6:  #3D0FC1
-*.color7: #aa86dd
-*color7:  #aa86dd
-*.color8: #765d9a
-*color8:  #765d9a
-*.color9: #9E285E
-*color9:  #9E285E
-*.color10: #B24E50
-*color10:  #B24E50
-*.color11: #EBA24D
-*color11:  #EBA24D
-*.color12: #270B98
-*color12:  #270B98
-*.color13: #5B169D
-*color13:  #5B169D
-*.color14: #3D0FC1
-*color14:  #3D0FC1
-*.color15: #aa86dd
-*color15:  #aa86dd
+*.color0: {color0}
+*color0:  {color0}
+*.color1: {color1}
+*color1:  {color1}
+*.color2: {color2}
+*color2:  {color2}
+*.color3: {color3}
+*color3:  {color3}
+*.color4: {color4}
+*color4:  {color4}
+*.color5: {color5}
+*color5:  {color5}
+*.color6: {color6}
+*color6:  {color6}
+*.color7: {color7}
+*color7:  {color7}
+*.color8: {color8}
+*color8:  {color8}
+*.color9: {color9}
+*color9:  {color9}
+*.color10: {color10}
+*color10:  {color10}
+*.color11: {color11}
+*color11:  {color11}
+*.color12: {color12}
+*color12:  {color12}
+*.color13: {color13}
+*color13:  {color13}
+*.color14: {color14}
+*color14:  {color14}
+*.color15: {color15}
+*color15:  {color15}
+

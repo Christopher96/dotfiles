@@ -1,50 +1,6 @@
-rename iso
-rename bilder
-rename background
-rename backgrounds
-delete
-find z
-find zsh
-find ra
-find config
-shell
-search 
-search compt
-find com
-search compton
-find compt
-open_with 1
-search env
+search trash
+touch BestamDenKortasteVagen.java
+rename new
+rename OU3.odt
+shell c
 search zsh
-search prof
-find 
-find scri
-rename schemes
-find sit
-open_with
-find sc
-find cons
-find confg
-find comp
-find
-find et
-shell ./ip.sh
-
-shell !./i3.sh
-find li
-find us
-find lib
-find fire
-find moz
-find wal
-find xr
-find xres
-find conf
-find scr
-rename walch
-find cac
-find wa
-search cac
-search wa
-open_with jjj
-find dot
