@@ -1,5 +1,5 @@
 #!/bin/bash
-ipsave=".trash/ip"
+ipsave="$HOME/.config/polybar/bin/ip"
 
 if [ "$1" == "--public" ]
   then

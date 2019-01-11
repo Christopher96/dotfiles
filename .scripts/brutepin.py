@@ -43,7 +43,7 @@ b.receive()
 
 for i in range(0, 10):
     newpin = b.newpin(i)
-    print "Testing pin: " + newpin
+    print ("Testing pin: " + newpin)
     b.send(newpin)
     res = b.receive()
     print(res)

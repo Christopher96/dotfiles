@@ -8,7 +8,6 @@ fi
 
 antigen use oh-my-zsh
 antigen bundle heroku
-antigen bundle vi-mode
 antigen bundle extract
 antigen bundle dirhistory
 antigen bundle history
@@ -16,9 +15,6 @@ antigen bundle jump
 antigen bundle git
 antigen bundle cp
 antigen bundle archlinux
-antigen bundle nyan
-antigen bundle rand-quote
-antigen bundle b4b4r07/zsh-vimode-visual
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -72,3 +68,4 @@ eval "$(SHELL=/bin/sh lesspipe.sh)"
 for file in ~/.zshrc.d/*; do
     source "$file"
 done
+

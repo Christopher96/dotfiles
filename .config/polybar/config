@@ -43,8 +43,8 @@ foreground = ${colors.foreground}
 line-size = 5
 line-color = ${colors.selected}
 
-border-left-size = 10
-border-right-size = 10
+border-left-size = 4 
+border-right-size = 4 
 border-top-size = 5
 border-bottom-size = -6
 

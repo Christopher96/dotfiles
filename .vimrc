@@ -1,7 +1,7 @@
 " RUNTIME {{{
 
 :runtime plugin/*
-:runtime autoload/*
+:runtime postload/*
 
 " }}}
 
@@ -11,7 +11,6 @@
 au VimResized * exe "normal! \<c-w>="
 
 " Make sure Vim returns to the same line when you reopen a file.
-" Thanks, Amit
 augroup line_return
     au!
     au BufReadPost *
@@ -42,6 +41,13 @@ set foldmethod=marker
 
 " }}}
 
+" COMMANDS {{{
+
+command! -complete=shellcmd -nargs=+ R call ExecuteInShell(<q-args>)
+
+
+" }}}
+
 " SETTINGS {{{
 
 set path+=**
@@ -54,16 +60,11 @@ set hlsearch
 set encoding=utf8    
 set fillchars=vert:\ 
 set autoread
+" set number relativenumber
 
 set tabstop=4       " The width of a TAB is set to 4.
-" Still it is a \t. It is just that
-" Vim will interpret it to be having
-" a width of 4.
-
 set shiftwidth=4    " Indents will have a width of 4
-
 set softtabstop=4   " Sets the number of columns for a TAB
-
 set expandtab       " Expand TABs to spaces
 
 set backup
@@ -71,6 +72,7 @@ set noswapfile
 set backupdir=~/.vim/tmp
 set directory=~/.vim/tmp
 set undodir=~/.vim/tmp
+
 
 " }}}
 
@@ -104,20 +106,21 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " Snippets
-" Plugin 'sirver/UltiSnips'
+Plugin 'sirver/UltiSnips'
 Plugin 'honza/vim-snippets'
 
 " Syntax
+Plugin 'vim-syntastic/syntastic'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'burnettk/vim-angular'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'othree/yajs.vim'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'posva/vim-vue'
+Plugin 'tmhedberg/matchit'
 
 " Theme
 Plugin 'dylanaraps/wal.vim'
@@ -192,4 +195,11 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
+
 " }}}
+
+" PLUGINS {{{{
+
+let g:vue_disable_pre_processors = 1
+
+" }}}}

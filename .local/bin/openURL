@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+xdg-open $1
+wid=$(xdotool search --name "Mozilla Firefox" | head -n 1)
+xdotool windowactivate $wid

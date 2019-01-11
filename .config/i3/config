@@ -142,7 +142,9 @@ bindsym $mod+Control+Shift+p  exec pkill polybar
 
 
 bindsym $mod+f 		          exec "rofi -show drun -modi drun,run,ssh"
-bindsym $mod+Shift+f          fullscreen toggle
+bindsym $mod+Shift+f 		  exec rofi -show drun -run-command "sudo -A {cmd}"
+
+bindsym $mod+Control+f        fullscreen toggle
 
 
 bindsym $mod+x		          exec xrdb ~/.Xresources
@@ -199,19 +201,20 @@ bindsym $sup+g 			        exec gyazo
 bindsym $sup+l                  exec dm-tool lock
 
 # F-KEY BINDINGS
+set $wal ~/.scripts/wal-wp.sh
 
-bindsym $mod+F1			exec wal -i /mnt/share/backgrounds/5lFWCfD.jpg
-bindsym $mod+F2			exec wal -i /mnt/share/backgrounds/3iooxbD.jpg
-bindsym $mod+F3			exec wal -i /mnt/share/backgrounds/381812_1280.jpg
-bindsym $mod+F4			exec wal -i /mnt/share/backgrounds/1339262301565.jpg
-bindsym $mod+F5			exec wal -i /mnt/share/backgrounds/1361000718153.jpg
-bindsym $mod+F6			exec wal -i /mnt/share/backgrounds/1362081489285.jpg
-bindsym $mod+F7			exec wal -i /mnt/share/backgrounds/1363193246835.jpg
-bindsym $mod+F8			exec wal -i /mnt/share/backgrounds/1445446796007.jpg
-bindsym $mod+F9			exec wal -i /mnt/share/backgrounds/1460394691885.jpg
-bindsym $mod+F10		exec wal -i /mnt/share/backgrounds/1460396747868.jpg
-bindsym $mod+F11		exec wal -i /mnt/share/backgrounds/BHdIV4f.jpg
-bindsym $mod+F12		exec wal -i /mnt/share/backgrounds/LB6EMz9.jpg
+bindsym $mod+F1		exec $wal 5lFWCfD.jpg
+bindsym $mod+F2		exec $wal 3iooxbD.jpg
+bindsym $mod+F3		exec $wal 381812_1280.jpg
+bindsym $mod+F4		exec $wal 1339262301565.jpg
+bindsym $mod+F5		exec $wal 1361000718153.jpg
+bindsym $mod+F6		exec $wal 1362081489285.jpg
+bindsym $mod+F7		exec $wal 1363193246835.jpg
+bindsym $mod+F8		exec $wal 1445446796007.jpg
+bindsym $mod+F9		exec $wal 1460394691885.jpg
+bindsym $mod+F10	exec $wal 1460396747868.jpg
+bindsym $mod+F11	exec $wal BHdIV4f.jpg
+bindsym $mod+F12	exec $wal LB6EMz9.jpg
 
 # OTHER BINDINGS
 
@@ -261,28 +264,12 @@ for_window [window_role="task_dialog"] floating enable
 for_window [class="\b(?!$floating_windows)^.*"] border none
 for_window [title="Hold on"] floating enable, position center
 for_window [instance=".*-CAVA"] floating disable, border pixel 0, move scratchpad
+for_window [class=(?i)firefox] focus
 
 # smart_gaps on
 gaps inner 5
-gaps outer 5
-
-
-#i3blocks configuration
-# bar {
-# 	strip_workspace_numbers yes
-# 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
-# 	separator_symbol "|"
-# 	tray_output primary
-# 	tray_padding 0
-# 	colors {
-# 	    background $background
-# 	    statusline #ffffff
-# 	}
-# 	position bottom
-# 	modifier none
-# }
-
-
+# gaps outer 5
+#
 # exec_always nitrogen --restore
 exec_always compton --config ~/.config/compton.conf
 

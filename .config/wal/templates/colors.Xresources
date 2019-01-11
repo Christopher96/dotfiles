@@ -47,7 +47,6 @@ URxvt.scrollBar: false
 URxvt.urgentOnBell: true
 URxvt.visualBell: false
 URxvt.cursorBlink: true
-URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: xdg-open
 URxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline Bold fg5
@@ -58,6 +57,8 @@ URxvt.letterSpace: 0
 !URxvt.shading: 40
 !URxvt*transparent: false
 !URXvt*blurRadius: 15
+
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard,eval
 
 !------------------------
 !  URxvt Colors
@@ -73,14 +74,15 @@ URxvt.selected:         $foreground_alt
 !  URxvt Keybinds
 !------------------------
 
-URxvt.keysym.Mod4-t: string:tmux -u\n
-URxvt.keysym.Mod4-a: string:tmux attach\n
+URxvt.keysym.Mod4-p: eval:paste_clipboard
 
 ! Scrolling
-URxvt.keysym.Mod4-u: command:\033]720;30\007
-URxvt.keysym.Mod4-d: command:\033]721;30\007
-URxvt.keysym.Mod4-k: command:\033]720;1\007
-URxvt.keysym.Mod4-j: command:\033]721;1\007
+URxvt.keysym.Mod4-u: eval:scroll_up 30
+URxvt.keysym.Mod4-d: eval:scroll_down 30
+URxvt.keysym.Mod4-k: eval:scroll_up 1
+URxvt.keysym.Mod4-j: eval:scroll_down 1
+URxvt.keysym.Mod4-t: eval:scroll_to_top
+URxvt.keysym.Mod4-b: eval:scroll_to_bottom
 
 !------------------------
 !  I3 Colors
@@ -131,13 +133,6 @@ rofi.padding: 650
 rofi.bw: 0
 !rofi.eh: 2
 rofi.line-padding: 15
-
-
-!----------------------
-! XPDF
-!----------------------
-
-xpdf*matteColor: {color0}
 
 !----------------------
 ! General colors

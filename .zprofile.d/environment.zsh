@@ -5,3 +5,7 @@ BG_ALT=$(xgetres polybar.background_alt)
 
 export POLY_I3_FOCUSED=%{O-18}%{F$FG_ALT}%{T3}%{T-}%{F-}%{F$FG}%{B$FG_ALT}%name%%{B-}%{F-}%{F$FG_ALT}%{T3}%{T-}%{F-}
 export POLY_I3_UNFOCUSED=%{O-18}%{F$FG}%{T3}%{T-}%{F-}%{F$FG_ALT}%{B$FG}%name%%{B-}%{F-}%{F$FG}%{T3}%{T-}%{F-}
+
+export SUDO_ASKPASS=/bin/askpass-rofi
+
+export PATH=$PATH:~/.local/bin

@@ -3,7 +3,7 @@ username="vpnbook"
 password="p57u662"
 read -sp "Enter Sudo Password: " sudopassword
 /usr/bin/expect << EOF
-spawn sudo openvpn vpnbook-euro1-udp53.ovpn
+spawn sudo openvpn vpnbook-euro1-tcp80.ovpn
 expect "password for $USER: "
 send "$sudopassword\r"
 expect "Enter Auth Username: "

@@ -1,3 +1,23 @@
+
+autoload -z edit-command-line 
+zle -N edit-command-line 
+bindkey "^V" edit-command-line
+
+# Sudo
+function add_sudo() {
+    BUFFER="sudo "$BUFFER
+    zle end-of-line
+}
+zle -N add_sudo
+bindkey "" add_sudo
+
+# function up_widget() {
+#     BUFFER="cd .."
+#     zle accept-line
+# }
+# zle -N up_widget
+# bindkey "" up_widget
+
 #tmux
 # function tmux() {
 
@@ -7,12 +27,6 @@
 # zle -N tmux
 # bindkey "^t" tmux
 # up
-function up_widget() {
-    BUFFER="cd .."
-    zle accept-line
-}
-zle -N up_widget
-bindkey "" up_widget
 
 # git
 # 	function git_prepare() {
@@ -30,6 +44,7 @@ bindkey "" up_widget
 # 	}
 # 	zle -N git_prepare
 # 	bindkey "^g" git_prepare
+# 	
 
 # home
 # function goto_home() { 
@@ -48,30 +63,14 @@ bindkey "" up_widget
 #	zle -N edit_and_run
 #	bindkey "^v" edit_and_run
 
-# LS
-function ls() {
-	BUFFER="ls"
-	zle accept-line
-}
-zle -N ls
-    bindkey "" ls
-
-# Sudo
-function add_sudo() {
-    BUFFER="sudo "$BUFFER
-    zle end-of-line
-}
-zle -N add_sudo
-bindkey "" add_sudo
-
 # Yes
-function add_yes() {
-    BUFFER="yes | "$BUFFER
-    zle end-of-line
-}
-zle -N add_yes
-bindkey "" add_yes
-
+# function add_yes() {
+#     BUFFER="yes | "$BUFFER
+#     zle end-of-line
+# }
+# zle -N add_yes
+# bindkey "" add_yes
+#
 # Scrolling, binds to urxvt keysyms
 # function scroll_up() {
 #     xdotool key 0xff55
