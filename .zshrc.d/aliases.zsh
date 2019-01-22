@@ -16,15 +16,21 @@ alias rmzips="find ./* -maxdepth 0 -name \*.zip | xargs rm -rf"
 
 alias grepcmd='echo ${(k)aliases} ${(k)builtins} $(ls /bin) | sed -e "s/\s\+/\n/g" | grep -i'
 
-alias tea="tee -a"
-
-alias del='_del(){ mv "$1" ~/.local/share/Trash/files}; _del'
+alias del='_del(){ mv "$1" ~/.trash}; _del'
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias dotfiles-add="dotfiles ls-files | xargs -I{} git --git-dir=$HOME/.dotfiles --work-tree=$HOME add {}"
 
-#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
-stty -ixon
+export DOTREPO="~/.config/dotdrop"
+
+alias dotdrop="$DOTREPO/dotdrop.sh"
+alias dotgit="git -C $DOTREPO"
+alias dotsync="dotgit pull && dotgit add -A && dotgit commit && dotgit push; dotdrop install"
+
+alias tmuxk="tmux ls | grep : | cut -d. -f1 | awk '{print substr(\$1, 0, length(\$1)-1)}' | xargs kill"
+
+alias lblk="lsblk -f -o name,fstype,size,label,mountpoint,uuid"
+
 LS_COLORS=$(ls_colors_generator)
 
 run_ls() {
@@ -42,6 +48,3 @@ alias ls="run_ls"
 alias dir="run_dir"
 alias vdir="run_vdir"
 
-alias tmuxk="tmux ls | grep : | cut -d. -f1 | awk '{print substr(\$1, 0, length(\$1)-1)}' | xargs kill"
-
-alias lblk="lsblk -f -o name,fstype,size,label,mountpoint,uuid"

@@ -1,3 +1,5 @@
+#so as not to be disturbed by Ctrl-S Ctrl-Q in terminals:
+stty -ixon
 
 uname=$(uname)
 if [[ "$uname" == "Darwin" ]]; then

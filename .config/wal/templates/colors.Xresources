@@ -5,7 +5,6 @@
  
 #define $main_font               ProFontIIx Nerd Font Mono
 #define $alt_font                Visitor TT1 BRK
-#define $captial_font            Visitor TT1 BRK Bold
 #define $font_size               12
 
 #define $main_font_xft           xft:$main_font:style=Regular:size=$font_size
@@ -123,7 +122,7 @@ rofi.color-urgent: argb:00000080, $background, argb:00000080, argb:00000080, $ba
 !  Rofi Appearance
 !-----------------------
 
-rofi.font: $captial_font 22
+rofi.font: $alt_font 22
 rofi.sidebar-mode: true
 rofi.show: drun
 rofi.hide-scrollbar: true

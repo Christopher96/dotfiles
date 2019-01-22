@@ -1,22 +1,5 @@
-search browser.x
-open_with vim
-mkdir unity
-find uni
-quit
-open_with 
-find moz
-touch Experience.vue
-rename Experience.vue
-mkdir experience
-find
-find con
-find .ca
-find 
-find dun
 find .conf
 find cac
-find wa
-find conf
 find du
 shell gs
 find zs
@@ -47,4 +30,21 @@ touch executeInShell.vim
 touch openURL.sh
 rename zathura-tabbed
 rename openURL
+open_with 
+find conf
+find dotdrqq
+touch Datorteknik
+mkdir Datorteknik
+find gtkj
+find gtk
+mkdir fonts
+find tra
+search font
+search visi
 find loc
+find fo
+find ac
+find wa
+find xre
+touch git.zsh
+find 
