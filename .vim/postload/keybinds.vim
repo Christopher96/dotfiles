@@ -61,9 +61,9 @@ vnoremap <C-p>		    "+p
 inoremap <C-p>		    <Esc>"+pa
 nnoremap <C-x>          "+dd
 
-let g:AutoPairsShortcutFastWrap = '<C-e>'
+" let g:AutoPairsShortcutFastWrap = '<C-e>'
 
-map 	 <silent> <C-q> :bd <BAR> :bd!<CR><C-l>
+map 	 <silent> <C-q> :bd <BAR> :bnext<CR>
 nnoremap <C-s>			:w<CR>
 inoremap <C-s>			<Esc>:w<CR>
 vnoremap <C-s>			<Esc>:w<CR>
@@ -81,7 +81,7 @@ nnoremap <C-e>z			:e ~/.zshrc<CR>
 
 " Plugins
 vnoremap <silent> <C-r>     :call VReplace()<cr>
-nnoremap <silent> <C-e>e    :call AutoRun()<cr>
+nnoremap <silent> <C-e>e    :call AutoCompile()<cr>
 
 " <C-Y> Emmet
 " <C-N> Multiple Cursors
@@ -126,9 +126,6 @@ nnoremap <S-Tab>		<<
 vnoremap <Tab>			><Esc>gv
 vnoremap <S-Tab>		<<Esc>gv
 map 	 <Esc><Esc>		:noh<CR>
-
-vnoremap <		    	>><Esc>gv
-vnoremap >		        <<<Esc>gv
 
 " --- ARROW MAPPINGS ---
 vmap  <expr>  <LEFT>   		DVB_Drag('left')                        

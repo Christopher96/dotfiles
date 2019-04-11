@@ -9,6 +9,7 @@ else
 fi
 
 antigen use oh-my-zsh
+antigen bundle vi-mode
 antigen bundle heroku
 antigen bundle extract
 antigen bundle dirhistory
@@ -22,6 +23,21 @@ antigen bundle sindresorhus/pure
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
+
+
+# Vim mode
+bindkey -v 
+
+# Vim colors
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
 
 
 setopt dotglob

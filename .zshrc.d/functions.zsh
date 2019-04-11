@@ -39,7 +39,7 @@ bits() {
 secret() {
     file="$HOME/.secrets"
     if [ -f "$file" ]; then
-        cat .secrets | grep $1 | cut -d: -f2 | tr -d '[:space:]'
+        cat $file | grep $1 | cut -d: -f2 | tr -d '[:space:]'
     else
         echo "no .secrets file"
     fi

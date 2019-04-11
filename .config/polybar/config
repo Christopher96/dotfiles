@@ -352,10 +352,6 @@ label-unfocused-foreground = ${colors.foreground}
 label-visible = ${env:POLY_I3_UNFOCUSED}
 label-visible-foreground = ${colors.foreground}
 
-label-separator = |
-label-separator-padding = 2
-label-separator-foreground = ${colors.foreground_alt}
-
 label-urgent = %icon%
 label-urgent-foreground = ${colors.foreground}
 

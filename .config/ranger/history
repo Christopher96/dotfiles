@@ -1,50 +1,50 @@
-find .conf
-find cac
-find du
-shell gs
-find zs
-rename compile_firefox
-delete
-search 
-open_with 2t
-search tmp
-mkdir .tmp
-search .xul
-search xul
-find tm
-find tmp
-shell gsc
+rename processor.circ
+rename task5.asm
 mkdir 
-compress sdf
-x v
-x VPNBook.com-OpenVPN-DE4.zip
-extract VPNBook.com-OpenVPN-DE4.zip
-find med
-rename iso
-touch 
-mkdir tentor
-find scr
-find sc
-find yo
-touch executeInShell.vim
-touch openURL.sh
-rename zathura-tabbed
-rename openURL
-open_with 
-find conf
-find dotdrqq
-touch Datorteknik
-mkdir Datorteknik
-find gtkj
-find gtk
-mkdir fonts
-find tra
-search font
-search visi
+touch delay.c
+touch helpers.c
+touch test.c
+touch dump.c
+rename swag
+rename swag.c
+rename helpers.c
+mkdir examples
+find g
+find lcd
+find 20
+find u32
 find loc
-find fo
-find ac
-find wa
-find xre
-touch git.zsh
+touch zathura-tabbed.desktop
+open_with vim
+find rp
+find buzz
 find 
+find new
+shell 
+find ee
+open_with 0
+open_with zathura
+find gre
+find zsh
+rename home.module.ts
+rename home.page.html
+rename home.page.scss
+rename home.page.spec.ts
+rename 
+rename home.page.ts
+rename home
+bulkrename
+rename games
+open_with 
+delete
+rename simon-says-chipkit
+rename adobe
+touch README.md
+find re
+find vimr
+mkdir postload
+rename plugin
+rename autoload
+touch 
+mkdir plugin
+open_with e

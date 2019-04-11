@@ -17,7 +17,7 @@ git-auth() {
     fi
 }
 
-git-create() {
+git-touch() {
     repo_name=$1
 
     dir_name=`basename $(pwd)`
@@ -53,7 +53,7 @@ git-create() {
     fi
 }
 
-git-delete() {
+git-rm() {
     repo_name=$1
 
     dir_name=`basename $(pwd)`
@@ -86,7 +86,7 @@ git-delete() {
     fi
 }
 
-git-list() {
+git-ls() {
     git-auth
 
     echo "Listing github repos for '$username'"

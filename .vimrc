@@ -1,6 +1,5 @@
 " RUNTIME {{{
 
-:runtime plugin/*
 :runtime postload/*
 
 " }}}
@@ -25,8 +24,14 @@ augroup reload_vimrc
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
-autocmd BufWritePost $HOME/.vim/autoload/keybinds.vim source $HOME/.vim/autoload/keybinds.vim
-
+" let keybinds = '$HOME/.vim/postload/keybinds.vim'
+"
+" augroup reload_keybinds
+"     autocmd!
+"     autocmd BufWritePost keybinds breakdel *
+"     autocmd BufWritePost keybinds source keybinds
+" augroup END
+"
 au FocusGained,BufEnter * :checktime
 au CursorHold,CursorHoldI * checktime
 
@@ -73,6 +78,8 @@ set backupdir=~/.vim/tmp
 set directory=~/.vim/tmp
 set undodir=~/.vim/tmp
 
+filetype plugin on
+filetype off                  " required
 
 " }}}
 
@@ -85,96 +92,61 @@ syntax enable
 
 " PLUGINS {{{
 
-filetype plugin on
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Helpers
-Plugin 'vim-scripts/tComment'
-Plugin 'mattn/emmet-vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'KabbAmine/vCoolor.vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'vim-scripts/tComment'
+Plug 'mattn/emmet-vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'KabbAmine/vCoolor.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Snippets
-Plugin 'sirver/UltiSnips'
-Plugin 'honza/vim-snippets'
+Plug 'sirver/UltiSnips'
+Plug 'honza/vim-snippets'
 
 " Syntax
-Plugin 'vim-syntastic/syntastic'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'burnettk/vim-angular'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'othree/yajs.vim'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'posva/vim-vue'
-Plugin 'tmhedberg/matchit'
+Plug 'vim-syntastic/syntastic'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'burnettk/vim-angular'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'othree/yajs.vim'
+Plug 'mitsuhiko/vim-jinja'
+Plug 'StanAngeloff/php.vim'
+Plug 'posva/vim-vue'
+Plug 'tmhedberg/matchit'
 
 " Theme
-Plugin 'dylanaraps/wal.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ap/vim-css-color'
-Plugin 'ryanoasis/vim-devicons'
+Plug 'dylanaraps/wal.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ap/vim-css-color'
+Plug 'ryanoasis/vim-devicons'
 
 " Autocomplete
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'tpope/vim-surround'
-Plugin 'alvan/vim-closetag'
+" Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-surround'
+Plug 'alvan/vim-closetag'
 
 " Other
-Plugin 'djoshea/vim-autoread'
-Plugin 'OmniSharp/omnisharp-vim'
+Plug 'djoshea/vim-autoread'
+" Plug 'OmniSharp/omnisharp-vim'
+
+call plug#end()
+
+" }}}
 
 " Ultisnips {{{
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.yet g:UltiSnipsEditSplit="vertical"
 "}}}
-
-" All of your Plugins must be added before the following line
-call vundle#end()	    " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-
-" }}}
-
-" RANGER {{{
-
-" function RangerExplorer()
-"     exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
-"     if filereadable('/tmp/vim_ranger_current_file')
-" 	exec 'edit ' . system('cat /tmp/vim_ranger_current_file')
-" 	call system('rm /tmp/vim_ranger_current_file')
-"     endif
-"     redraw!
-" endfun
-
-" }}}
 
 " POWERLINE {{{
 
