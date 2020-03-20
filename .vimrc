@@ -1,5 +1,6 @@
 " RUNTIME {{{
 
+:runtime autoload/*
 :runtime postload/*
 
 " }}}
@@ -65,7 +66,6 @@ set hlsearch
 set encoding=utf8    
 set fillchars=vert:\ 
 set autoread
-" set number relativenumber
 
 set tabstop=4       " The width of a TAB is set to 4.
 set shiftwidth=4    " Indents will have a width of 4
@@ -77,6 +77,7 @@ set noswapfile
 set backupdir=~/.vim/tmp
 set directory=~/.vim/tmp
 set undodir=~/.vim/tmp
+set relativenumber
 
 filetype plugin on
 filetype off                  " required
@@ -102,14 +103,18 @@ Plug 'KabbAmine/vCoolor.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Snippets
-Plug 'sirver/UltiSnips'
+" Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
 
 " Syntax
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'elixir-editors/vim-elixir'
 Plug 'vim-syntastic/syntastic'
-Plug 'jelera/vim-javascript-syntax'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'burnettk/vim-angular'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
@@ -133,20 +138,12 @@ Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 
 " Other
-Plug 'djoshea/vim-autoread'
 " Plug 'OmniSharp/omnisharp-vim'
+Plug 'djoshea/vim-autoread'
 
 call plug#end()
 
 " }}}
-
-" Ultisnips {{{
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.yet g:UltiSnipsEditSplit="vertical"
-"}}}
 
 " POWERLINE {{{
 
@@ -173,5 +170,6 @@ let g:airline_right_alt_sep = ''
 " PLUGINS {{{{
 
 let g:vue_disable_pre_processors = 1
+let g:OmniSharp_highlight_types = 2
 
 " }}}}

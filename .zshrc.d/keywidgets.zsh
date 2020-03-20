@@ -1,4 +1,3 @@
-
 autoload -z edit-command-line 
 zle -N edit-command-line 
 bindkey "^V" edit-command-line
@@ -10,6 +9,19 @@ function add_sudo() {
 }
 zle -N add_sudo
 bindkey "" add_sudo
+
+# Ranger
+function ranger_open() {
+    BUFFER="r"
+    zle end-of-line
+    zle accept-line
+}
+zle -N ranger_open
+bindkey "^O" ranger_open
+
+bindkey "^F" forward-char
+bindkey "^B" backward-char
+
 
 # function up_widget() {
 #     BUFFER="cd .."
@@ -55,13 +67,13 @@ bindkey "" add_sudo
 # zle -N goto_home
 # bindkey "" goto_home
 
-# Edit and rerun
-#	function edit_and_run() {
-#		BUFFER="fc"
-#		zle accept-line
-#	}
-#	zle -N edit_and_run
-#	bindkey "^v" edit_and_run
+#Edit and rerun
+# function edit_and_run() {
+#     BUFFER="fc"
+#     zle accept-line
+# }
+# zle -N edit_and_run
+# bindkey "^v" edit_and_run
 
 # Yes
 # function add_yes() {

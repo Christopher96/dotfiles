@@ -2,13 +2,17 @@
 !-----------------------
 !  Global Fonts
 !-----------------------
- 
+
 #define $main_font               ProFontIIx Nerd Font Mono
 #define $alt_font                Visitor TT1 BRK
+#define $capital_font            Franklin M54
 #define $font_size               12
+#define $font_size_lg            14 
 
+#define $main_font_mono          $main_font:pixelsize=$font_size_lg:antialias=true:autohint=true
 #define $main_font_xft           xft:$main_font:style=Regular:size=$font_size
 #define $main_font_pango         $main_font $font_size
+#define $alt_font_mono           $alt_font:pixelsize=$font_size_lg:antialias=true:autohint=true
 #define $alt_font_xft            xft:$alt_font:size=$font_size
 #define $alt_font_pango          $alt_font $font_size
 
@@ -18,6 +22,7 @@
 
 #define $foreground             {color15}
 #define $foreground_alt         {color5}
+#define $bg_transparent         #E6{color0.strip}
 #define $background             {color0}
 #define $background_alt         {color1}
 #define $cursorColor            {color7}
@@ -35,7 +40,7 @@ Xft*hintstyle:  hintfull
 Xft*lcdfilter:  lcddefault
 
 !------------------------
-!  URxvt Settings
+!  urxvt settings
 !------------------------
 
 URxvt*font:$main_font_xft
@@ -49,13 +54,12 @@ URxvt.cursorBlink: true
 URxvt.url-launcher: xdg-open
 URxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline Bold fg5
-URxvt.depth: 24
+URxvt.depth: 32
 URxvt.internalBorder: 30
 URxvt.externalBorder: 0
 URxvt.letterSpace: 0
-!URxvt.shading: 40
-!URxvt*transparent: false
-!URXvt*blurRadius: 15
+URXvt*blurRadius: 15
+URxvt.shading: 40
 
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard,eval
 
@@ -64,7 +68,8 @@ URxvt.perl-ext-common: default,matcher,selection-to-clipboard,eval
 !------------------------
 
 URxvt.foreground:      	$foreground
-URxvt.background:      	$background
+URxvt.background:      	[90]$background
+URxvt.borderColor:      [90]$background
 URxvt.cursorColor:  	$foreground
 URxvt.colorUL:      	$foreground_alt
 URxvt.selected:         $foreground_alt   
@@ -72,6 +77,13 @@ URxvt.selected:         $foreground_alt
 !------------------------
 !  URxvt Keybinds
 !------------------------
+
+URxvt.keyboard-select.clipboard: true
+URxvt.perl-ext-common: default,matcher,fork-here,keyboard-select
+
+URxvt.keysym.Mod4-o: perl:fork-here:fork-at-cwd
+URxvt.keysym.Mod4-v: perl:keyboard-select:activate
+URxvt.keysym.Mod4-s: perl:keyboard-select:search
 
 URxvt.keysym.Mod4-p: eval:paste_clipboard
 
@@ -102,6 +114,7 @@ i3wm.font:		    $main_font
 polybar.font_0:         $alt_font:size=10
 polybar.font_1:         $main_font:size=12
 polybar.font_2:         $main_font:size=20
+polybar.bg_transparent: $bg_transparent
 polybar.background:     $background
 polybar.background_alt: $background_alt
 polybar.foreground:     $foreground
@@ -113,25 +126,39 @@ polybar.selected:       $foreground_alt
 !-----------------------
 
 rofi.color-enabled: true
-rofi.color-window: argb:00000080, argb:00000080, argb:00000080
-rofi.color-normal: argb:00000080, $foreground, argb:00000080, $foreground, $foreground_alt
-rofi.color-active: argb:00000080, $background, argb:00000080, argb:00000080, $background
-rofi.color-urgent: argb:00000080, $background, argb:00000080, argb:00000080, $background
+
+! State: 'bg', 'fg', 'bgalt', 'hlbg', 'hlfg'
+rofi.color-normal: argb:00000000, $foreground_alt, argb:00000000, $foreground_alt, $foreground
+rofi.color-active: argb:00000000, $background, argb:00000000, argb:00000000, $background
+rofi.color-urgent: argb:00000000, $background, argb:00000000, argb:00000000, $background
+rofi.color-window: argb:D9000000, argb:00000000, argb:00000000
 
 !-----------------------
 !  Rofi Appearance
 !-----------------------
 
-rofi.font: $alt_font 22
-rofi.sidebar-mode: true
+rofi.kb-cancel: Control+c
+rofi.show-icons: true
+rofi.fixed-num-lines: true
+rofi.lines: 7
+rofi.font: $capital_font 16
 rofi.show: drun
 rofi.hide-scrollbar: true
-rofi.lines: 5
 rofi.width: 100
-rofi.padding: 650
-rofi.bw: 0
-!rofi.eh: 2
+rofi.padding: 600
 rofi.line-padding: 15
+
+
+!----------------------
+! ST settings
+!----------------------
+
+*font: $main_font_mono
+*fontalt0: $alt_font_mono
+*background: $background
+*foreground: $foreground
+*borderpx: 20
+*alpha: 0.9
 
 !----------------------
 ! General colors

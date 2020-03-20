@@ -1,4 +1,3 @@
-
 wifi() {
     sudo pkill wpa_supplicant
     sudo wpa_supplicant -B -i wlan0 -c<(wpa_passphrase $1 $2)
@@ -22,11 +21,19 @@ urlencode() {
 }
 
 r() {
-    if [ -z "$RANGER_LEVEL" ]; then
-        SHELL=/usr/local/bin/r.shell ranger
-    else
-        exit
-    fi
+	local IFS=$'\t\n'
+	local tempfile="$(mktemp -t tmp.XXXXXX)"
+	local ranger_cmd=(
+		command
+		ranger
+		--cmd="map S chain shell echo %d > "$tempfile"; quitall"
+	)
+	
+	${ranger_cmd[@]} "$@"
+	if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
+		cd -- "$(cat "$tempfile")" || return
+	fi
+	command rm -f -- "$tempfile" 2>/dev/null
 }
 
 bits() {

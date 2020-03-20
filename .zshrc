@@ -1,12 +1,6 @@
 #so as not to be disturbed by Ctrl-S Ctrl-Q in terminals:
 stty -ixon
-
-uname=$(uname)
-if [[ "$uname" == "Darwin" ]]; then
-    source /usr/local/share/antigen/antigen.zsh
-else 
-    source /usr/share/antigen.zsh
-fi
+source /usr/share/zsh/share/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundle vi-mode
@@ -80,7 +74,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # Colors for LESS
 export LESS='-R'
 eval "$(SHELL=/bin/sh lesspipe.sh)"
-
 
 # Source additional files
 for file in ~/.zshrc.d/*; do

@@ -1,50 +1,50 @@
-rename processor.circ
-rename task5.asm
-mkdir 
-touch delay.c
-touch helpers.c
-touch test.c
-touch dump.c
-rename swag
-rename swag.c
-rename helpers.c
-mkdir examples
-find g
-find lcd
-find 20
-find u32
+find fo
 find loc
-touch zathura-tabbed.desktop
-open_with vim
-find rp
-find buzz
-find 
-find new
-shell 
-find ee
+find ra
+find te
+mkdir random
+find nä
+mkdir myrunnable
+rename pkg
+rename HTTPAsk.java
+find rej
+rename config.def.h
+find com
+open_with%space
+open_with%space0
 open_with 0
+open_with%spaceza
+rename term-cwd.sh
+touch serv.ex
+find pro
+touch tictac.ex
+touch request.ex
+touch rotate.ex
+rename exam.x
+touch nth.ex
 open_with zathura
-find gre
-find zsh
-rename home.module.ts
-rename home.page.html
-rename home.page.scss
-rename home.page.spec.ts
-rename 
-rename home.page.ts
-rename home
-bulkrename
-rename games
-open_with 
+find lo a
+find zi
+search xprofile
+touch .xprofile
+open_with r
+find zpro
+search zpro
+find zp
+search 
+rename .zenv
+rename .zshenv
+find yo
+rename yourstorage-hub
+rename yourstorage-simple
 delete
-rename simon-says-chipkit
-rename adobe
-touch README.md
-find re
-find vimr
-mkdir postload
-rename plugin
-rename autoload
-touch 
-mkdir plugin
-open_with e
+find scr
+find 
+find zsh
+find env
+find conf
+find nvim
+mkdir nvim
+find nv
+touch init.vim
+open_with vim

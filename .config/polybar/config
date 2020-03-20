@@ -7,7 +7,7 @@
 ;=====================================================
 
 [colors]
-transparent = #4D000000
+bg_transparent = ${xrdb:polybar.bg_transparent:#E9000000}
 background = ${xrdb:polybar.background:#000000}
 background_alt = ${xrdb:polybar.background_alt:#000000}
 foreground = ${xrdb:polybar.foreground:#ffffff}
@@ -37,7 +37,7 @@ radius = 0
 ;background-7 = #803e0a53
 ;background-8 = #4D400a53
 ;background-9 = #1A490a53
-background = ${colors.transparent}
+background = ${colors.bg_transparent}
 foreground = ${colors.foreground}
 
 line-size = 5
@@ -69,8 +69,7 @@ monitor = ${env:MONITOR:DVI-I-1}
 
 modules-left = i3 w1
 modules-center = xwindow
-modules-right = sl wlan sr eth sl ip sr
-;pkg mail trash 
+modules-right = sl temp sr wlan sl eth sr
 [bar/HDMI-0]
 inherit = bar/parent
 monitor = ${env:MONITOR:HDMI-0}
@@ -91,12 +90,12 @@ inherit = bar/parent
 monitor = ${env:MONITOR:DP-5}
 modules-left = i3 w3
 modules-center = xwindow
-modules-right = sl drive sr mpv sl pavolume sr-invert volume
+modules-right = sl pkg sr sl drive sr sl pulseaudio
 
 tray-position = right
 tray-padding = 10
 tray-transparent = true
-tray-background = ${colors.foreground}
+tray-background = ${colors.background}
 
 ;
 ; CUSTOM MODULES
@@ -139,9 +138,14 @@ type = custom/text
 content = %{T3}%{T-}
 content-foreground = ${colors.foreground_alt}
 
+[module/sr-invert]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = ${colors.foreground}
+
 [module/arch]
 type = custom/text
-content = %{O-30}%{T3}%{T-}
+content = %{O-30}%{T3}%{T-}
 content-foreground = ${colors.foreground}
 content-padding = 3
 
@@ -199,33 +203,37 @@ format-prefix-foreground = ${colors.foreground_alt}
 
 label = %output%
 
-[module/pavolume]
-type = custom/script
-interval = 1
-format = <label>
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = @DEFAULT_SINK@
+use-ui-max = true
+interval = 5
 
-label = %output%
-label-foreground = ${colors.foreground_alt}
-label-background = ${colors.foreground}
+format-volume = <ramp-volume><label-volume>
+format-volume-foreground = ${colors.foreground}
+format-volume-background = ${colors.foreground_alt}
 
-exec = ~/.config/polybar/bin/pavolume.sh
+format-volume-suffix = %{T3}%{T-}
+format-volume-suffix-foreground = ${colors.foreground_alt}
 
-click-right = exec pavucontrol
-click-left = ~/.config/polybar/bin/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/bin/pavolume.sh --up
-scroll-down = ~/.config/polybar/bin/pavolume.sh --down
+label-volume = %{T2}%{T-}%percentage%%
+label-volume-foreground = ${colors.foreground}
+label-volume-background = ${colors.foreground_alt}
 
-[module/mail]
-type = custom/script
-interval = 5000
+format-muted = <label-muted>%{T3}%{T-}
+format-muted-foreground = ${colors.foreground}
+format-muted-background = ${colors.foreground_alt}
 
-format = " "<label>
+label-muted = 婢 muted
+label-muted-foreground = ${colors.foreground_alt}
+label-muted-background = ${colors.foreground}
 
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.foreground_alt}
+ramp-volume-0 = 
+ramp-volume-1 =墳
+ramp-volume-2 = 
 
-exec = ~/.config/polybar/bin/mail.sh
+ramp-volume-foreground = ${colors.foreground_alt}
+ramp-volume-background = ${colors.foreground}
 
 [module/trash]
 interval = 10
@@ -267,9 +275,17 @@ exec-if = ~/.config/polybar/bin/ifonline.sh
 type = custom/script
 interval = 5000
 format = <label>
-label = "%output:0:30%"
-exec = ~/.config/polybar/bin/pkg.sh
-click-left = ~/.config/polybar/bin/pkg.sh --upgrade
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground_alt}
+format-prefix-background = ${colors.foreground}
+
+label = "%{T2}%{T-}%output%"
+label-background = ${colors.foreground_alt}
+label-foreground = ${colors.foreground}
+
+exec = checkupdates+aur | wc -l
+exec-if = echo %output% | grep -v error
 
 [module/powermenu]
 type = custom/menu
@@ -415,25 +431,37 @@ format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground_alt}
 format-connected-prefix-background = ${colors.foreground}
 
-format-connected = <label-connected>
-; format-connected-underline = ${colors.foreground_alt}
-; format-connected-overline = ${colors.foreground_alt}
+format-disconnected-prefix = ""
+format-disconnected-prefix-foreground = ${colors.foreground_alt}
+format-disconnected-prefix-background = ${colors.foreground}
+
+format-connected = sl <label-connected> sr
+format-disconnected = <label-disconnected>
 
 label-connected = "%essid% %downspeed%"
 label-connected-foreground = ${colors.foreground}
 label-connected-background = ${colors.foreground_alt}
+
+label-disconnected = ""
+label-disconnected-foreground = ${colors.foreground}
+label-disconnected-background = ${colors.foreground_alt}
 
 [module/eth]
 type = internal/network
 interface = eth0
 interval = 3.0
 
-format-connected-prefix = " "
+format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground_alt}
+format-connected-prefix-background = ${colors.foreground}
 
 format-connected = <label-connected>
-format-underline = ${colors.foreground_alt}
-label-connected = %local_ip%
+; format-connected-underline = ${colors.foreground_alt}
+; format-connected-overline = ${colors.foreground_alt}
+
+label-connected = " %local_ip%"
+label-connected-foreground = ${colors.foreground}
+label-connected-background = ${colors.foreground_alt}
 
 [module/date]
 type = internal/date
@@ -482,6 +510,20 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground_alt}
+
+[module/temp]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/bin/temp.sh 
+
+format = <label>
+format-prefix =  
+format-prefix-foreground = ${colors.foreground_alt}
+format-prefix-background = ${colors.foreground}
+
+label = %{T2}%{T-}%output%
+label-background = ${colors.foreground_alt}
+label-foreground = ${colors.foreground}
 
 [module/temperature]
 type = internal/temperature

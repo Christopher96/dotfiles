@@ -36,6 +36,9 @@ let g:vcool_ins_hsl_map = '<leader>ch'		" Insert hsl color.
 let g:vcool_ins_rgba_map = '<leader>ca'		" Insert rgba color.
 let g:vcool_ins_rgb_map = '<leader>cr'		" Insert rgb color.
 
+" YouCompleteMe
+noremap <leader>g       :YcmCompleter GoToDeclaration<CR>
+ 
 " --- CTRL MAPPINGS ---
 
 " CtrlP
@@ -61,7 +64,7 @@ vnoremap <C-p>		    "+p
 inoremap <C-p>		    <Esc>"+pa
 nnoremap <C-x>          "+dd
 
-" let g:AutoPairsShortcutFastWrap = '<C-e>'
+let g:AutoPairsShortcutFastWrap = '<C-e>'
 
 map 	 <silent> <C-q> :bd <BAR> :bnext<CR>
 nnoremap <C-s>			:w<CR>
@@ -72,10 +75,10 @@ map	 <silent> <C-c>		<C-c>:noh<CR>
 
 " Quick edit
 nnoremap <C-e>v			:e ~/.vimrc<CR>
+nnoremap <C-e>b			:e ~/.vim/postload/keybinds.vim<CR>
 nnoremap <C-e>i			:e ~/.config/i3/config<CR>
 nnoremap <C-e>p			:e ~/.config/polybar/config<CR>
-nnoremap <C-e>x			:e ~/.Xresources<CR>
-nnoremap <C-e>b			:e ~/.vim/postload/keybinds.vim<CR>
+nnoremap <C-e>x			:e ~/.config/wal/templates/colors.Xresources<CR>
 nnoremap <C-e>z			:e ~/.zshrc<CR>
 
 
@@ -121,6 +124,8 @@ nnoremap <S-CR>			O<Esc>
 nnoremap <CR> 			o<Esc>
 
 " --- TAB MAPPINGS ---
+imap <expr> <Tab> pumvisible() ? "\<C-y> " : "\<C-g>u\<CR>"
+
 nnoremap <Tab> 			>>
 nnoremap <S-Tab>		<<
 vnoremap <Tab>			><Esc>gv

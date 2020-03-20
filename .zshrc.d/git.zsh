@@ -17,6 +17,12 @@ git-auth() {
     fi
 }
 
+git-clone() {
+    repo_name=$1
+    username=`git config github.user`
+    git clone https://github.com/$username/$repo_name
+}
+
 git-touch() {
     repo_name=$1
 
@@ -39,6 +45,8 @@ git-touch() {
     if [ "$response" -gt "300" ]; then
         cat /tmp/curl_output
     else
+
+        echo "node_modules/" > .gitignore
 
         echo "Initializing git repository"
         git init

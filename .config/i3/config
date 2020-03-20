@@ -1,6 +1,3 @@
-# Dependencies
-# i3lock compton nitrogen urxvt jq polybar
-
 set $mod Mod1
 set $sup Mod4
 
@@ -8,8 +5,8 @@ floating_modifier $mod
 
 font pango:DEC Terminal 11
 
-set $browser firefox
-set $terminal urxvt
+set $browser brave
+set $terminal st
 
 
 # ================== DVI-I-1 =====================
@@ -30,13 +27,9 @@ bindsym $mod+Shift+1 move container to workspace $workspace_1; workspace $worksp
 bindsym $mod+Shift+2 move container to workspace $workspace_2; workspace $workspace_2
 bindsym $mod+Shift+3 move container to workspace $workspace_3; workspace $workspace_3
 
-bindsym $mod+Ctrl+1 workspace $workspace_1; exec $browser "https://outlook.office365.com/owa/\?bO\=1\#path\=/mail/inbox"
+bindsym $mod+Ctrl+1 workspace $workspace_1; exec $terminal
 bindsym $mod+Ctrl+2 workspace $workspace_2; exec $browser
 bindsym $mod+Ctrl+3 workspace $workspace_3; exec $terminal
-
-#assign [title="E-post"] $workspace_1
-
-
 
 # ================== HDMI-0 =====================
 
@@ -58,16 +51,10 @@ bindsym $mod+u workspace $workspace_u
 bindsym $mod+Shift+q move container to workspace $workspace_q; workspace $workspace_q
 bindsym $mod+Shift+w move container to workspace $workspace_w; workspace $workspace_w
 bindsym $mod+Shift+e move container to workspace $workspace_e; workspace $workspace_e
-bindsym $mod+Shift+u move container to workspace $workspace_u; workspace $workspace_u
 
-bindsym $mod+Ctrl+q workspace $workspace_q; exec atom
+bindsym $mod+Ctrl+q workspace $workspace_q; exec $terminal
 bindsym $mod+Ctrl+w workspace $workspace_w; exec $browser
-bindsym $mod+Ctrl+e workspace $workspace_e; exec $terminal
-bindsym $mod+Ctrl+u workspace $workspace_u; exec unity-editor
-
-#assign [title="New Tab"] $workspace_w
-
-
+bindsym $mod+Ctrl+e workspace $workspace_e; exec $terminal 
 
 # ================== DP-5 =====================
 
@@ -87,14 +74,9 @@ bindsym $mod+Shift+a move container to workspace $workspace_a; workspace $worksp
 bindsym $mod+Shift+s move container to workspace $workspace_s; workspace $workspace_s
 bindsym $mod+Shift+d move container to workspace $workspace_d; workspace $workspace_d
 
-bindsym $mod+Ctrl+a workspace $workspace_a; exec --no-startup-id i3-msg 'workspace $workspace_a; exec $browser "http://youtube.com"'
+bindsym $mod+Ctrl+a workspace $workspace_a; exec $terminal
 bindsym $mod+Ctrl+s workspace $workspace_s; exec $browser
-bindsym $mod+Ctrl+d workspace $workspace_d; exec skypeforlinux
-
-#assign [title="YouTube"] $workspace_a
-#assign [title="$terminal DP-5"] $workspace_d
-
-
+bindsym $mod+Ctrl+d workspace $workspace_d; exec $terminal 
 
 # ================== ALL SCREENS =====================
 
@@ -122,7 +104,7 @@ bindsym $sup+9 move container to workspace $workspace_8; workspace $workspace_8
 bindsym $sup+8 move container to workspace $workspace_9; workspace $workspace_9
 bindsym $sup+0 move container to workspace $workspace_10; workspace $workspace_10
 
-bindsym $mod+Ctrl+y exec $browser https://youtube.com
+bindsym $mod+Ctrl+o exec "urxvt -e ranger"
 
 # ================== Keybinds =====================
 
@@ -133,13 +115,9 @@ bindcode $mod+49              kill
 bindsym $mod+r                reload
 bindsym $mod+Shift+r          restart
 
-# Polubar commands
-exec --no-startup-id ~/.scripts/polybar.sh &
-
 bindsym $mod+p                exec pkill -USR1 polybar
-bindsym $mod+Shift+p          exec ~/.scripts/polybar.sh &
+bindsym $mod+Shift+p          exec ~/.scripts/polybar.sh
 bindsym $mod+Control+Shift+p  exec pkill polybar
-
 
 bindsym $mod+f 		          exec "rofi -show drun -modi drun,run,ssh"
 bindsym $mod+Shift+f 		  exec rofi -show drun -run-command "sudo -A {cmd}"
@@ -152,16 +130,13 @@ bindsym $mod+Shift+x	      exec "i3-nagbar -t warning -m 'You pressed the exit s
 
 bindsym $mod+z                layout toggle split
 
-# bindsym $mod+z                layout tabbed
-# bindsym $mod+Shift+z          layout stacked
-
 bindsym $mod+v                split v
 bindsym $mod+Shift+v          split h
 
 bindsym $mod+space            floating toggle
 bindsym $mod+Shift+space      focus mode_toggle
 
-#bindsym $mod+a               focus parent
+# bindsym $mod+p               focus parent
 
 bindsym $mod+h                focus left
 bindsym $mod+j                focus down
@@ -186,19 +161,18 @@ bindsym $mod+Ctrl+j                resize grow height 10 px or 10 ppt
 bindsym $mod+Ctrl+k                resize shrink height 10 px or 10 ppt
 bindsym $mod+Ctrl+l                resize grow width 10 px or 10 ppt
 
-bindsym $mod+Shift+minus      move scratchpad
-bindsym $mod+minus            scratchpad show
+bindsym $mod+Shift+minus        move scratchpad
+bindsym $mod+minus              scratchpad show
 
-bindsym $mod+Shift+Home			    exec reboot
-bindsym $mod+Shift+End				exec shutdown -h now
-bindsym $mod+Shift+backSpace	    exec ~/.config/i3/bin/lock.sh
+bindsym $mod+Shift+Home			exec reboot
+bindsym $mod+Shift+End			exec shutdown -h now
+bindsym $mod+Shift+backSpace	exec ~/.config/i3/bin/lock.sh
 
-bindsym $mod+Return 					exec $terminal
+bindsym $mod+Shift+Return 		exec ~/.scripts/term-cwd.sh
+bindsym $mod+Return 			exec $terminal
 
-# SUPER BINDINGS
-
-bindsym $sup+g 			        exec gyazo
-bindsym $sup+l                  exec dm-tool lock
+bindsym $mod+Ctrl+g 			exec gyazo
+bindsym $sup+Ctrl+l             exec dm-tool lock
 
 # F-KEY BINDINGS
 set $wal ~/.scripts/wal-wp.sh
@@ -232,7 +206,7 @@ bindsym XF86MonBrightnessUp 	exec xbacklight -inc 20 # increase screen brightnes
 bindsym XF86MonBrightnessDown 	exec xbacklight -dec 20 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86TouchpadToggle 		exec /some/path/toggletouchpad.sh # toggle touchpad
+# bindsym XF86TouchpadToggle 		exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay 				exec playerctl play
@@ -262,26 +236,22 @@ for_window [class="$floating_windows"] floating enable, border pixel 0
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [class="\b(?!$floating_windows)^.*"] border none
-for_window [title="Hold on"] floating enable, position center
+for_window [title="Hold On|Hold on"] floating enable, position center
 for_window [instance=".*-CAVA"] floating disable, border pixel 0, move scratchpad
 for_window [class=(?i)firefox] focus
 
 # smart_gaps on
 gaps inner 5
 # gaps outer 5
-#
-# exec_always nitrogen --restore
-exec_always compton --config ~/.config/compton.conf
-
 
 # exec --no-startup-id polybar -r HDMI-0-bottom
 # exec --no-startup-id polybar -r DVI-I-1
 # exec --no-startup-id polybar -r HDMI-0
 # exec --no-startup-id polybar -r DP-5
 
-# exec --no-startup-id gulp --cwd ~/Code/home serve
-# exec ~/.config/i3/bin/cavai3ipc.py DVI-I-1
-#
+exec --no-startup-id ~/.scripts/polybar.sh
+exec --no-startup-id ~/.local/bin/wallpaper-wrap && sleep 1 && picom
 exec --no-startup-id wal -R
-exec --no-startup-id ckb --background
+exec --no-startup-id ckb-next --background
 exec --no-startup-id udiskie
+
