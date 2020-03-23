@@ -21,6 +21,8 @@ urlencode() {
 }
 
 r() {
+    SHELL=$HOME/.local/bin/r.shell
+
 	local IFS=$'\t\n'
 	local tempfile="$(mktemp -t tmp.XXXXXX)"
 	local ranger_cmd=(

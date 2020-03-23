@@ -8,18 +8,6 @@ let g:user_emmet_leader_key=","
 noremap <leader>sl      :w<Home>silent <End> !urlscan<CR>
 map <leader>l           :call HandleURL()<cr>
 
-" Ranger file explorer
-noremap <leader>rv	 	:wa<CR>:RangerVSplit<CR>
-noremap <leader>rs	 	:wa<CR>:RangerSplit<CR>
-noremap <leader>rt	 	:wa<CR>:RangerTab<CR>
-noremap <leader>ri	 	:wa<CR>:RangerInsert<CR>
-noremap <leader>ra	 	:wa<CR>:RangerAppend<CR>
-noremap <leader>rc	 	:set operatorfunc=RangerChangeOperator<CR>g@
-noremap <leader>rR	 	:set operatorfunc=RangerBrowseEdit<CR>g@
-noremap <leader>rT	 	:set operatorfunc=RangerBrowseTab<CR>g@
-noremap <leader>rS	 	:set operatorfunc=RangerBrowseSplit<CR>g@
-noremap <leader>rV	 	:set operatorfunc=RangerBrowseVSplit<CR>g@
-
 " Buffers
 nnoremap <leader>q  	:bp! <BAR> bd! #<CR>
 nnoremap <leader>s	    :w !sudo tee % >/dev/null<CR>
@@ -54,7 +42,7 @@ nnoremap <C-j>          :bprevious<CR>
 nnoremap <C-k>          :bnext<CR>
 
 " Ranger
-noremap  <C-o>	        :wa<CR>:RangerEdit<CR>
+noremap  <C-o>	        :wa<CR>:Ranger<CR>
 
 " Clipboard
 nnoremap <C-y>          "+y
@@ -124,7 +112,7 @@ nnoremap <S-CR>			O<Esc>
 nnoremap <CR> 			o<Esc>
 
 " --- TAB MAPPINGS ---
-imap <expr> <Tab> pumvisible() ? "\<C-y> " : "\<C-g>u\<CR>"
+imap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 nnoremap <Tab> 			>>
 nnoremap <S-Tab>		<<

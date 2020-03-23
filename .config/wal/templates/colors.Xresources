@@ -38,63 +38,6 @@ Xft*rgba:       rgb
 Xft*autohint:   false
 Xft*hintstyle:  hintfull
 Xft*lcdfilter:  lcddefault
-
-!------------------------
-!  urxvt settings
-!------------------------
-
-URxvt*font:$main_font_xft
-URxvt*boldFont:$main_font_xft
-URxvt*italicFont:$main_font_xft
-URxvt*bolditalicFont:$main_font_xft
-URxvt.scrollBar: false
-URxvt.urgentOnBell: true
-URxvt.visualBell: false
-URxvt.cursorBlink: true
-URxvt.url-launcher: xdg-open
-URxvt.matcher.button: 1
-URxvt.matcher.rend.0: Uline Bold fg5
-URxvt.depth: 32
-URxvt.internalBorder: 30
-URxvt.externalBorder: 0
-URxvt.letterSpace: 0
-URXvt*blurRadius: 15
-URxvt.shading: 40
-
-URxvt.perl-ext-common: default,matcher,selection-to-clipboard,eval
-
-!------------------------
-!  URxvt Colors
-!------------------------
-
-URxvt.foreground:      	$foreground
-URxvt.background:      	[90]$background
-URxvt.borderColor:      [90]$background
-URxvt.cursorColor:  	$foreground
-URxvt.colorUL:      	$foreground_alt
-URxvt.selected:         $foreground_alt   
-
-!------------------------
-!  URxvt Keybinds
-!------------------------
-
-URxvt.keyboard-select.clipboard: true
-URxvt.perl-ext-common: default,matcher,fork-here,keyboard-select
-
-URxvt.keysym.Mod4-o: perl:fork-here:fork-at-cwd
-URxvt.keysym.Mod4-v: perl:keyboard-select:activate
-URxvt.keysym.Mod4-s: perl:keyboard-select:search
-
-URxvt.keysym.Mod4-p: eval:paste_clipboard
-
-! Scrolling
-URxvt.keysym.Mod4-u: eval:scroll_up 30
-URxvt.keysym.Mod4-d: eval:scroll_down 30
-URxvt.keysym.Mod4-k: eval:scroll_up 1
-URxvt.keysym.Mod4-j: eval:scroll_down 1
-URxvt.keysym.Mod4-t: eval:scroll_to_top
-URxvt.keysym.Mod4-b: eval:scroll_to_bottom
-
 !------------------------
 !  I3 Colors
 !------------------------

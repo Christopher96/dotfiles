@@ -1,16 +1,3 @@
-find fo
-find loc
-find ra
-find te
-mkdir random
-find nä
-mkdir myrunnable
-rename pkg
-rename HTTPAsk.java
-find rej
-rename config.def.h
-find com
-open_with%space
 open_with%space0
 open_with 0
 open_with%spaceza
@@ -37,14 +24,27 @@ rename .zshenv
 find yo
 rename yourstorage-hub
 rename yourstorage-simple
-delete
-find scr
 find 
 find zsh
 find env
-find conf
 find nvim
 mkdir nvim
 find nv
 touch init.vim
+find ur
+find conf
+find wal
+find loc
+touch r.shell
+find scr
+touch 
+mkdir Aktiv karriärstart
+touch övning 1
 open_with vim
+rename yourstorage-udp
+rename asd.png
+rename repo-
+mkdir repo
+rename repo-update
+find rep
+delete
