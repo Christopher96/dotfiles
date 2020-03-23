@@ -98,18 +98,11 @@ call plug#begin('~/.vim/plugged')
 " Helpers
 Plug 'vim-scripts/tComment'
 Plug 'mattn/emmet-vim'
-" Plug 'jiangmiao/auto-pairs'
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
-
-" Snippets
-" Plug 'sirver/UltiSnips'
-Plug 'honza/vim-snippets'
 
 " Syntax
 Plug 'PotatoesMaster/i3-vim-syntax'
@@ -126,6 +119,9 @@ Plug 'mitsuhiko/vim-jinja'
 Plug 'StanAngeloff/php.vim'
 Plug 'posva/vim-vue'
 Plug 'tmhedberg/matchit'
+Plug 'leafgarland/typescript-vim'
+Plug 'tasn/vim-tsx'
+" Plug 'Quramy/tsuquyomi'
 
 " Theme
 Plug 'dylanaraps/wal.vim'
@@ -135,13 +131,18 @@ Plug 'ap/vim-css-color'
 Plug 'ryanoasis/vim-devicons'
 
 " Autocomplete
-" Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 
 " Other
-" Plug 'OmniSharp/omnisharp-vim'
 Plug 'djoshea/vim-autoread'
+
+" Nvim
+if has('nvim')
+    Plug 'rbgrouleff/bclose.vim'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
 
 call plug#end()
 
@@ -190,5 +191,20 @@ function! s:CloseBracket()
     endif
 endfunction
 inoremap <expr> {<Enter> <SID>CloseBracket()
+
+"}}}
+
+" COC EXTENSIONS {{{
+
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ ]
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "}}}
