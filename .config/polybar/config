@@ -360,7 +360,6 @@ format = <label-state>
 
 label-focused = ${env:POLY_I3_FOCUSED}
 label-focused-foreground = ${colors.foreground_alt}
-label-focused-padding = 0
 
 label-unfocused = ${env:POLY_I3_UNFOCUSED}
 label-unfocused-foreground = ${colors.foreground}
