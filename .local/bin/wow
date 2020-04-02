@@ -1,0 +1,2 @@
+#!/usr/bin/env zsh
+xwinwrap -g 1920x1080+1920+0 -un -fdt -ni -b -nf -ov -- /mnt/share/WoW/WoW.exe WID &
